@@ -2,7 +2,7 @@
 import {useEffect,useRef,useState} from 'react';
 interface SoundGraph {context:AudioContext;master:GainNode;hum:OscillatorNode;air:BiquadFilterNode;sources:AudioScheduledSourceNode[];}
 /** Original synthesized ambience. No recordings, autoplay, or external sound downloads. */
-export function useCinematicSound(palette:string){
+export function useCinematicSound(palette:string,sceneId=0){
  const graph=useRef<SoundGraph|null>(null);const [enabled,setEnabled]=useState(false);
  async function toggle(){
   if(!graph.current){
@@ -15,7 +15,7 @@ export function useCinematicSound(palette:string){
   }
   await graph.current.context.resume();const next=!enabled;graph.current.master.gain.setTargetAtTime(next?.085:0,graph.current.context.currentTime,.25);setEnabled(next);
  }
- useEffect(()=>{const g=graph.current;if(!g)return;const t=g.context.currentTime;const frequency=palette==='ice'?64:palette==='desert'?39:palette==='festival'?98:palette==='market'?73:48;g.hum.frequency.setTargetAtTime(frequency,t,.8);g.air.frequency.setTargetAtTime(palette==='storm'?1500:palette==='market'?850:450,t,.8);},[palette,enabled]);
+ useEffect(()=>{const g=graph.current;if(!g)return;const t=g.context.currentTime;const frequency=sceneId===56?48:sceneId===35?29:sceneId>=43?38:palette==='ice'?64:palette==='desert'?39:palette==='festival'?98:palette==='market'?73:48;g.hum.frequency.setTargetAtTime(frequency,t,.8);g.air.frequency.setTargetAtTime(palette==='storm'?1500:palette==='market'?850:450,t,.8);},[palette,enabled,sceneId]);
  useEffect(()=>{if(!enabled||palette!=='festival')return;const timer=setInterval(()=>{const g=graph.current;if(!g)return;const note=g.context.createOscillator(),gain=g.context.createGain();const t=g.context.currentTime;note.type='sine';note.frequency.value=[196,246.94,293.66,392][Math.floor(Math.random()*4)];gain.gain.setValueAtTime(0,t);gain.gain.linearRampToValueAtTime(.08,t+.08);gain.gain.exponentialRampToValueAtTime(.001,t+2);note.connect(gain).connect(g.master);note.start(t);note.stop(t+2.1);},1000);return()=>clearInterval(timer);},[enabled,palette]);
  useEffect(()=>()=>{const g=graph.current;if(g){g.sources.forEach(s=>s.stop());void g.context.close();graph.current=null;}},[]);
  return {soundEnabled:enabled,toggleSound:toggle};

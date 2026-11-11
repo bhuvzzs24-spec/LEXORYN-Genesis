@@ -1,15 +1,17 @@
 import manifest from '@/data/story-media.json';
+import finale from '@/data/finale-media.json';
 import {assets} from '@/data/assets';
 import visual from '@/data/visual-assets.json';
 import type {InspectionMedia} from './InspectionExhibit';
 export interface SceneMedia {src:string;mobileSrc?:string;width:number;height:number;kind:'generated'|'provided';source?:string;}
+const finalRegistry=finale as Record<string,SceneMedia>;
 const registry=manifest.generated as Record<string,SceneMedia>;
 const upgraded=visual.generated as Record<string,SceneMedia>;
 const atlases=visual.atlases as Record<string,SceneMedia>;
 const replacements:Record<string,string>={city:'city-far',market:'market-far',cuisine:'cuisine-far',objects:'objects-far',desert:'desert-far',ice:'ice-far',storm:'storm-far',convergence:'festival-far'};
 export function resolveSceneAsset(request:string,low=false):SceneMedia {
  const key=request.split('/').at(-1)?.replace('.webp','')??'';
- const media=upgraded[replacements[key]]??registry[key]??registry.clouds;
+ const media=finalRegistry[key]??upgraded[replacements[key]]??registry[key]??registry.clouds;
  if(media)return {...media,src:low&&media.mobileSrc?media.mobileSrc:media.src};
  return {src:assets.atmosphericClouds.src,width:assets.atmosphericClouds.width,height:assets.atmosphericClouds.height,kind:'generated'};
 }

@@ -1,0 +1,98 @@
+{
+  "convergence-night": {
+    "src": "/assets/finale/convergence-night.webp",
+    "width": 1672,
+    "height": 941,
+    "kind": "generated",
+    "mobileSrc": "/assets/finale/convergence-night-mobile.webp",
+    "alpha": false
+  },
+  "codex-core": {
+    "src": "/assets/finale/codex-core.webp",
+    "width": 1672,
+    "height": 941,
+    "kind": "generated",
+    "mobileSrc": "/assets/finale/codex-core-mobile.webp",
+    "alpha": false
+  },
+  "myr-ceremony": {
+    "src": "/assets/finale/myr-ceremony.webp",
+    "width": 1672,
+    "height": 941,
+    "kind": "generated",
+    "mobileSrc": "/assets/finale/myr-ceremony-mobile.webp",
+    "alpha": false
+  },
+  "planetary-emergency": {
+    "src": "/assets/finale/planetary-emergency.webp",
+    "width": 1672,
+    "height": 941,
+    "kind": "generated",
+    "mobileSrc": "/assets/finale/planetary-emergency-mobile.webp",
+    "alpha": false
+  },
+  "aftermath-central": {
+    "src": "/assets/finale/aftermath-central.webp",
+    "width": 1672,
+    "height": 941,
+    "kind": "generated",
+    "mobileSrc": "/assets/finale/aftermath-central-mobile.webp",
+    "alpha": false
+  },
+  "aftermath-regional": {
+    "src": "/assets/finale/aftermath-regional.webp",
+    "width": 1672,
+    "height": 941,
+    "kind": "generated",
+    "mobileSrc": "/assets/finale/aftermath-regional-mobile.webp",
+    "alpha": false
+  },
+  "aftermath-covenant": {
+    "src": "/assets/finale/aftermath-covenant.webp",
+    "width": 1672,
+    "height": 941,
+    "kind": "generated",
+    "mobileSrc": "/assets/finale/aftermath-covenant-mobile.webp",
+    "alpha": false
+  },
+  "forbidden-archive": {
+    "src": "/assets/finale/forbidden-archive.webp",
+    "width": 1672,
+    "height": 941,
+    "kind": "generated",
+    "mobileSrc": "/assets/finale/forbidden-archive-mobile.webp",
+    "alpha": false
+  },
+  "crisis-comic-strip": {
+    "src": "/assets/finale/crisis-comic-strip.webp",
+    "width": 2172,
+    "height": 724,
+    "kind": "generated",
+    "mobileSrc": "/assets/finale/crisis-comic-strip-mobile.webp",
+    "alpha": false
+  },
+  "ceremonial-procession": {
+    "src": "/assets/finale/ceremonial-procession.webp",
+    "width": 1672,
+    "height": 941,
+    "kind": "generated",
+    "mobileSrc": "/assets/finale/ceremonial-procession-mobile.webp",
+    "alpha": false
+  },
+  "hangar-interior": {
+    "src": "/assets/finale/hangar-interior.webp",
+    "width": 1672,
+    "height": 941,
+    "kind": "generated",
+    "mobileSrc": "/assets/finale/hangar-interior-mobile.webp",
+    "alpha": false
+  },
+  "atmospheric-laboratory": {
+    "src": "/assets/finale/atmospheric-laboratory.webp",
+    "width": 1672,
+    "height": 941,
+    "kind": "generated",
+    "mobileSrc": "/assets/finale/atmospheric-laboratory-mobile.webp",
+    "alpha": false
+  }
+}

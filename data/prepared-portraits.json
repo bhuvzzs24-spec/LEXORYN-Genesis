@@ -1,0 +1,41 @@
+{
+  "aaryan": {
+    "id": "aaryan",
+    "prompt": "Use case: identity-preserve. Asset type: detailed cinematic head-and-shoulders character portrait for LEXORYN year3186. Input image is the EXACT approved original fictional identity and wardrobe reference, not a style substitute. Create a new close-up photographic portrait of precisely the same person: preserve facial anatomy, age, skin tone, eye shape/color, distinctive scars/freckles, nose, jaw, lips, hairline and hairstyle from the input. Preserve the same costume collar, visible bronze/titanium structures and technical fabric material. Do not beautify into a different face, change ethnicity/age/hair, add unrelated accessories, or resemble any actor. Head and shoulders only, including the entire crown or hairstyle where relevant; face occupies most of the vertical frame. High-end live-action production portrait, visible natural pores and fine hair strands, restrained warm ivory side key and subtle cyan rim. Photorealistic skin and cloth; no painterly texture, no text, logo or border. Genuine transparent background with clean edges for compositing. Native portrait ratio3:4 or2:3, highest practical native detailed resolution; do not upscale the source crop. AARYAN VEER: exact original brown-skinned angular face, healed nose bridge scar, dark eyes, asymmetric wavy black hair with shaved left temple and silver streak, light stubble, graphite armor and bronze shoulder brace, storm cloak collar. Quietly protective expression.",
+    "asset": "/assets/finale/portrait-aaryan.webp",
+    "width": 1086,
+    "height": 1448,
+    "alpha": true,
+    "sourceSha256": "1cc076a71fb5f633713251b5418f8d6606700b49b5857923a5c77a77a3dae922",
+    "bytes": 651624,
+    "sourceMaster": "exec-d327b71c-797c-4c65-ab27-b85cf3c7fe30.png",
+    "identityReference": "exec-582ad7f5-b5cd-4ba4-b256-3864f2166b56.png",
+    "status": "prepared; not used by runtime"
+  },
+  "kaor": {
+    "id": "kaor",
+    "prompt": "Use case: identity-preserve. Asset type: detailed cinematic head-and-shoulders character portrait for LEXORYN year3186. Input image is the EXACT approved original fictional identity and wardrobe reference, not a style substitute. Create a new close-up photographic portrait of precisely the same person: preserve facial anatomy, age, skin tone, eye shape/color, distinctive scars/freckles, nose, jaw, lips, hairline and hairstyle from the input. Preserve the same costume collar, visible bronze/titanium structures and technical fabric material. Do not beautify into a different face, change ethnicity/age/hair, add unrelated accessories, or resemble any actor. Head and shoulders only, including the entire crown or hairstyle where relevant; face occupies most of the vertical frame. High-end live-action production portrait, visible natural pores and fine hair strands, restrained warm ivory side key and subtle cyan rim. Photorealistic skin and cloth; no painterly texture, no text, logo or border. Genuine transparent background with clean edges for compositing. Native portrait ratio3:4 or2:3, highest practical native detailed resolution; do not upscale the source crop. GENERAL KAOR: exact original older deep-brown-skinned broad square lined face, short silver crew-cut, cropped gray beard, amber-brown eyes, eyebrow notch, articulated graphite armor collar and bronze command bar. Disciplined thoughtful expression.",
+    "asset": "/assets/finale/portrait-kaor.webp",
+    "width": 1086,
+    "height": 1448,
+    "alpha": true,
+    "sourceSha256": "161c4cb96576b3654781e2d5953fd2049f3e01c275fff4124513c114d9bba795",
+    "bytes": 622164,
+    "sourceMaster": "exec-1788b7e9-666d-4d57-85cf-12c5d1213dc5.png",
+    "identityReference": "exec-9cc8fc6f-79d4-4cb1-8012-b670084a6542.png",
+    "status": "prepared; not used by runtime"
+  },
+  "sorya": {
+    "id": "sorya",
+    "prompt": "Use case: identity-preserve. Asset type: detailed cinematic head-and-shoulders character portrait for LEXORYN year3186. Input image is the EXACT approved original fictional identity and wardrobe reference, not a style substitute. Create a new close-up photographic portrait of precisely the same person: preserve facial anatomy, age, skin tone, eye shape/color, distinctive scars/freckles, nose, jaw, lips, hairline and hairstyle from the input. Preserve the same costume collar, visible bronze/titanium structures and technical fabric material. Do not beautify into a different face, change ethnicity/age/hair, add unrelated accessories, or resemble any actor. Head and shoulders only, including the entire crown or hairstyle where relevant; face occupies most of the vertical frame. High-end live-action production portrait, visible natural pores and fine hair strands, restrained warm ivory side key and subtle cyan rim. Photorealistic skin and cloth; no painterly texture, no text, logo or border. Genuine transparent background with clean edges for compositing. Native portrait ratio3:4 or2:3, highest practical native detailed resolution; do not upscale the source crop. SORYA ELIN: exact original olive-brown skin, oval face, broad dark eyes, short tightly curled dark hair, subtle freckles, ivory ceramic-fiber research coat collar and bronze seam hardware. Calm methodical intelligence.",
+    "asset": "/assets/finale/portrait-sorya.webp",
+    "width": 1024,
+    "height": 1536,
+    "alpha": true,
+    "sourceSha256": "ccf73dc4abcca91a5d1c9e9b0b961914b8a93ba9238585715fce0ea5439e4242",
+    "bytes": 698594,
+    "sourceMaster": "exec-c2abe786-7f86-4186-b73c-f7dbc6932ed2.png",
+    "identityReference": "exec-d2659879-a608-4f1d-a3a6-4df71824963b.png",
+    "status": "prepared; not used by runtime"
+  }
+}

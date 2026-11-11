@@ -38,7 +38,7 @@ function ImageLayer({src,depth=-12,width=38,position=[0,.6],opacity=1,drift=.4,p
  useEffect(()=>{let changed=false;if(texture.colorSpace!==THREE.SRGBColorSpace){texture.colorSpace=THREE.SRGBColorSpace;changed=true;}const anisotropy=Math.min(8,gl.capabilities.getMaxAnisotropy());if(texture.anisotropy!==anisotropy){texture.anisotropy=anisotropy;changed=true;}if(changed)texture.needsUpdate=true;},[texture,gl]);
  const image=texture.image as {width?:number;height?:number};
  const aspect=image?.width&&image?.height?image.width/image.height:16/9;
- useFrame(()=>{if(group.current){group.current.position.x=position[0]+(bound(progress)-.5)*drift;group.current.position.z=depth+ease(progress)*Math.min(.6,Math.abs(drift)*.3);}});
+ useFrame(()=>{if(order===-10&&opacity>=.5)gl.domElement.dataset.environmentAsset=src;if(group.current){group.current.position.x=position[0]+(bound(progress)-.5)*drift;group.current.position.z=depth+ease(progress)*Math.min(.6,Math.abs(drift)*.3);}});
  return <group ref={group} position={[position[0],position[1],depth]}>
   <mesh renderOrder={order}><planeGeometry args={[width,width/aspect]}/><meshBasicMaterial map={texture} transparent opacity={bound(opacity)} alphaTest={.006} depthWrite={false} toneMapped={false}/></mesh>
  </group>;

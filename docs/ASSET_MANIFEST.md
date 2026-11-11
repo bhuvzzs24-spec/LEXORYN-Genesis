@@ -1,5 +1,7 @@
 # LEXORYN — cinematic asset manifest
 
+Final Phase3 adds12 original environment/comic sources and seven transparent cast sources under `public/assets/finale/`; their12 mobile environment copies preserve aspect ratios. See `FINALE_ENVIRONMENTS.md`, `CHARACTER_CONTINUITY.md`, `FINAL_PHASE_PLAN.md` and the typed JSON manifests for native dimensions, prompts, hashes, scene mapping and replaceable slots. Restricted reference artwork remains excluded from public delivery.
+
 The Phase2 fidelity overhaul extends the runtime with `data/visual-assets.json`: eight original environment plates, four transparent architecture layers and four transparent object atlases. [VISUAL_OVERHAUL_ASSETS.md](VISUAL_OVERHAUL_ASSETS.md) records exact provenance, dimensions and scene mapping; [VISUAL_OVERHAUL_VALIDATION.md](VISUAL_OVERHAUL_VALIDATION.md) records validation. Existing plates and all source masters are preserved.
 
 The current 28-scene runtime replacement boundary is `data/story-media.json` plus `components/story/SceneAssetRegistry.ts`; scene configuration is `data/story.ts`. The original `data/assets.ts` remains a Phase1/reference registry. [SCENE_ASSET_MAP.md](SCENE_ASSET_MAP.md) is the current scene-by-scene map, [WORLD_BIBLE.md](WORLD_BIBLE.md) defines continuity, and [PHASE2_GENERATED_ASSETS.md](PHASE2_GENERATED_ASSETS.md) records14 actual generated clean plates. All14 are native1672×941, with smaller mobile copies and no upscaling; no 4K claim is made.

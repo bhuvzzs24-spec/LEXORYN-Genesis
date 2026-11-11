@@ -54,3 +54,7 @@ public/assets/**
 # Original visual-overhaul images only; no supplied references.
 !public/assets/overhaul/
 !public/assets/overhaul/*.webp
+
+# Original generated final-chapter art only.
+!public/assets/finale/
+!public/assets/finale/*.webp

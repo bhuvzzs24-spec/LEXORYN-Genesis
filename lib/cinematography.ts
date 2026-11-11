@@ -44,6 +44,34 @@ const authoredNodes:readonly CinematicCameraPose[]=[
  pose([.55,.25,10.8],[.15,.15,-18]),
  pose([-.6,.5,11.3],[-.2,.3,-20]),
  pose([.1,1.3,12.2],[0,.8,-21]),
+ pose([-.8,1.5,11.4],[0,.6,-20]),
+ pose([.65,.2,10.8],[.1,.15,-18]),
+ pose([-.45,.35,11.4],[-.1,.1,-18]),
+ pose([.8,.8,10.6],[.2,.45,-20]),
+ pose([-.6,.3,11.3],[-.1,.1,-18]),
+ pose([.2,1.3,10.8],[0,.4,-19]),
+ pose([-.4,.5,11.8],[0,.2,-18]),
+ pose([.5,.25,11.2],[0,.15,-18]),
+ pose([-.6,.5,11.4],[0,.2,-18]),
+ pose([.4,.2,11.1],[0,.1,-18]),
+ pose([-.5,.4,11.5],[0,.2,-18]),
+ pose([.5,.6,11.3],[0,.3,-18]),
+ pose([-.4,.25,12],[0,.1,-18]),
+ pose([.45,.7,11.4],[0,.3,-20]),
+ pose([-.7,.5,11.4],[-.1,.2,-18]),
+ pose([.65,.3,10.8],[.1,.1,-18]),
+ pose([-.5,-1.8,8.8],[0,-1.5,-18]),
+ pose([.6,-2.8,7.8],[0,-2,-18]),
+ pose([-.7,.4,11.3],[0,.2,-18]),
+ pose([.6,.65,11.6],[0,.3,-18]),
+ pose([-.55,.9,11.2],[0,.4,-18]),
+ pose([.5,.5,10.8],[0,.2,-18]),
+ pose([-.6,.6,11.4],[0,.3,-18]),
+ pose([.4,.45,11.2],[0,.2,-18]),
+ pose([-.45,.5,11.4],[0,.2,-18]),
+ pose([.4,.8,12],[0,.3,-18]),
+ pose([.1,.35,11.8],[.75,.1,0]),
+ pose([0,.35,10.5],[.75,.1,0]),
 ];
 
 const clamp=(value:number,min=0,max=1)=>Number.isNaN(value)?min:Math.max(min,Math.min(max,value));
@@ -63,7 +91,7 @@ const shotArcs:Readonly<Record<number,StoryVector>>={
 
 function frameNode(node:CinematicCameraPose,index:number,mobile:boolean):CinematicCameraPose {
  if(!mobile)return node;
- const orbital=index<=5||index===14||index===15;
+ const orbital=index<=5||index===14||index===15||index>=55;
  // Fit shared boundary nodes, not only the active shot. That is essential at05→06/14→15.
  return {
   position:[node.position[0]*(orbital?1:.52),node.position[1],node.position[2]*(orbital?1.32:1)],

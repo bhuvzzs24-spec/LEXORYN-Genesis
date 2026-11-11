@@ -1,0 +1,58 @@
+{
+  "aaryan": {
+    "asset": "/assets/finale/character-aaryan.webp",
+    "width": 941,
+    "height": 1672,
+    "alpha": true,
+    "sourceSha256": "3b20fa8ca59a98cd6ee45241b1c955727634dc40422d76ced11076b6d9725ed1",
+    "bytes": 372732
+  },
+  "kaor": {
+    "asset": "/assets/finale/character-kaor.webp",
+    "width": 1024,
+    "height": 1536,
+    "alpha": true,
+    "sourceSha256": "4a1e04ec8af5465674f93bc28fe641ccaee8d64745e0d13ccac6ed4cdac41566",
+    "bytes": 351346
+  },
+  "sorya": {
+    "asset": "/assets/finale/character-sorya.webp",
+    "width": 1024,
+    "height": 1536,
+    "alpha": true,
+    "sourceSha256": "59edad4d054f0217f4058436619f8f5372c21d4aa31fe33e538ddbefeeffbfce",
+    "bytes": 308358
+  },
+  "nyra": {
+    "asset": "/assets/finale/character-nyra.webp",
+    "width": 1024,
+    "height": 1536,
+    "alpha": true,
+    "sourceSha256": "ac1256edbb99b118c33137f44ee5d572b123b0649cb634165af819447cc84cd4",
+    "bytes": 283536
+  },
+  "elara": {
+    "asset": "/assets/finale/character-elara.webp",
+    "width": 1024,
+    "height": 1536,
+    "alpha": true,
+    "sourceSha256": "27c729fe0c409419935e297292bd4e33ffea0a52ebde212adff8d2347974ac29",
+    "bytes": 298912
+  },
+  "vaelora": {
+    "asset": "/assets/finale/character-vaelora.webp",
+    "width": 1024,
+    "height": 1536,
+    "alpha": true,
+    "sourceSha256": "5c6291f238eb01a0681af688c02ba9d27f9b2c71f61154e8714e640711c2749a",
+    "bytes": 312772
+  },
+  "supporting": {
+    "asset": "/assets/finale/supporting-cast.webp",
+    "width": 1983,
+    "height": 793,
+    "alpha": true,
+    "sourceSha256": "c27cd5b0a8b156b4d64c719f7981c216b663a19fb51f3e1079a7da115f57994f",
+    "bytes": 484340
+  }
+}

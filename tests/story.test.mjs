@@ -1,27 +1,24 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import ts from 'typescript';
-const emit = (name) => ts.transpileModule(fs.readFileSync(new URL(name,import.meta.url),'utf8'),{compilerOptions:{module:ts.ModuleKind.ESNext,target:ts.ScriptTarget.ES2022}}).outputText;
-const dataUrl = 'data:text/javascript;base64,'+Buffer.from(emit('../data/story.ts')).toString('base64');
-const {storyScenes,storyChapters,cuisineHotspots,attireHotspots,everydayHotspots}=await import(dataUrl);
-const libraryCode=emit('../lib/story.ts').replace(/from ['"]@\/data\/story['"]/g,`from '${dataUrl}'`);
-const {getStoryFrame,progressForScene,sampleCamera,storyBounds,totalStoryDuration}=await import('data:text/javascript;base64,'+Buffer.from(libraryCode).toString('base64'));
+import {moduleURL} from './load-module.mjs';
+const {storyScenes,storyChapters,cuisineHotspots,attireHotspots,everydayHotspots}=await import(moduleURL('../data/story.ts'));
+const {getStoryFrame,progressForScene,sampleCamera,storyBounds,totalStoryDuration}=await import(moduleURL('../lib/story.ts'));
 
-test('the complete 28-beat story is ordered, distinct and divided into four chapters',()=>{
- assert.equal(storyScenes.length,28);
- assert.deepEqual(storyScenes.map(s=>s.id),Array.from({length:28},(_,i)=>i+1));
- assert.equal(new Set(storyScenes.map(s=>s.slug)).size,28);
- assert.equal(storyChapters.length,4);
+test('the complete 56-beat story is ordered, distinct and divided into eight chapters',()=>{
+ assert.equal(storyScenes.length,56);
+ assert.deepEqual(storyScenes.map(s=>s.id),Array.from({length:56},(_,i)=>i+1));
+ assert.equal(new Set(storyScenes.map(s=>s.slug)).size,56);
+ assert.equal(storyChapters.length,8);
  for(const c of storyChapters)assert.equal(storyScenes.filter(s=>s.chapter===c.id).length,7);
- assert.ok(totalStoryDuration>=18&&totalStoryDuration<=26);
+ assert.ok(totalStoryDuration>=45&&totalStoryDuration<=60);
  assert.equal(storyScenes[0].mode,'orbit');assert.equal(storyScenes[14].mode,'orbit');
  assert.match(storyScenes[27].title,/PREPARING FOR CONVERGENCE/);
 });
 test('all timing intervals meet without gaps and every scene navigation target resolves correctly',()=>{
  assert.equal(storyBounds[0].start,0);assert.equal(storyBounds.at(-1).end,1);
  storyBounds.forEach((b,i)=>{assert.ok(b.end>b.start);if(i)assert.ok(Math.abs(b.start-storyBounds[i-1].end)<1e-12);assert.equal(getStoryFrame(progressForScene(i)).sceneIndex,i);});
- assert.equal(getStoryFrame(-1).sceneIndex,0);assert.equal(getStoryFrame(2).sceneIndex,27);assert.equal(getStoryFrame(1).localProgress,1);assert.equal(getStoryFrame(NaN).sceneIndex,0);
+ assert.equal(getStoryFrame(-1).sceneIndex,0);assert.equal(getStoryFrame(2).sceneIndex,55);assert.equal(getStoryFrame(1).localProgress,1);assert.equal(getStoryFrame(NaN).sceneIndex,0);
 });
 test('camera and story sampling are finite, deterministic and reversible at each scroll position',()=>{
  const samples=Array.from({length:301},(_,i)=>i/300);

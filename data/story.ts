@@ -1,3 +1,4 @@
+import {finaleScenes} from './finale-story';
 /** Phase 1–2 story canon. Asset paths are replaceable production slots, not claims of resolution. */
 export type StoryVector = readonly [number, number, number];
 export type StoryPalette = 'orbit' | 'city' | 'market' | 'desert' | 'ice' | 'storm' | 'culture' | 'festival';
@@ -34,7 +35,7 @@ export interface StoryScene {
   readonly id: number;
   readonly slug: string;
   readonly title: string;
-  readonly chapter: 1 | 2 | 3 | 4;
+  readonly chapter: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
   readonly chapterTitle: string;
   readonly mode: 'orbit' | 'world';
   readonly asset: string;
@@ -59,6 +60,10 @@ export const storyChapters = [
   { id: 2, title: 'CITY OF A MILLION VOICES', startScene: 8, endScene: 14 },
   { id: 3, title: 'THREE CLIMATES, ONE CIVILIZATION', startScene: 15, endScene: 21 },
   { id: 4, title: 'THE LIVES WE BUILT', startScene: 22, endScene: 28 },
+  { id: 5, title: 'THE NIGHT OF CONVERGENCE', startScene: 29, endScene: 35 },
+  { id: 6, title: 'GUARDIANS OF LEXORYN', startScene: 36, endScene: 42 },
+  { id: 7, title: 'THE INTELLIGENCE BENEATH', startScene: 43, endScene: 49 },
+  { id: 8, title: 'THE LAST PROMPT', startScene: 50, endScene: 56 },
 ] as const;
 
 const detail = (name: string) => `/assets/story/details/${name}.webp`;
@@ -204,4 +209,5 @@ export const storyScenes: readonly StoryScene[] = [
     hotspot('native-fungus', 'LUMINOUS FUNGI', [.17, .76], 'Native fungi recycle organic material in shaded ground layers. Cultivated food species are kept distinct from unmanaged wild growth.', 'ecology', 'eco-fungus'),
   ] }),
   scene({ id: 28, title: 'PREPARING FOR CONVERGENCE', asset: '/assets/story/convergence.webp', palette: 'festival', effect: 'lantern', vehicle: 'cargo', caption: 'Tonight, three regions will light one sky.', duration: 1.15, camera: surfaceFlight(.2, 1.15, 10.1, -.2), hotspots: [hotspot('convergence-drones', 'CONVERGENCE LIGHTS', [.7, .4], 'Coordinated lantern drones rise from civic terraces, tracing the shared regional energy network as communities prepare for the Night of Convergence.', 'festival')], info: 'Festival preparation concludes this phase. The Night of Convergence ceremony begins the next chapter; no crisis branch is implemented here.' }),
+  ...finaleScenes.map(s=>s.id===31?{...s,hotspots:cuisineHotspots}:s),
 ];
