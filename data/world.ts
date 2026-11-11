@@ -47,7 +47,7 @@ export const world = {
     dayLengthHours: 32,
     yearLengthEarthDays: 486,
     axialTiltDegrees: 24,
-    oceanCoveragePercent: 58,
+    oceanCoveragePercent: 19,
     atmosphericDescription: 'Dense breathable lower atmosphere with ionized storm corridors; speculative engineered regulation.',
     moonDescription: 'One fractured rocky moon, with a localized debris arc. Orbital geometry is cinematic, not an n-body simulation.',
     scientificBasis: 'Latitude-dependent insolation, polar ice and geothermal refuges, rain-shadow deserts and wind-driven midlatitude storms provide a coherent speculative foundation. Exact values are fictional and configurable.'

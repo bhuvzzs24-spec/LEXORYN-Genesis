@@ -50,3 +50,7 @@ public/assets/**
 !public/assets/story/convergence-mobile.webp
 !public/assets/story/clouds.webp
 !public/assets/story/clouds-mobile.webp
+
+# Original visual-overhaul images only; no supplied references.
+!public/assets/overhaul/
+!public/assets/overhaul/*.webp

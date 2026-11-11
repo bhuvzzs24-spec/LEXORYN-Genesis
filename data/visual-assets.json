@@ -1,0 +1,142 @@
+{
+  "generated": {
+    "city-far": {
+      "src": "/assets/overhaul/city-far.webp",
+      "width": 1672,
+      "height": 941,
+      "kind": "generated",
+      "alpha": false,
+      "sourceMaster": "exec-11073ba6-daf9-44a8-a6a4-2b531c1f9625.png",
+      "mobileSrc": "/assets/overhaul/city-far-mobile.webp"
+    },
+    "market-far": {
+      "src": "/assets/overhaul/market-far.webp",
+      "width": 1672,
+      "height": 941,
+      "kind": "generated",
+      "alpha": false,
+      "sourceMaster": "exec-cdf95ebe-b217-4c00-8990-90c7ac9d48d4.png",
+      "mobileSrc": "/assets/overhaul/market-far-mobile.webp"
+    },
+    "cuisine-far": {
+      "src": "/assets/overhaul/cuisine-far.webp",
+      "width": 1672,
+      "height": 941,
+      "kind": "generated",
+      "alpha": false,
+      "sourceMaster": "exec-7670989d-b05c-4112-bb75-b2ddd6179aea.png",
+      "mobileSrc": "/assets/overhaul/cuisine-far-mobile.webp"
+    },
+    "objects-far": {
+      "src": "/assets/overhaul/objects-far.webp",
+      "width": 1672,
+      "height": 941,
+      "kind": "generated",
+      "alpha": false,
+      "sourceMaster": "exec-3fa92be5-d919-4add-9965-095668b5fd51.png",
+      "mobileSrc": "/assets/overhaul/objects-far-mobile.webp"
+    },
+    "desert-far": {
+      "src": "/assets/overhaul/desert-far.webp",
+      "width": 1672,
+      "height": 941,
+      "kind": "generated",
+      "alpha": false,
+      "sourceMaster": "exec-938c29ec-ce16-4e7b-a3ff-8333b4668193.png",
+      "mobileSrc": "/assets/overhaul/desert-far-mobile.webp"
+    },
+    "ice-far": {
+      "src": "/assets/overhaul/ice-far.webp",
+      "width": 1672,
+      "height": 941,
+      "kind": "generated",
+      "alpha": false,
+      "sourceMaster": "exec-7ad77de1-4406-4880-922c-4eb35903e6da.png",
+      "mobileSrc": "/assets/overhaul/ice-far-mobile.webp"
+    },
+    "storm-far": {
+      "src": "/assets/overhaul/storm-far.webp",
+      "width": 1672,
+      "height": 941,
+      "kind": "generated",
+      "alpha": false,
+      "sourceMaster": "exec-c7dacbec-c91b-470b-be48-17dcaa46a119.png",
+      "mobileSrc": "/assets/overhaul/storm-far-mobile.webp"
+    },
+    "festival-far": {
+      "src": "/assets/overhaul/festival-far.webp",
+      "width": 1672,
+      "height": 941,
+      "kind": "generated",
+      "alpha": false,
+      "sourceMaster": "exec-346e8941-87ad-44ca-a8e0-66b1712c73f9.png",
+      "mobileSrc": "/assets/overhaul/festival-far-mobile.webp"
+    },
+    "city-midground": {
+      "src": "/assets/overhaul/city-midground.webp",
+      "width": 1774,
+      "height": 887,
+      "kind": "generated",
+      "alpha": true,
+      "sourceMaster": "exec-aab9ff91-623f-4b7c-8f49-6ba25b171c1e.png"
+    },
+    "city-foreground": {
+      "src": "/assets/overhaul/city-foreground.webp",
+      "width": 1672,
+      "height": 941,
+      "kind": "generated",
+      "alpha": true,
+      "sourceMaster": "exec-939a46f1-3ccf-4b55-be69-bf07f7765f71.png"
+    },
+    "market-midground": {
+      "src": "/assets/overhaul/market-midground.webp",
+      "width": 1875,
+      "height": 839,
+      "kind": "generated",
+      "alpha": true,
+      "sourceMaster": "exec-387d72f6-84ce-40db-8687-f010be8a0c8e.png"
+    },
+    "market-foreground": {
+      "src": "/assets/overhaul/market-foreground.webp",
+      "width": 1672,
+      "height": 941,
+      "kind": "generated",
+      "alpha": true,
+      "sourceMaster": "exec-8d2162a8-e4fb-4eff-8d55-a9b03f59b504.png"
+    }
+  },
+  "atlases": {
+    "food-atlas": {
+      "src": "/assets/overhaul/food-atlas.webp",
+      "width": 1536,
+      "height": 1024,
+      "kind": "generated",
+      "alpha": true,
+      "sourceMaster": "exec-45bb98cf-ba80-4932-b80a-b51f45ff5591.png"
+    },
+    "gear-atlas": {
+      "src": "/assets/overhaul/gear-atlas.webp",
+      "width": 1536,
+      "height": 1024,
+      "kind": "generated",
+      "alpha": true,
+      "sourceMaster": "exec-3a1a74e1-95da-4cff-93a1-d4904e0186e2.png"
+    },
+    "boots-atlas": {
+      "src": "/assets/overhaul/boots-atlas.webp",
+      "width": 2172,
+      "height": 724,
+      "kind": "generated",
+      "alpha": true,
+      "sourceMaster": "exec-a4a7ac8b-f34d-4def-b4c0-56da7af57a29.png"
+    },
+    "attire-atlas": {
+      "src": "/assets/overhaul/attire-atlas.webp",
+      "width": 1536,
+      "height": 1024,
+      "kind": "generated",
+      "alpha": true,
+      "sourceMaster": "exec-98372b8c-b91e-4fe2-8bd3-f51baa149a47.png"
+    }
+  }
+}

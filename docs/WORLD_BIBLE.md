@@ -10,7 +10,7 @@ The main display follows a visitor moving through one world. Buildings, vehicles
 
 ## Planet and climate logic
 
-Defaults carried forward: 0.92 Earth gravity, a 32-hour day, a 486-Earth-day year, 24° axial tilt and 58% ocean coverage. Latitude-dependent insolation, prevailing winds, rain shadows, thermal inertia and geothermal heat are the qualitative design basis. The Codex Vein extends habitable corridors but does not remove heat, water or maintenance constraints. Oceans are deep cobalt/near-black; land is asymmetric obsidian terrain, with sparse gold engineering fractures and cyan ice at the poles. Regional weather is differentiated; the entire planet must not become uniformly purple or uniformly temperate.
+Defaults carried forward: 0.92 Earth gravity, a 32-hour day, a 486-Earth-day year, 24° axial tilt and approximately19% exposed dark-teal basin coverage. Latitude-dependent insolation, prevailing winds, rain shadows, thermal inertia and geothermal heat are the qualitative design basis. The Codex Vein extends habitable corridors but does not remove heat, water or maintenance constraints. Enclosed seas are deep teal/near-black; the dominant land is asymmetric graphite and obsidian mineral terrain, with sparse gold engineering fractures and cyan ice at the poles. Regional weather is differentiated; the entire planet must not become uniformly purple or uniformly temperate.
 
 | System | Pyravar | Cryonth | Aerion Meridia |
 | --- | --- | --- | --- |

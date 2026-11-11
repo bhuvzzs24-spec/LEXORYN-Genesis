@@ -6,21 +6,26 @@ import * as THREE from 'three';
 import PlanetSystem from '../PlanetSystem';
 import CinematicGrade from '../CinematicGrade';
 import {storyScenes} from '@/data/story';
-import {smoothStoryProgress} from '@/lib/story';
-import {resolveSceneAsset} from './SceneAssetRegistry';
+import {cinematicLayerBlend} from '@/lib/cinematography';
+import {resolveSceneAsset,sceneDepthAssets} from './SceneAssetRegistry';
+import {LayeredEnvironment} from './LayeredEnvironment';
+import {SceneObjectLayer} from './SceneObjectLayer';
 import {NativeDrifters} from './NativeDrifters';
 import {ScrollCameraRig} from './ScrollCameraRig';
-import {ParallaxEnvironment,AnimatedVehicleLayer,AtmosphericEffects,CivicMechanisms,FestivalDrones} from './WorldLayers';
-export interface CinematicSceneProps {sceneIndex:number;progress:number;paused:boolean;reducedMotion:boolean;quality:'high'|'low';selectedRegion:string|null;onSelectRegion:(id:string)=>void;onFailure:()=>void;planetKey:number;}
+import {AnimatedVehicleLayer,AtmosphericEffects,CivicMechanisms,FestivalDrones} from './WorldLayers';
+export interface CinematicSceneProps {sceneIndex:number;progress:number;paused:boolean;reducedMotion:boolean;quality:'high'|'low';selectedRegion:string|null;onSelectRegion:(id:string)=>void;onFailure:()=>void;planetKey:number;focusedObjectId:string|null;onHoverObject:(id:string|null)=>void;}
 class AssetBoundary extends Component<{children:ReactNode;fallback?:ReactNode},{failed:boolean}>{state={failed:false};static getDerivedStateFromError(){return {failed:true};}render(){return this.state.failed?this.props.fallback??null:this.props.children;}}
 function Transmission({progress}:{progress:number}){const ref=useRef<THREE.Group>(null);useFrame(()=>{if(ref.current){ref.current.rotation.z=progress*Math.PI*.4;ref.current.scale.setScalar(.5+progress*.2);}});return <group ref={ref} position={[-1,.5,2]}>{[0,1,2,3].map(i=><mesh key={i} rotation={[i*.1,.15,0]}><torusGeometry args={[.6+i*.2,.004,6,70]}/><meshBasicMaterial color={i%2?'#f4c37a':'#59dbe7'} transparent opacity={.4}/></mesh>)}</group>;}
 function SceneWorld(props:CinematicSceneProps){
  const scene=storyScenes[props.sceneIndex],next=storyScenes[props.sceneIndex+1];
- const low=props.quality==='low',media=resolveSceneAsset(scene.asset,low);const mix=smoothStoryProgress((props.progress-.82)/.18);
+ const low=props.quality==='low',media=resolveSceneAsset(scene.asset,low);const mix=cinematicLayerBlend(props.progress);
  const orbital=scene.mode==='orbit',entering=scene.id===6||scene.id===7;
  const showWorld=!orbital||entering;
  const common={progress:props.progress,paused:props.paused,reducedMotion:props.reducedMotion,quality:props.quality};
- const variant=scene.id===22?'cuisine':scene.id===23?'atelier':scene.id===24?'objects':scene.palette;
+ const variant=scene.id===22?'cuisine':scene.id===23?'atelier':scene.id===24?'objects':scene.id===25?'council':scene.id===26?'commons':scene.id===27?'ecosystem':scene.palette;
+ const nextMedia=next?resolveSceneAsset(next.asset,low):media;
+ const nextVariant=next?.id===22?'cuisine':next?.id===23?'atelier':next?.id===24?'objects':next?.id===25?'council':next?.id===26?'commons':next?.id===27?'ecosystem':next?.palette??variant;
+ const changes=!!next&&next.mode==='world'&&(nextMedia.src!==media.src||nextVariant!==variant);
  const civic=scene.id===10?'transit':scene.id===12?'energy':[14,21].includes(scene.id)?'network':scene.id===25?'council':scene.id===26?'clinic':'none';
  return <>
   <ScrollCameraRig {...props}/><CinematicGrade enabled={!low}/>
@@ -30,8 +35,9 @@ function SceneWorld(props:CinematicSceneProps){
   {scene.id===4?<Transmission progress={props.progress}/>:null}
   {scene.id===5?<AnimatedVehicleLayer {...common} variant="fleet"/>:null}
   {showWorld?<>
-   <Suspense fallback={null}><AssetBoundary key={media.src}><ParallaxEnvironment {...common} asset={media.src} aspect={media.width/media.height} variant={entering?'storm':variant} foreground={!entering}/></AssetBoundary></Suspense>
-   {next&&next.mode==='world'&&props.progress>.82?<Suspense fallback={null}><AssetBoundary key={resolveSceneAsset(next.asset,low).src}><ParallaxEnvironment {...common} asset={resolveSceneAsset(next.asset,low).src} variant={next.palette} depth={-15.8} opacity={mix} foreground={false}/></AssetBoundary></Suspense>:null}
+   <Suspense fallback={null}><AssetBoundary key={media.src}><LayeredEnvironment {...common} {...sceneDepthAssets(scene.asset)} asset={media.src} aspect={media.width/media.height} variant={entering?'storm':variant} foreground={!entering} architecture={!entering} opacity={changes?1-mix:1}/></AssetBoundary></Suspense>
+   {changes&&props.progress>.78?<Suspense fallback={null}><AssetBoundary key={nextMedia.src}><LayeredEnvironment {...common} {...sceneDepthAssets(next.asset)} asset={nextMedia.src} aspect={nextMedia.width/nextMedia.height} variant={nextVariant} depth={-28.05} progress={0} opacity={mix}/></AssetBoundary></Suspense>:null}
+   {[22,24].includes(scene.id)?<Suspense fallback={null}><AssetBoundary key={`items-${scene.id}`}><SceneObjectLayer scene={scene} focusedId={props.focusedObjectId} onHover={props.onHoverObject}/></AssetBoundary></Suspense>:null}
    <AtmosphericEffects {...common} variant={entering?'storm':scene.effect==='steam'?'market':scene.palette} seed={3186+scene.id}/>
    {!entering?<AnimatedVehicleLayer {...common} variant={scene.vehicle}/>:null}
    {!entering?<CivicMechanisms {...common} variant={civic}/>:null}

@@ -1,8 +1,8 @@
 'use client';
 
-import { useEffect, useMemo, useRef, type RefObject } from 'react';
+import { memo, useEffect, useMemo, useRef, type RefObject } from 'react';
 import { useFrame, useThree } from '@react-three/fiber';
-import { useTexture } from '@react-three/drei';
+import {LayeredEnvironment} from './LayeredEnvironment';
 import * as THREE from 'three';
 
 /** Local progress is authoritative: every vehicle/mechanism reverses with the scroll. */
@@ -48,54 +48,8 @@ const palettes = {
   storm: { metal: '#253642', bronze: '#8f714d', light: '#59dbe7', haze: '#4d6c82' },
 };
 
-function EdgePylon({ side, variant }: { side: number; variant: string }) {
-  const palette = palettes[climate(variant)];
-  const isDesert = climate(variant) === 'desert';
-  const isIce = climate(variant) === 'ice';
-  return <group position={[side * 7.2, -.2, -.8]} rotation={[0, side * .12, side * -.025]}>
-    <mesh position={[0, 1, 0]}><boxGeometry args={[.62, 11, .78]}/><meshStandardMaterial color={palette.metal} metalness={.75} roughness={.43}/></mesh>
-    <mesh position={[side * -.34, 1.2, .36]}><boxGeometry args={[.075, 10.2, .075]}/><meshStandardMaterial color={palette.bronze} metalness={.78} roughness={.45}/></mesh>
-    <mesh position={[side * -.24, 1.2, .42]}><boxGeometry args={[.022, 9.8, .018]}/><meshStandardMaterial color={palette.light} emissive={palette.light} emissiveIntensity={.7} roughness={.5}/></mesh>
-    {[-3, -1.5, 0, 1.5, 3, 4.5].map(y => <mesh key={y} position={[0, y, .3]}><boxGeometry args={[.9, .10, .34]}/><meshStandardMaterial color={palette.bronze} metalness={.78} roughness={.58}/></mesh>)}
-    {isDesert ? <group position={[side * -.7, -.5, -1.5]} rotation={[-.48, 0, side * -.14]}>
-      <mesh><boxGeometry args={[2.5, .08, 2.7]}/><meshStandardMaterial color="#19222b" metalness={.65} roughness={.33}/></mesh>
-      {[-1, -.5, 0, .5, 1].map(x => <mesh key={x} position={[x, .045, 0]}><boxGeometry args={[.018, .008, 2.7]}/><meshStandardMaterial color="#ad8b57" metalness={.8} roughness={.5}/></mesh>)}
-    </group> : null}
-    {isIce ? <mesh position={[side * -.5, -.4, -1.2]} rotation={[0, .15, side * .09]}><boxGeometry args={[.25, 7.5, .28]}/><meshPhysicalMaterial color="#a4d7e3" metalness={.08} roughness={.28} transmission={0} transparent opacity={.45}/></mesh> : null}
-  </group>;
-}
-
-/** One correctly proportioned film plate, with real separate foreground depth architecture. */
-export function ParallaxEnvironment({ asset, depth = -16, aspect, opacity = 1, foreground = true, variant, progress, quality }: ParallaxEnvironmentProps) {
-  const texture = useTexture(asset);
-  const { size } = useThree();
-  const frame = useRef<THREE.Group>(null);
-  const image = texture.image as { width?: number; height?: number } | undefined;
-  const ratio = aspect ?? ((image?.width && image?.height) ? image.width / image.height : 16 / 9);
-  const palette = palettes[climate(variant)];
-  const immersive = !/food|cuisine|costume|atelier|object|jewel|accessor|footwear/.test(variant);
-  useFrame(() => {
-    if (!frame.current) return;
-    // Translation is small and physically separated from the background. No photograph scale trick.
-    frame.current.position.x = (clamp(progress) - .5) * -.6;
-    frame.current.position.z = smooth(progress) * .35;
-  });
-  return <group>
-    <mesh position={[0, .8, depth]}><planeGeometry args={[50, 50 / ratio]}/><meshBasicMaterial map={texture} toneMapped={false} transparent opacity={clamp(opacity)} depthWrite={false}/></mesh>
-    {foreground ? <><hemisphereLight args={[climate(variant) === 'ice' ? '#c8eaf0' : '#cbbda1', '#101923', .55]}/><directionalLight position={[-8, 9, 6]} intensity={climate(variant) === 'desert' ? 2.1 : 1.35} color={climate(variant) === 'ice' ? '#c0e1f1' : '#ffe0b5'}/></> : null}
-    {foreground && immersive ? <group ref={frame} scale={[size.width < 700 ? .35 : 1, 1, 1]}>
-      <EdgePylon side={-1} variant={variant}/><EdgePylon side={1} variant={variant}/>
-      <mesh position={[0, -4.3, .2]}><boxGeometry args={[18, .18, 1.4]}/><meshStandardMaterial color={palette.metal} metalness={.74} roughness={.55}/></mesh>
-      <mesh position={[0, -4.18, -.44]}><boxGeometry args={[18, .018, .025]}/><meshStandardMaterial color={palette.light} emissive={palette.light} emissiveIntensity={.7}/></mesh>
-      {quality === 'high' ? [-5.5, -3.7, 3.7, 5.5].map(x => <mesh key={x} position={[x, -3.6, -.42]}><boxGeometry args={[.045, 1.2, .06]}/><meshStandardMaterial color={palette.bronze} metalness={.8} roughness={.5}/></mesh>) : null}
-      {/market|culture|festival/.test(variant) ? [-5.6, 5.6].map(x => <group key={x} position={[x, 4.8, -3]}>
-        <mesh><boxGeometry args={[.03, 3.8, .025]}/><meshStandardMaterial color={palette.bronze} metalness={.8} roughness={.6}/></mesh>
-        <mesh position={[0, -1.8, 0]}><cylinderGeometry args={[.13, .2, .5, 12]}/><meshStandardMaterial color={palette.bronze} metalness={.8} roughness={.43}/></mesh>
-        <mesh position={[0, -1.85, .02]}><cylinderGeometry args={[.115, .15, .30, 12]}/><meshStandardMaterial color={palette.light} emissive={palette.light} emissiveIntensity={1.1}/></mesh>
-      </group>) : null}
-    </group> : null}
-  </group>;
-}
+/** Backward-compatible entry into the shared layered environment. */
+export function ParallaxEnvironment(props:ParallaxEnvironmentProps){return <LayeredEnvironment {...props}/>;}
 
 function createVehicleResources() {
   const profile = new THREE.Shape();
@@ -120,7 +74,7 @@ function createVehicleResources() {
 }
 type VehicleResources = ReturnType<typeof createVehicleResources>;
 
-function CraftModel({ type, resources, detailed }: { type: string; resources: VehicleResources; detailed: boolean }) {
+const CraftModel=memo(function CraftModel({ type, resources, detailed }: { type: string; resources: VehicleResources; detailed: boolean }) {
   const { geometries: g, materials: m } = resources;
   const cargo = type === 'cargo', bike = type === 'bike', ground = type === 'crawler', skimmer = type === 'skimmer';
   return <group dispose={null} scale={bike ? [.68, .75, .48] : ground ? [1.05, .82, .9] : [1, 1, 1]}>
@@ -148,9 +102,9 @@ function CraftModel({ type, resources, detailed }: { type: string; resources: Ve
     </group>) : null}
     {skimmer ? [-1, 1].map(side => <mesh key={side} geometry={g.box} material={m.bronze} position={[-.15, -.4, side * .54]} rotation={[0, 0, -.04]} scale={[2.65, .045, .16]}/>) : null}
   </group>;
-}
+});
 
-function TrainModel({ resources, count }: { resources: VehicleResources; count: number }) {
+const TrainModel=memo(function TrainModel({ resources, count }: { resources: VehicleResources; count: number }) {
   const { geometries: g, materials: m } = resources;
   return <group dispose={null}>
     {Array.from({ length: count }, (_, i) => <group key={i} position={[-i * 2.28, 0, 0]}>
@@ -162,57 +116,70 @@ function TrainModel({ resources, count }: { resources: VehicleResources; count: 
       {i === 0 ? <mesh geometry={g.sphere} material={m.glass} position={[1.04, .07, 0]} scale={[.38, .28, .34]}/> : null}
     </group>)}
   </group>;
-}
+});
 
-export function AnimatedVehicleLayer({ progress, paused, reducedMotion, quality, variant, seed = 3186 }: WorldLayerProps) {
-  const resources = useMemo(createVehicleResources, []);
-  const vehicles = useRef<(THREE.Group | null)[]>([]);
-  const clock = useRef(0);
-  const { gl } = useThree();
-  const paths = useMemo(() => {
-    if (variant === 'none') return [];
-    if (variant === 'fleet') return [
-      { a: [-16, -.4, 4], b: [17, 2.1, -3], scale: .68, type: 'scout' },
-      { a: [15, 3, -9], b: [-17, 1.4, -11], scale: .34, type: 'scout' },
-      { a: [-9, 5, -13], b: [8, 3, -8], scale: .23, type: 'cargo' },
-      { a: [5, -3, -13], b: [-3, .4, 2], scale: .42, type: 'scout' },
-      { a: [-15, 1.5, -7], b: [15, 4.2, -4], scale: .21, type: 'cargo' },
-    ];
-    if (variant === 'train') return [{ a: [-17, -1.7, -3], b: [24, -1.7, -3], scale: .64, type: 'train' }];
-    if (variant === 'crawler') return [{ a: [-13, -3, -2], b: [14, -2.8, -4], scale: .6, type: 'crawler' }];
-    if (variant === 'skimmer') return [{ a: [-14, -2.4, -1], b: [15, -1.9, -5], scale: .62, type: 'skimmer' }];
-    if (variant === 'bike') return [{ a: [-14, -.3, 3.2], b: [15, 1.2, -2], scale: .72, type: 'bike' }, { a: [16, 2, -7], b: [-16, 1.5, -9], scale: .32, type: 'bike' }];
-    if (variant === 'cargo') return [{ a: [-15, .4, -2], b: [16, 2.5, -7], scale: .58, type: 'cargo' }, { a: [15, 3.2, -12], b: [-14, 1.3, -10], scale: .3, type: 'cargo' }];
-    return [{ a: [-14, -.3, 3], b: [16, 1.5, -4], scale: .68, type: 'scout' }, { a: [15, 2.6, -9], b: [-14, 1.6, -10], scale: .25, type: 'scout' }];
-  }, [variant]);
-  const direction = useMemo(() => new THREE.Vector3(), []);
-  const forward = useMemo(() => new THREE.Vector3(1, 0, 0), []);
-  useEffect(() => () => resources.dispose(), [resources]);
-  useFrame((_, dt) => {
-    if (!paused && !reducedMotion) clock.current += Math.min(dt, .05);
-    const p = clamp(progress);
-    paths.forEach((path, i) => {
-      const craft = vehicles.current[i]; if (!craft) return;
-      // Different trajectories, all deterministic and exactly reversible. Idle time never translates craft.
-      const t = smooth(clamp((p - i * .025) / (1 - i * .025)));
-      craft.position.set(THREE.MathUtils.lerp(path.a[0], path.b[0], t), THREE.MathUtils.lerp(path.a[1], path.b[1], t) + Math.sin(t * Math.PI) * (path.type === 'crawler' || path.type === 'train' ? 0 : .5), THREE.MathUtils.lerp(path.a[2], path.b[2], t));
-      direction.set(path.b[0] - path.a[0], path.b[1] - path.a[1], path.b[2] - path.a[2]).normalize();
-      craft.quaternion.setFromUnitVectors(forward, direction);
-    });
-    resources.materials.engine.emissiveIntensity = 1.2 + Math.sin(clock.current * 1.4 + seed) * .08;
-    if (paths.length && vehicles.current[0]) gl.domElement.dataset.vehiclePosition = vehicles.current[0].position.toArray().map(v => v.toFixed(3)).join(',');
-    gl.domElement.dataset.vehicleProgress = p.toFixed(3);
+interface VehicleFlight {a:number[];b:number[];scale:number;type:string;distant?:boolean;}
+const DistantCraft=memo(function DistantCraft({resources,cargo}:{resources:VehicleResources;cargo:boolean}){
+ const {geometries:g,materials:m}=resources;
+ return <group dispose={null}>
+  <mesh geometry={g.hull} material={m.dark} rotation={[-Math.PI/2,0,0]} scale={[1,cargo?1.4:1,1]}/>
+  <mesh geometry={g.sphere} material={m.glass} position={[.55,.17,0]} scale={[.5,.2,.3]}/>
+  <mesh geometry={g.box} material={m.bronze} position={[-.2,.07,0]} scale={[1.7,.035,.42]}/>
+  {[-1,1].map(side=><group key={side}>
+   <mesh geometry={g.wing} material={m.hull} rotation={[-Math.PI/2,0,side<0?Math.PI:0]} position={[-.35,0,side*.27]} scale={[.7,.75,.7]}/>
+   <mesh geometry={g.disk} material={m.engine} position={[-1.16,.02,side*.39]} rotation={[0,0,Math.PI/2]} scale={[.08,1,.08]}/>
+  </group>)}
+ </group>;
+});
+export function AnimatedVehicleLayer({progress,paused,reducedMotion,quality,variant,seed=3186}:WorldLayerProps){
+ const resources=useMemo(createVehicleResources,[]),vehicles=useRef<(THREE.Group|null)[]>([]),clock=useRef(0),{gl}=useThree();
+ const paths=useMemo<VehicleFlight[]>(()=>{
+  if(variant==='none')return [];
+  let primary:VehicleFlight[];
+  if(variant==='fleet')primary=[
+   {a:[-16,-.4,4],b:[17,2.1,-3],scale:.68,type:'scout'},
+   {a:[15,3,-9],b:[-17,1.4,-11],scale:.34,type:'scout'},
+   {a:[-9,5,-13],b:[8,3,-8],scale:.23,type:'cargo'},
+  ];
+  else if(variant==='train')primary=[{a:[-17,-1.7,-3],b:[24,-1.7,-3],scale:.64,type:'train'}];
+  else if(variant==='crawler')primary=[{a:[-13,-3,-2],b:[14,-2.8,-4],scale:.6,type:'crawler'}];
+  else if(variant==='skimmer')primary=[{a:[-14,-2.4,-1],b:[15,-1.9,-5],scale:.62,type:'skimmer'}];
+  else if(variant==='bike')primary=[{a:[-14,-.3,3.2],b:[15,1.2,-2],scale:.72,type:'bike'},{a:[16,2,-7],b:[-16,1.5,-9],scale:.32,type:'bike'}];
+  else if(variant==='cargo')primary=[{a:[-15,.4,-2],b:[16,2.5,-7],scale:.58,type:'cargo'},{a:[15,3.2,-12],b:[-14,1.3,-10],scale:.3,type:'cargo'}];
+  else primary=[{a:[-14,-.3,3],b:[16,1.5,-4],scale:.68,type:'scout'},{a:[15,2.6,-9],b:[-14,1.6,-10],scale:.25,type:'scout'}];
+  const frontier=variant==='crawler'||variant==='skimmer',count=quality==='low'?(frontier?1:3):(frontier?3:10),r=random(seed+variant.length*81);
+  const traffic=Array.from({length:count},(_,i)=>{
+   const direction=i%2?-1:1,start=-15+r()*10,y=1.2+(i%4)*.88+r()*.4,z=-12-(i%5)*2.7;
+   return {a:[start*direction,y,z],b:[(14+r()*7)*direction,y+(r()-.5)*1.7,z+(r()-.5)*3],scale:.08+r()*.11,type:i%4===0?'cargo':'scout',distant:true};
   });
-  if (variant === 'none') return null;
-  return <group>
-    {paths.slice(0, quality === 'low' && variant === 'fleet' ? 3 : paths.length).map((path, i) => <group key={`${variant}-${i}`} ref={node => { vehicles.current[i] = node; }} scale={path.scale}>
-      {path.type === 'train' ? <TrainModel resources={resources} count={quality === 'low' ? 3 : 6}/> : <CraftModel type={path.type} resources={resources} detailed={quality === 'high' && i === 0}/>}
-    </group>)}
-    {variant === 'train' ? <group position={[0, -2.17, -3]} dispose={null}>
-      <mesh geometry={resources.geometries.box} material={resources.materials.dark} scale={[42, .12, .5]}/>
-      {[-.25, .25].map(z => <mesh key={z} geometry={resources.geometries.box} material={resources.materials.bronze} position={[0, .1, z]} scale={[42, .025, .035]}/>)}
-    </group> : null}
-  </group>;
+  return [...primary,...traffic];
+ },[variant,quality,seed]);
+ const direction=useMemo(()=>new THREE.Vector3(),[]),forward=useMemo(()=>new THREE.Vector3(1,0,0),[]);
+ useEffect(()=>()=>resources.dispose(),[resources]);
+ useFrame((_,dt)=>{
+  if(!paused&&!reducedMotion)clock.current+=Math.min(dt,.05);
+  const p=clamp(progress);
+  paths.forEach((path,i)=>{
+   const craft=vehicles.current[i];if(!craft)return;
+   const delay=path.distant?0:i*.025,t=smooth(clamp((p-delay)/(1-delay))),rise=path.type==='crawler'||path.type==='train'?0:path.distant?.16:.5;
+   craft.position.set(THREE.MathUtils.lerp(path.a[0],path.b[0],t),THREE.MathUtils.lerp(path.a[1],path.b[1],t)+Math.sin(t*Math.PI)*rise,THREE.MathUtils.lerp(path.a[2],path.b[2],t));
+   direction.set(path.b[0]-path.a[0],path.b[1]-path.a[1]+Math.cos(t*Math.PI)*Math.PI*rise,path.b[2]-path.a[2]).normalize();
+   craft.quaternion.setFromUnitVectors(forward,direction);craft.rotateX(Math.sin(t*Math.PI*2+i)*.035);
+  });
+  resources.materials.engine.emissiveIntensity=1.2+Math.sin(clock.current*1.4+seed)*.08;
+  if(paths.length&&vehicles.current[0])gl.domElement.dataset.vehiclePosition=vehicles.current[0].position.toArray().map(v=>v.toFixed(3)).join(',');
+  gl.domElement.dataset.vehicleProgress=p.toFixed(3);gl.domElement.dataset.trafficCount=String(paths.length);gl.domElement.dataset.trafficDepthBands=String(new Set(paths.map(p=>Math.round(p.a[2]/4))).size);
+ });
+ const composition=useMemo(()=><group>
+  {paths.map((path,i)=><group key={`${variant}-${i}`} ref={node=>{vehicles.current[i]=node;}} scale={path.scale}>
+   {path.type==='train'?<TrainModel resources={resources} count={quality==='low'?3:6}/>:path.distant?<DistantCraft resources={resources} cargo={path.type==='cargo'}/>:<CraftModel type={path.type} resources={resources} detailed={quality==='high'&&i<2}/>}
+  </group>)}
+  {variant==='train'?<group position={[0,-2.17,-3]} dispose={null}>
+   <mesh geometry={resources.geometries.box} material={resources.materials.dark} scale={[42,.12,.5]}/>
+   {[-.25,.25].map(z=><mesh key={z} geometry={resources.geometries.box} material={resources.materials.bronze} position={[0,.1,z]} scale={[42,.025,.035]}/>)}
+  </group>:null}
+ </group>,[paths,resources,quality,variant]);
+ return variant==='none'?null:composition;
 }
 
 const atmosphereVertex = /* glsl */ `
@@ -220,7 +187,7 @@ const atmosphereVertex = /* glsl */ `
   attribute float aSeed;
   varying float vAlpha; varying float vSeed;
   void main(){
-    vec3 p=position;float drift=uProgress*10.0+uTime*.13;
+    vec3 p=position;float drift=uProgress*8.0+uTime*.09;
     if(uKind>1.5){p.y=mod(p.y-drift*3.1+12.0,24.0)-12.0;p.x+=sin(aSeed*12.0+uProgress*6.0)*.25;}
     else if(uKind>.5){p.y=mod(p.y-drift*.65+12.0,24.0)-12.0;p.x+=sin(aSeed*20.0+uTime*.1+uProgress*4.0)*.7;}
     else{p.x=mod(p.x+drift+22.0,44.0)-22.0;p.y+=sin(aSeed*20.0+uProgress*5.0+uTime*.12)*.18;}
@@ -238,13 +205,13 @@ const vaporFragment = /* glsl */ `
  varying vec2 vUv;uniform float uTime;uniform float uProgress;uniform float uSeed;uniform float uOpacity;uniform vec3 uColor;
  float hash(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
  float noise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(hash(i),hash(i+vec2(1,0)),f.x),mix(hash(i+vec2(0,1)),hash(i+vec2(1)),f.x),f.y);}
- float fbm(vec2 p){float a=.5,n=0.;for(int i=0;i<4;i++){n+=noise(p)*a;p=p*2.1+3.7;a*=.5;}return n;}
- void main(){vec2 p=vUv;vec2 flow=vec2(uTime*.009+uProgress*.23,-uTime*.004-uProgress*.08);float n=fbm(p*vec2(6.,4.)+flow+uSeed);float mask=smoothstep(0.,.15,p.x)*smoothstep(0.,.15,1.-p.x)*smoothstep(0.,.2,p.y)*smoothstep(0.,.2,1.-p.y);float a=smoothstep(.34,.78,n)*mask*uOpacity;gl_FragColor=vec4(uColor*(.7+n*.35),a);}
+ float fbm(vec2 p){float a=.5,n=0.;for(int i=0;i<5;i++){n+=noise(p)*a;p=p*2.1+3.7;a*=.5;}return n;}
+ void main(){vec2 p=vUv;vec2 flow=vec2(uTime*(.007+uSeed*.0005)+uProgress*(.19+uSeed*.035),-uTime*.003-uProgress*(.06+uSeed*.012));float n=fbm(p*vec2(6.,4.)+flow+uSeed);float mask=smoothstep(0.,.15,p.x)*smoothstep(0.,.15,1.-p.x)*smoothstep(0.,.2,p.y)*smoothstep(0.,.2,1.-p.y);float a=smoothstep(.34,.78,n)*mask*uOpacity;gl_FragColor=vec4(uColor*(.7+n*.35),a);}
 `;
 function VaporPlane({ index, progress, clock, variant }: { index: number; progress: number; clock: RefObject<number>; variant: string }) {
   const material = useRef<THREE.ShaderMaterial>(null);
   const mist = climate(variant), steam = mist === 'market';
-  const uniforms = useMemo(() => ({ uTime: { value: 0 }, uProgress: { value: 0 }, uSeed: { value: index * 2.37 }, uOpacity: { value: steam ? .24 : mist === 'desert' ? .11 : .19 }, uColor: { value: new THREE.Color(palettes[mist].haze) } }), [index, mist, steam]);
+  const uniforms = useMemo(() => ({ uTime: { value: 0 }, uProgress: { value: 0 }, uSeed: { value: index * 2.37 }, uOpacity: { value: steam ? .17 : mist === 'desert' ? .065 : index===0?.085:.13 }, uColor: { value: new THREE.Color(palettes[mist].haze) } }), [index, mist, steam]);
   useFrame(() => { if (material.current) { material.current.uniforms.uTime.value = clock.current; material.current.uniforms.uProgress.value = progress; } });
   return <mesh position={[steam ? (index === 0 ? -4 : 4.5) : (index - 1) * 2, steam ? -.8 : -1 + index * .7, -11 + index * 4]} rotation={[0, 0, index * .045]}>
     <planeGeometry args={steam ? [7, 8] : [35, 17]}/><shaderMaterial ref={material} uniforms={uniforms} vertexShader={vaporVertex} fragmentShader={vaporFragment} transparent depthWrite={false} side={THREE.DoubleSide}/>
@@ -287,7 +254,7 @@ export function AtmosphericEffects({ progress, paused, reducedMotion, quality, v
   useFrame((_, dt) => { if (!paused && !reducedMotion) clock.current += Math.min(dt, .05); if (material.current) { material.current.uniforms.uTime.value = clock.current; material.current.uniforms.uProgress.value = clamp(progress); } });
   return <group>
     <points geometry={geometry} frustumCulled={false}><shaderMaterial ref={material} uniforms={uniforms} vertexShader={atmosphereVertex} fragmentShader={atmosphereFragment} transparent depthWrite={false}/></points>
-    {Array.from({ length: quality === 'low' ? 2 : 3 }, (_, i) => <VaporPlane key={i} index={i} progress={progress} clock={clock} variant={variant}/>)}
+    {Array.from({ length: quality === 'low' ? 2 : 4 }, (_, i) => <VaporPlane key={i} index={i} progress={progress} clock={clock} variant={variant}/>)}
     {kind === 'ice' ? <Aurora progress={progress} clock={clock}/> : null}
     {kind === 'storm' ? <Lightning progress={progress} reducedMotion={reducedMotion}/> : null}
   </group>;

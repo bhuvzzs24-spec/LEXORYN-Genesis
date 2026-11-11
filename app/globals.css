@@ -9,3 +9,11 @@
 .scene-transition-veil{position:absolute;inset:0;z-index:3;background:#050a12;pointer-events:none}
 
 .capture-planet .story-viewport>:not(.scene-canvas){visibility:hidden}.capture-planet .scene-canvas{visibility:visible}.planet-fallback{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+/* Visual fidelity overhaul: scenery leads, inspection replaces competing captions. */
+.navigation-veil{position:absolute;inset:0;background:#050a12;opacity:0;z-index:12;pointer-events:none}
+.cinematic-caption.establishing h1{font-size:clamp(32px,4vw,62px)}
+.cinematic-caption.opening{bottom:15%}.cinematic-caption.opening h1{font-size:clamp(56px,6.7vw,106px);letter-spacing:8px}
+.cinematic-caption{bottom:17%;transition:filter .3s}.story-viewport[data-inspecting=true] .cinematic-caption{visibility:hidden}
+.scene-slug{color:#d7dfdf;text-shadow:0 1px 8px #000}.icon-button{transition:background .18s,color .18s,transform .18s}.icon-button:active{transform:scale(.95)}
+@media(max-width:700px){.cinematic-caption{bottom:24%}.cinematic-caption.opening{bottom:27%}.cinematic-caption.opening h1{font-size:48px;letter-spacing:4px}.cinematic-caption.establishing h1{font-size:32px}}
