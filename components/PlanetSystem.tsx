@@ -6,6 +6,7 @@ import * as THREE from 'three';
 import { regions } from '@/data/world';
 
 export interface PlanetSystemProps {
+ orbitalProgress?: number;
   progress: number;
   paused: boolean;
   reducedMotion: boolean;
@@ -232,7 +233,9 @@ function Satellite({ index, paused, reducedMotion }: { index: number; paused: bo
  </group>;
 }
 
-function BrokenMoon() {
+function BrokenMoon({progress}:{progress:number}) {
+ const debris=useRef<THREE.Group>(null);
+ useFrame(()=>{if(!debris.current)return;debris.current.children.forEach((mesh,i)=>{const a=i*2.399+progress*(.12+i*.003),r=.5+(i%5)*.06;mesh.position.set(Math.sin(a)*.12+.05,Math.cos(a)*r,Math.sin(a*1.3)*.25);mesh.rotation.set(a,a*.6+progress*.2,a*.7);});});
  const geometries=useMemo(()=>[Math.PI/2,-Math.PI/2].map(phi=>{
   const g=new THREE.SphereGeometry(.44,56,40,phi,Math.PI);const p=g.attributes.position;
   for(let i=0;i<p.count;i++){const x=p.getX(i),y=p.getY(i),z=p.getZ(i);const d=1+Math.sin(x*38+y*21)*Math.cos(z*31)*.035+Math.sin(y*79-z*47)*.016;p.setXYZ(i,x*d,y*d,z*d);}
@@ -249,11 +252,11 @@ function BrokenMoon() {
    <mesh geometry={geometries[1]}><meshStandardMaterial color="#4c4e55" roughness={.94} metalness={.05} side={THREE.DoubleSide}/></mesh>
    <mesh rotation={[0,Math.PI/2,0]}><circleGeometry args={[.425,48]}/><meshStandardMaterial color="#2c2b30" roughness={1} side={THREE.DoubleSide}/></mesh>
   </group>
-  {Array.from({length:16},(_,i)=>{const a=i*2.399;const r=.5+(i%5)*.06;return <mesh key={i} position={[Math.sin(a)*.12+.05,Math.cos(a)*r,Math.sin(a*1.3)*.25]} rotation={[a,a*.6,a*.7]}><dodecahedronGeometry args={[.018+(i%4)*.009,0]}/><meshStandardMaterial color="#50515a" roughness={.96} metalness={.06}/></mesh>})}
+  <group ref={debris}>{Array.from({length:16},(_,i)=>{const a=i*2.399;const r=.5+(i%5)*.06;return <mesh key={i} position={[Math.sin(a)*.12+.05,Math.cos(a)*r,Math.sin(a*1.3)*.25]} rotation={[a,a*.6,a*.7]}><dodecahedronGeometry args={[.018+(i%4)*.009,0]}/><meshStandardMaterial color="#50515a" roughness={.96} metalness={.06}/></mesh>})}</group>
  </group>;
 }
 
-export default function PlanetSystem({progress,paused,reducedMotion,selectedRegion,onSelectRegion}:PlanetSystemProps) {
+export default function PlanetSystem({progress,paused,reducedMotion,selectedRegion,onSelectRegion,orbitalProgress=0}:PlanetSystemProps) {
  const rotation=useRef<THREE.Group>(null), clouds=useRef<THREE.Mesh>(null), surface=useRef<THREE.Mesh>(null!);
  const time=useRef(0), idle=useRef(.16), drag=useRef<{x:number;y:number;pitch:number;yaw:number}|null>(null);
  const manual=useRef(false), dragAngles=useRef({pitch:.1,yaw:.16});
@@ -317,6 +320,6 @@ export default function PlanetSystem({progress,paused,reducedMotion,selectedRegi
   <mesh renderOrder={3}><sphereGeometry args={[2.075,128,80]}/><shaderMaterial vertexShader={shellVertex} fragmentShader={atmosphereFragment} uniforms={atmosphereUniforms} transparent depthWrite={false} side={THREE.BackSide} blending={THREE.AdditiveBlending}/></mesh>
   <group visible={progress<.43}><OrbitalStation paused={paused} reducedMotion={reducedMotion}/>
   {[0,1,2].map(index=><Satellite key={index} index={index} paused={paused} reducedMotion={reducedMotion}/>)}
-  <BrokenMoon/></group>
+  <BrokenMoon progress={orbitalProgress}/></group>
  </group>;
 }

@@ -1,0 +1,116 @@
+{
+  "generated": {
+    "city": {
+      "src": "/assets/story/city.webp",
+      "mobileSrc": "/assets/story/city-mobile.webp",
+      "width": 1672,
+      "height": 941,
+      "kind": "generated",
+      "source": "generated-master/01a1c621-425e-7513-bd28-dc472aea59d0/exec-571e1baf-a0b4-4c59-8e23-0f192095ae92.png"
+    },
+    "market": {
+      "src": "/assets/story/market.webp",
+      "mobileSrc": "/assets/story/market-mobile.webp",
+      "width": 1672,
+      "height": 941,
+      "kind": "generated",
+      "source": "generated-master/01a1c621-425e-7513-bd28-dc472aea59d0/exec-10d3ea3b-f4fe-47a6-ae56-4019d3d8c5c2.png"
+    },
+    "cuisine": {
+      "src": "/assets/story/cuisine.webp",
+      "mobileSrc": "/assets/story/cuisine-mobile.webp",
+      "width": 1672,
+      "height": 941,
+      "kind": "generated",
+      "source": "generated-master/01a1c621-425e-7513-bd28-dc472aea59d0/exec-aef1cfef-a34a-4740-95b3-c62161fc9117.png"
+    },
+    "desert": {
+      "src": "/assets/story/desert.webp",
+      "mobileSrc": "/assets/story/desert-mobile.webp",
+      "width": 1672,
+      "height": 941,
+      "kind": "generated",
+      "source": "generated-master/01a1c621-425e-7513-bd28-dc472aea59d0/exec-9cd0f6f0-ffde-42b7-a8ab-08b3cd7b4873.png"
+    },
+    "ice": {
+      "src": "/assets/story/ice.webp",
+      "mobileSrc": "/assets/story/ice-mobile.webp",
+      "width": 1672,
+      "height": 941,
+      "kind": "generated",
+      "source": "generated-master/01a1c621-425e-7513-bd28-dc472aea59d0/exec-0adc3ee1-ca89-4b01-90b7-709197201869.png"
+    },
+    "ice-interior": {
+      "src": "/assets/story/ice-interior.webp",
+      "mobileSrc": "/assets/story/ice-interior-mobile.webp",
+      "width": 1672,
+      "height": 941,
+      "kind": "generated",
+      "source": "generated-master/01a1c621-425e-7513-bd28-dc472aea59d0/exec-703d86da-0a1b-4548-9c82-5f0449147c1b.png"
+    },
+    "storm": {
+      "src": "/assets/story/storm.webp",
+      "mobileSrc": "/assets/story/storm-mobile.webp",
+      "width": 1672,
+      "height": 941,
+      "kind": "generated",
+      "source": "generated-master/01a1c621-425e-7513-bd28-dc472aea59d0/exec-a7cb7937-d00b-4a19-b7d2-28dfff4c0711.png"
+    },
+    "atelier": {
+      "src": "/assets/story/atelier.webp",
+      "mobileSrc": "/assets/story/atelier-mobile.webp",
+      "width": 1672,
+      "height": 941,
+      "kind": "generated",
+      "source": "generated-master/01a1c621-425e-7513-bd28-dc472aea59d0/exec-1e625520-90e0-44ec-80f3-2ce1b7f6e7b9.png"
+    },
+    "objects": {
+      "src": "/assets/story/objects.webp",
+      "mobileSrc": "/assets/story/objects-mobile.webp",
+      "width": 1672,
+      "height": 941,
+      "kind": "generated",
+      "source": "generated-master/01a1c621-425e-7513-bd28-dc472aea59d0/exec-c740b096-a229-437a-98a1-27dfa8ec0b99.png"
+    },
+    "council": {
+      "src": "/assets/story/council.webp",
+      "mobileSrc": "/assets/story/council-mobile.webp",
+      "width": 1672,
+      "height": 941,
+      "kind": "generated",
+      "source": "generated-master/01a1c621-425e-7513-bd28-dc472aea59d0/exec-263dedc5-8393-4a66-a629-b2e2b46aab04.png"
+    },
+    "commons": {
+      "src": "/assets/story/commons.webp",
+      "mobileSrc": "/assets/story/commons-mobile.webp",
+      "width": 1672,
+      "height": 941,
+      "kind": "generated",
+      "source": "generated-master/01a1c621-425e-7513-bd28-dc472aea59d0/exec-dd860428-efb6-4cef-9191-2c1322308c9d.png"
+    },
+    "ecosystem": {
+      "src": "/assets/story/ecosystem.webp",
+      "mobileSrc": "/assets/story/ecosystem-mobile.webp",
+      "width": 1672,
+      "height": 941,
+      "kind": "generated",
+      "source": "generated-master/01a1c621-425e-7513-bd28-dc472aea59d0/exec-77fd3a12-7a6d-4d0a-b377-286ba1f1d53c.png"
+    },
+    "convergence": {
+      "src": "/assets/story/convergence.webp",
+      "mobileSrc": "/assets/story/convergence-mobile.webp",
+      "width": 1672,
+      "height": 941,
+      "kind": "generated",
+      "source": "generated-master/01a1c621-425e-7513-bd28-dc472aea59d0/exec-0d97ba29-0bfb-4f54-87e8-6ad2351ee028.png"
+    },
+    "clouds": {
+      "src": "/assets/story/clouds.webp",
+      "mobileSrc": "/assets/story/clouds-mobile.webp",
+      "width": 1672,
+      "height": 941,
+      "kind": "generated",
+      "source": "generated-master/01a1c621-425e-7513-bd28-dc472aea59d0/exec-f63de88f-7ff9-45a3-9110-e7adf0d623b3.png"
+    }
+  }
+}

@@ -2,6 +2,12 @@
 
 Year 3186. **The planet where intelligence became civilization.** LEXORYN is a fictional, original world. The Codex Vein and G.P.T. (Generative Planetary Thread) are fictional tributes, not endorsements or literal product branding. This current story bible supersedes labels printed inside the older Chatexia collage.
 
+## Current Phase 2 pipeline
+
+The 28-beat full-viewport story now uses `data/story.ts`, `data/story-media.json` and `components/story/SceneAssetRegistry.ts`. The original `data/assets.ts` remains the Phase1/reference registry. See [WORLD_BIBLE.md](WORLD_BIBLE.md) for regional life/culture rules, [SCENE_ASSET_MAP.md](SCENE_ASSET_MAP.md) for every scene/layer/quality limit, and [PHASE2_GENERATED_ASSETS.md](PHASE2_GENERATED_ASSETS.md) for the actual14 generated environment plates and exact prompts. All14 native masters are1672×941 with smaller aspect-preserving mobile copies; they are still artwork, not video or modeled environments. Supplied boards stay reference-only and small detail crops are labeled concept studies. All18 original references remain accounted for by hash; both new packs were individually inspected.
+
+Supplied raw images and derivative crops have no recorded public-redistribution grant and must not be committed as binaries to the public GitHub repository. Preserve them locally/private, document provenance without rights claims, and keep original source bytes unchanged.
+
 ## World appearance
 
 A dark mineral world transformed by intelligence over centuries. Every shot should communicate scale through atmospheric depth, recurring infrastructure and physically legible materials. Cinematic realism is the target; the real-time implementation remains a foundation to be judged from actual rendered captures, not a claim of final film production quality. No cartoon portraits, arbitrary neon purple, floating icon planets, stock city photographs or unmodified Earth geography.

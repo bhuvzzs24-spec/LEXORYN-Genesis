@@ -1,41 +1,40 @@
 # LEXORYN — The Living Intelligence Planet
 
-**Public source edition:** supplied reference artwork is intentionally excluded. The generated cloud/city plate supplies public scene views. See [artwork policy](docs/PUBLIC_ARTWORK.md). The private Site preserves the approved original artwork separately.
+Year3186. The planet where intelligence became civilization.
 
-Year 3186. “The planet where intelligence became civilization.”
+The existing Phase1 planet and descent now open a shared full-viewport story:28 scenes across orbit, Velair Prime, three climates and daily life. Phase2 ends with Convergence preparations. The ceremony, hero cast and crisis remain later-phase work.
 
 ## Run locally
 
-Node 20.9+ is required by the installed Next.js version. From this directory:
+Use Node20.9+ and the committed lockfile:
 
 ```sh
 npm ci
 npm run dev
 ```
 
-Open http://127.0.0.1:4174. Run `npm run typecheck`, `npm run lint`, `npm test`, and `npm run build`. The production build creates `out/`; preview it with `npm start`. This uses the included local Node static server, because Next.js App Router static exports are served as files rather than through `next start`.
+Open http://127.0.0.1:4174. Validate with `npm run typecheck`, `npm run lint`, `npm test`, `npm run build`. The static production export is `out/`; serve it with `npm start`.
 
-## Architecture
+## Story engine
 
-- `app/`: server entry point, metadata and Tailwind visual system.
-- `components/Expedition.tsx`: pinned GSAP ScrollTrigger choreography, five chapters, accessible climate profiles and preferences.
-- `components/JourneyScene.tsx`: lazy R3F canvas, real perspective camera route, depth-separated cloud layers, cinematic image planes, scout paths and arrival platform.
-- `components/PlanetSystem.tsx`: original displaced mesh, procedural GGX-inspired surface material, separate storm layer, atmospheric scattering approximation, broken moon, stations, satellite paths, drag and 3D hotspots.
-- `data/world.ts`: editable canon, regional climate/technology/biology assumptions and typed Phase 2–4 extension contracts.
-- `data/assets.ts`: centralized replaceable artwork registry.
-- `lib/journey.ts`: bounded continuous camera path and chapter selectors.
-- `references/`: policy notice; all 18 supplied originals remain in the owner’s preserved private archive.
-- `docs/ART_DIRECTION.md`, `docs/ASSET_MANIFEST.md`, `docs/GENERATED_ASSETS.md`: continuity rules, full mapping and exact generated-plate provenance.
-- `docs/VALIDATION.md`: final validation results and known limits.
+- `components/story/CinematicStoryController.tsx`: one GSAP-pinned full-screen stage, weighted reversible scroll, chapter/28-scene navigation, judge highlight playback, captions, inspection and preferences.
+- `FullscreenCinematicScene.tsx` and `ScrollCameraRig.tsx`: one persistent R3F canvas, actual perspective camera, endpoint blending, independent image failure boundaries and scene layers.
+- `WorldLayers.tsx`: original mesh spacecraft, trains, skimmers, bikes, crawlers, cargo; separate shader weather, spatial civic mechanisms and instanced festival drones.
+- `NativeDrifters.tsx`: modest original distant fauna with separate spatial flight and membrane flexion.
+- `components/PlanetSystem.tsx`: preserved original alien surface/cloud/atmosphere shaders, real sphere, idle rotation, drag, climate focus, station, satellites and fractured moon/debris.
+- `data/story.ts` / `lib/story.ts`: all28 scenes, camera keyframes, timing, climates, mobile metadata, six foods, six costume traditions and ten everyday object inspections.
+- `data/story-media.json` / `SceneAssetRegistry.ts`: replaceable optimized imagery. Fourteen actual generated1672×941 environmental plates plus smaller mobile copies; no upscaling or 4K claim.
+- `data/world.ts`: editable planetary canon and extension contracts. Original Phase1 components/route helpers remain preserved alongside the active engine.
+- `docs/WORLD_BIBLE.md`, `SCENE_ASSET_MAP.md`, `PHASE2_GENERATED_ASSETS.md`: continuity, every scene/layer/quality limit, exact prompts and source hashes.
 
-## Controls and resilience
+## Controls
 
-Drag the planet with a mouse; touch retains vertical scrolling. Click a surface node or named climate control to focus a region. Escape closes profiles/preferences. Chapter controls work by keyboard; Alt+Up/Down changes chapters when focus is outside a control. Reset restores the original camera and drag orientation. Pause freezes ambient rotation; scrolling continues to control the journey. System reduced motion freezes idle motion and removes optional transition movement. Performance mode lowers render density. Still-image mode preserves chapter navigation and regional climate information on devices without usable WebGL. Individual image-plate failures are isolated from the 3D planet, with the older approved city plate as an alternate.
+Scroll forward/backward to move camera, craft, clouds and mechanisms; the same progress produces the same primary positions. Stop scrolling to hold them. Ambient drift can continue. Drag the planet with a mouse; touch retains vertical scrolling. Use regional climate inspections, reset camera, previous/next scene, chapter controls or Explore to jump anywhere. Alt+Up/Down changes scenes. Escape closes overlays. The navigator traps keyboard focus and restores it on close. Judge highlights drive nine selected scenes without manual scrolling.
 
-## Scope and quality limits
+Pause freezes ambient drift. Reduce motion respects the operating system, removes entry vibration/lightning and freezes ambient drift while retaining explicit scroll control. Performance mode lowers render density/particles; mobile uses smaller textures. Still-image mode preserves all scene navigation and text inspections without WebGL. Audio is an optional original synthesized soundscape, starts only from a button gesture, and has mute controls; it uses no third-party recordings.
 
-This is the Phase 1 real-time cinematic foundation, not a claim of final film-quality rendering. Surface maps are procedural; the documented high-resolution texture slots remain upgrade targets. Atmospheric entry uses multiple real-depth shader clouds plus an actually generated scene plate, not a fluid simulation. The city is an approved image in 3D perspective with original mesh scout craft and observation rails; it is not yet an explorable city model. No crisis, placeholder cast or incomplete civilization UI has been added. Restrained bloom is enabled on desktop and bypassed in performance/mobile mode. True volumetric scattering and simulation-grade orbital physics are not claimed.
+## Visual and distribution limits
 
-## Phase 2 extension
+Large environments are generated still plates with real separate foreground geometry, vehicles, weather and perspective motion. They are not fully explorable modeled cities or fluid simulations. Multiple city beats intentionally share the capital plate, with different camera paths and mechanisms. Human/Myr figures and large wildlife in the plates are static. Objects without models are explicitly labeled still concept studies, never falsely advertised as rotatable3D. The mist-skates are small procedural fauna, not production rigged hero creatures. Optional upgrade slots include authored4K environment/depth layers, production vehicle/creature meshes and detailed planetary material maps.
 
-Build city exploration and district interactions on the arrival scene and typed regions/settlements/culture contracts. Add cohesive inhabitants, climate-specific architecture, farming, food, festivals, language, government, clothing and transport. Reuse the existing camera/asset registry and continuity rules; keep character mystery and branching crisis in Phases 3 and 4.
+Supplied reference artwork and derivatives are preserved locally/private; public GitHub excludes their binaries because redistribution rights are not established. Public story plates are newly generated imagery with documented provenance; the public edition disables supplied concept-detail thumbnails. Font license notices remain alongside Cinzel and Manrope. See `docs/PUBLIC_ARTWORK.md` for the public edition policy and `docs/VALIDATION.md` for the tested behavior and limits.

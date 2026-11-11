@@ -17,3 +17,36 @@ public/assets/**
 *.key
 
 /node_modules
+
+# Original generated Phase2 plates and original 3D-render poster only.
+!public/assets/story/
+!public/assets/planet/
+!public/assets/planet/orbit-poster.webp
+!public/assets/story/city.webp
+!public/assets/story/city-mobile.webp
+!public/assets/story/market.webp
+!public/assets/story/market-mobile.webp
+!public/assets/story/cuisine.webp
+!public/assets/story/cuisine-mobile.webp
+!public/assets/story/desert.webp
+!public/assets/story/desert-mobile.webp
+!public/assets/story/ice.webp
+!public/assets/story/ice-mobile.webp
+!public/assets/story/ice-interior.webp
+!public/assets/story/ice-interior-mobile.webp
+!public/assets/story/storm.webp
+!public/assets/story/storm-mobile.webp
+!public/assets/story/atelier.webp
+!public/assets/story/atelier-mobile.webp
+!public/assets/story/objects.webp
+!public/assets/story/objects-mobile.webp
+!public/assets/story/council.webp
+!public/assets/story/council-mobile.webp
+!public/assets/story/commons.webp
+!public/assets/story/commons-mobile.webp
+!public/assets/story/ecosystem.webp
+!public/assets/story/ecosystem-mobile.webp
+!public/assets/story/convergence.webp
+!public/assets/story/convergence-mobile.webp
+!public/assets/story/clouds.webp
+!public/assets/story/clouds-mobile.webp
