@@ -1,0 +1,19 @@
+.DS_Store
+node_modules/
+.next/
+out/
+dist/
+*.tsbuildinfo
+
+# Supplied reference artwork is not cleared for public redistribution.
+references/*
+!references/README.md
+public/assets/**
+!public/assets/regions/
+!public/assets/regions/atmospheric-clouds.webp
+.env
+.env.*
+*.pem
+*.key
+
+/node_modules
