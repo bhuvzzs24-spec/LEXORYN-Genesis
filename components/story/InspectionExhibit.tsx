@@ -2,11 +2,13 @@
 
 import {useCallback,useEffect,useId,useRef,useState,type CSSProperties,type PointerEvent} from 'react';
 import {X} from 'lucide-react';
+import {speciesDiets} from '@/data/species';
 import type {StoryHotspot,StoryScene} from '@/data/story';
 import styles from './InspectionExhibit.module.css';
 
 export interface InspectionMedia {
   src:string;
+  mobileSrc?:string;
   width:number;
   height:number;
   kind:'generated'|'concept-reference'|'photographic-detail';
@@ -44,6 +46,7 @@ export default function InspectionExhibit({scene,objectMedia=emptyMedia,reducedM
   const external=externalHoverId?{sceneId:scene.id,id:externalHoverId}:null;
   const selection=current(pinned,scene.id)??external??current(hovered,scene.id)??current(focused,scene.id);
   const active=!disabled&&selection&&!same(selection,dismissed)?scene.hotspots.find(h=>h.id===selection.id)??null:null;
+  const diet=speciesDiets.find(d=>d.id===active?.id);
   const isPinned=!!active&&current(pinned,scene.id)?.id===active.id;
   const generated=active?objectMedia[active.id]:undefined;
   const allowed=generated&&(generated.kind!=='concept-reference'||includeProvidedDetails)&&!failedImages.includes(generated.src)?generated:undefined;
@@ -129,7 +132,7 @@ export default function InspectionExhibit({scene,objectMedia=emptyMedia,reducedM
       <div className={styles.caption}>
         <span className={styles.category}>{active.category??'FIELD STUDY'}<i/>{isPinned?'FOCUS HELD':'SELECT TO HOLD'}</span>
         <h2 id={titleId}>{active.title}</h2>
-        <p id={descriptionId}>{active.body}</p>
+        <p id={descriptionId}>{active.body}</p>{diet?<dl className={styles.diet}>{(['vaelori','myr','human'] as const).map(species=><div key={species}><dt>{species.toUpperCase()}</dt><dd>{diet[species]}</dd></div>)}</dl>:null}
         {media?<small className={styles.imageType}>{media.kind==='concept-reference'?'NATIVE CONCEPT STUDY · STILL IMAGE':'LAYERED IMAGE STUDY · INTERACTIVE LIGHT'}</small>:null}
       </div>
       {isPinned?<button type="button" className={styles.close} onClick={dismiss} aria-label="Close inspection"><X size={16}/></button>:null}

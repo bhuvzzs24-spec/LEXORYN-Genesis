@@ -1,0 +1,59 @@
+{
+  "crisis-comic-strip": {
+    "src": "/assets/dynasty-crisis/crisis-comic-strip.webp",
+    "mobileSrc": "/assets/dynasty-crisis/crisis-comic-strip-mobile.webp",
+    "width": 2172,
+    "height": 724,
+    "kind": "generated",
+    "alpha": false,
+    "sceneIds": [
+      54
+    ],
+    "sourceSha256": "a77b0ac970a4734c7e8bd703b10ce53212a0d34b8b64943364e630598f82118b"
+  },
+  "shielded-concord": {
+    "src": "/assets/dynasty-crisis/shielded-concord.webp",
+    "mobileSrc": "/assets/dynasty-crisis/shielded-concord-mobile.webp",
+    "width": 1672,
+    "height": 941,
+    "kind": "generated",
+    "alpha": false,
+    "sceneIds": [
+      53,
+      54,
+      55
+    ],
+    "outcomeId": "shelter",
+    "sourceSha256": "1c48b9f96e680faff97f8050f9faf08a64f067917be97312591070f0fd0fb0aa"
+  },
+  "regional-accord": {
+    "src": "/assets/dynasty-crisis/regional-accord.webp",
+    "mobileSrc": "/assets/dynasty-crisis/regional-accord-mobile.webp",
+    "width": 1672,
+    "height": 941,
+    "kind": "generated",
+    "alpha": false,
+    "sceneIds": [
+      53,
+      54,
+      55
+    ],
+    "outcomeId": "regional",
+    "sourceSha256": "3e81b817b2634834bd7d4deb2fb2aa7e93a8e1d03dee922c1ff8c30819b7c566"
+  },
+  "living-covenant": {
+    "src": "/assets/dynasty-crisis/living-covenant.webp",
+    "mobileSrc": "/assets/dynasty-crisis/living-covenant-mobile.webp",
+    "width": 1672,
+    "height": 941,
+    "kind": "generated",
+    "alpha": false,
+    "sceneIds": [
+      53,
+      54,
+      55
+    ],
+    "outcomeId": "covenant",
+    "sourceSha256": "40709973a601d84dba458a000b70888d6c57bad4ffc3bb321a1765567b00d531"
+  }
+}

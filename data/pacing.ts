@@ -14,7 +14,8 @@ export interface ShowcaseShot {readonly sceneIndex:number;readonly seconds:numbe
 /** Five principal highlights plus a brief activation pulse span exactly ten seconds. */
 export const montageShots:readonly ShowcaseShot[]=[[0,2],[6,1.5],[9,2],[19,1.5],[30,2],[33,1]].map(([sceneIndex,seconds])=>({sceneIndex,seconds,localStart:.15,localEnd:.72,montage:true}));
 export const storyShots:readonly ShowcaseShot[]=Array.from({length:22},(_,i)=>({sceneIndex:i+34,seconds:i===0?11:i===17?18:i===19?14:i===21?12:8,localStart:.12,localEnd:.78,montage:false}));
-export const showcaseShots=[...montageShots,...storyShots] as const;
+/** Default journey: transition is included in each four-second shot. */
+export const showcaseShots:readonly ShowcaseShot[]=Array.from({length:56},(_,sceneIndex)=>({sceneIndex,seconds:4,localStart:0,localEnd:1,montage:false}));
 export const montageDurationSeconds=montageShots.reduce((n,s)=>n+s.seconds,0);
 export const showcaseDurationSeconds=showcaseShots.reduce((n,s)=>n+s.seconds,0);
 export function showcaseFrame(elapsedMs:number){

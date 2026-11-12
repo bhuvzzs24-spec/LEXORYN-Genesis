@@ -1,8 +1,8 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import ts from 'typescript';
-async function load(path){const result=ts.transpileModule(fs.readFileSync(new URL(path,import.meta.url),'utf8'),{compilerOptions:{module:ts.ModuleKind.ESNext,target:ts.ScriptTarget.ES2022}});return import('data:text/javascript;base64,'+Buffer.from(result.outputText).toString('base64'));}
+import {moduleURL} from './load-module.mjs';
+const load=path=>import(moduleURL(path));
 const journey=await load('../lib/journey.ts');
 const {regions,world}=await load('../data/world.ts');
 const {assets}=await load('../data/assets.ts');

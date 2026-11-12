@@ -18,16 +18,17 @@ test('manual introduction is substantially shorter while all 56 scenes and inter
  assert.equal(storyScenes[51].duration,1.4);assert.equal(storyScenes[55].duration,1.3);
 });
 
-test('autoplay selects six highlights over exactly ten seconds then gives every story beat readable time',()=>{
+test('default autoplay covers every scene in exactly 224 seconds with transitions inside each four-second shot',()=>{
  assert.equal(montageDurationSeconds,10);assert.equal(montageShots.length,6);
- assert.deepEqual(montageShots.map(s=>s.sceneIndex+1),[1,7,10,20,31,34]);
- assert.equal(showcaseFrame(9999).shot.sceneIndex,33);
- assert.equal(showcaseFrame(10000).shot.sceneIndex,34);assert.equal(showcaseFrame(10000).shot.montage,false);
- assert.deepEqual(storyShots.map(s=>s.sceneIndex+1),Array.from({length:22},(_,i)=>i+35));
- for(const shot of storyShots)assert.ok(shot.seconds>=8);
- assert.ok(showcaseDurationSeconds>=180&&showcaseDurationSeconds<=300);
- assert.equal(showcaseFrame(showcaseDurationSeconds*1000).complete,true);
+ assert.equal(showcaseDurationSeconds,224);
+ for(let i=0;i<56;i++){
+  assert.equal(showcaseFrame(i*4000).shot.sceneIndex,i);
+  assert.equal(showcaseFrame(i*4000+3999).shot.sceneIndex,i);
+  assert.equal(showcaseFrame(i*4000).shot.seconds,4);
+ }
+ assert.equal(showcaseFrame(224000).complete,true);
  assert.equal(showcaseFrame(0).shot.sceneIndex,0);
+ assert.equal(storyShots.length,22);
 });
 
 test('city shots use seven distinct delivered environments and the feast differs from food preparation',()=>{

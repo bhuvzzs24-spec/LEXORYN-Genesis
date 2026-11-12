@@ -1,0 +1,217 @@
+{
+  "vaelori-council": {
+    "src": "/assets/dynasty-civilization/vaelori-council.webp",
+    "width": 1672,
+    "height": 941,
+    "mobileSrc": "/assets/dynasty-civilization/vaelori-council-mobile.webp",
+    "kind": "generated",
+    "alpha": false,
+    "sceneIds": [
+      25,
+      41,
+      43,
+      52
+    ],
+    "sourceMaster": "exec-9b41b29f-cc84-4e22-84c7-2c0cf120ea46.png",
+    "sourceSha256": "bf3967897e17610ddc32d8a12ae3d9cd2d7db679cc4084bff3acf020ff0a0898"
+  },
+  "myr-geothermal": {
+    "src": "/assets/dynasty-civilization/myr-geothermal.webp",
+    "width": 1672,
+    "height": 941,
+    "mobileSrc": "/assets/dynasty-civilization/myr-geothermal-mobile.webp",
+    "kind": "generated",
+    "alpha": false,
+    "sceneIds": [
+      18,
+      48
+    ],
+    "sourceMaster": "exec-ef1db3cf-9240-49e9-a88c-9d2343a8d5f5.png",
+    "sourceSha256": "9f3e5374d5eedb5dc6a372de12b13ca54fa4d9879d75566f612b2e0506dfa69d"
+  },
+  "myr-thermal-research": {
+    "src": "/assets/dynasty-civilization/myr-thermal-research.webp",
+    "width": 1672,
+    "height": 941,
+    "mobileSrc": "/assets/dynasty-civilization/myr-thermal-research-mobile.webp",
+    "kind": "generated",
+    "alpha": false,
+    "sceneIds": [
+      19
+    ],
+    "sourceMaster": "exec-e5116013-3e7c-4b4b-a0b2-33d6ad1279e9.png",
+    "sourceSha256": "c5c8bfb41c60d9d2404b576d8df9b799e8c3206b3b7dc7cfa4a7b8058f6cd164"
+  },
+  "alien-market": {
+    "src": "/assets/dynasty-civilization/alien-market.webp",
+    "width": 1672,
+    "height": 941,
+    "mobileSrc": "/assets/dynasty-civilization/alien-market-mobile.webp",
+    "kind": "generated",
+    "alpha": false,
+    "sceneIds": [
+      13
+    ],
+    "sourceMaster": "exec-8b36a67f-3c79-4710-80dd-9b44d549e730.png",
+    "sourceSha256": "65503db74692cc94c1812decb21914101b736126d392bf2765cde0d72dd330f8"
+  },
+  "alien-atelier": {
+    "src": "/assets/dynasty-civilization/alien-atelier.webp",
+    "width": 1672,
+    "height": 941,
+    "mobileSrc": "/assets/dynasty-civilization/alien-atelier-mobile.webp",
+    "kind": "generated",
+    "alpha": false,
+    "sceneIds": [
+      23
+    ],
+    "sourceMaster": "exec-801b314f-ee4a-421d-af7d-91921dffd6cb.png",
+    "sourceSha256": "d40d043f2c0168eb763b869c0a9543ee77ef4f08e989bb298c38962265b67e5b"
+  },
+  "alien-convergence": {
+    "src": "/assets/dynasty-civilization/alien-convergence.webp",
+    "width": 1672,
+    "height": 941,
+    "mobileSrc": "/assets/dynasty-civilization/alien-convergence-mobile.webp",
+    "kind": "generated",
+    "alpha": false,
+    "sceneIds": [
+      29,
+      32,
+      34
+    ],
+    "sourceMaster": "exec-07fed633-bc47-401c-b79f-939ba9828a3e.png",
+    "sourceSha256": "026dff33e4dd07515742130ceac2a6b2d35917013ac1ab050bd03d313b404b05"
+  },
+  "alien-food-preparation": {
+    "src": "/assets/dynasty-civilization/alien-food-preparation.webp",
+    "width": 1672,
+    "height": 941,
+    "mobileSrc": "/assets/dynasty-civilization/alien-food-preparation-mobile.webp",
+    "kind": "generated",
+    "alpha": false,
+    "sceneIds": [
+      22
+    ],
+    "sourceMaster": "exec-c6943dee-4fdc-4952-a1a8-dda01ba574fc.png",
+    "sourceSha256": "9284e5daeec11c35c347aa5eeb4fa32b4be53bc691c494f6f154b9cb1bd86306"
+  },
+  "alien-ceremonial-feast": {
+    "src": "/assets/dynasty-civilization/alien-ceremonial-feast.webp",
+    "width": 1672,
+    "height": 941,
+    "mobileSrc": "/assets/dynasty-civilization/alien-ceremonial-feast-mobile.webp",
+    "kind": "generated",
+    "alpha": false,
+    "sceneIds": [
+      31
+    ],
+    "sourceMaster": "exec-e6415c5d-ee66-446d-af2b-16ed179286d5.png",
+    "sourceSha256": "9a1217c2f03a65e233fd61e9f139f91b6e89355ad900c771487c9b052889f550"
+  },
+  "alien-procession": {
+    "src": "/assets/dynasty-civilization/alien-procession.webp",
+    "width": 1672,
+    "height": 941,
+    "mobileSrc": "/assets/dynasty-civilization/alien-procession-mobile.webp",
+    "kind": "generated",
+    "alpha": false,
+    "sceneIds": [
+      30
+    ],
+    "sourceMaster": "exec-e1f64f6b-2337-4319-8942-ad1426e97159.png",
+    "sourceSha256": "9b8e6a7c4913bec73ba9342e63c3c3b03ce80728ae67c10b9461c8c7de112002"
+  },
+  "myr-ecological-ceremony": {
+    "src": "/assets/dynasty-civilization/myr-ecological-ceremony.webp",
+    "width": 1672,
+    "height": 941,
+    "mobileSrc": "/assets/dynasty-civilization/myr-ecological-ceremony-mobile.webp",
+    "kind": "generated",
+    "alpha": false,
+    "sceneIds": [
+      33
+    ],
+    "sourceMaster": "exec-b6e1d21d-6c2a-4127-b5f8-1e745f9a67ae.png",
+    "sourceSha256": "f1316f9b98bfd7ecd4a1e3054cb999addada8ced9f77bb1962f2e96da5a66d85"
+  },
+  "alien-learning-care": {
+    "src": "/assets/dynasty-civilization/alien-learning-care.webp",
+    "width": 1672,
+    "height": 941,
+    "mobileSrc": "/assets/dynasty-civilization/alien-learning-care-mobile.webp",
+    "kind": "generated",
+    "alpha": false,
+    "sceneIds": [
+      26,
+      42
+    ],
+    "sourceMaster": "exec-772ecab0-1acf-4737-99ed-a5211e071886.png",
+    "sourceSha256": "3ed5d752ca9c4c915d973a317c16773dd3b25aaee521b2410d261de7a4a60870"
+  },
+  "native-ecology": {
+    "src": "/assets/dynasty-civilization/native-ecology.webp",
+    "width": 1672,
+    "height": 941,
+    "mobileSrc": "/assets/dynasty-civilization/native-ecology-mobile.webp",
+    "kind": "generated",
+    "alpha": false,
+    "sceneIds": [
+      27
+    ],
+    "sourceMaster": "exec-bbab2b87-67a2-4c94-9082-e1c6b4592374.png",
+    "sourceSha256": "5a384a9e9af7bc76544f5d356efda331b96dc1924df5261c1333d97a8a00decd"
+  },
+  "pyravar-dominion": {
+    "src": "/assets/dynasty-civilization/pyravar-dominion.webp",
+    "mobileSrc": "/assets/dynasty-civilization/pyravar-dominion-mobile.webp",
+    "width": 1672,
+    "height": 941,
+    "kind": "generated",
+    "alpha": false,
+    "sceneIds": [
+      16
+    ],
+    "sourceMaster": "exec-5af64e33-2bc2-4230-ab8a-84cf0f4b7a63.png",
+    "sourceSha256": "2314e15dde1e3cd5baad9916b76651d5fffd49077b3af480fd5d22ca353bddd0"
+  },
+  "convergence-preparations": {
+    "src": "/assets/dynasty-civilization/convergence-preparations.webp",
+    "mobileSrc": "/assets/dynasty-civilization/convergence-preparations-mobile.webp",
+    "width": 1672,
+    "height": 941,
+    "kind": "generated",
+    "alpha": false,
+    "sceneIds": [
+      28
+    ],
+    "sourceMaster": "exec-97f54cb7-c14b-463c-b5f2-e056e6d33288.png",
+    "sourceSha256": "cf7296d13e3e6409fe5c6f4b505778024ef5a2594b5e175cdb0a66b59897b3c7"
+  },
+  "solar-reservoir": {
+    "src": "/assets/dynasty-civilization/solar-reservoir.webp",
+    "mobileSrc": "/assets/dynasty-civilization/solar-reservoir-mobile.webp",
+    "width": 1672,
+    "height": 941,
+    "kind": "generated",
+    "alpha": false,
+    "sceneIds": [
+      17
+    ],
+    "sourceMaster": "exec-98d3707a-0f16-45b4-b5a6-a505e63bbac8.png",
+    "sourceSha256": "a501ada14d5e486931ac276491fdf2f5b68ee8031b0ba5c9d99d71b4ceb2d113"
+  },
+  "alien-residential": {
+    "src": "/assets/dynasty-civilization/alien-residential.webp",
+    "mobileSrc": "/assets/dynasty-civilization/alien-residential-mobile.webp",
+    "width": 1672,
+    "height": 941,
+    "kind": "generated",
+    "alpha": false,
+    "sceneIds": [
+      11
+    ],
+    "sourceMaster": "exec-951d4b2f-b49b-427e-8ec1-15dd1bd47d4e.png",
+    "sourceSha256": "a3bc22ab23eac607a8b45f8e0ae4900f455d925b04fb401891b5e259bafc53b9"
+  }
+}

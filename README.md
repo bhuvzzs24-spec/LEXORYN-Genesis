@@ -17,7 +17,7 @@ Open http://127.0.0.1:4174. Validate with `npm run typecheck`, `npm run lint`, `
 
 ## Story engine
 
-- `components/story/CinematicStoryController.tsx`: one GSAP-pinned full-screen stage, weighted reversible scroll, chapter/56-scene navigation, judge highlight playback, captions, inspection and preferences.
+- `components/story/CinematicStoryController.tsx`: one GSAP-pinned full-screen stage, weighted reversible scroll, chapter/56-scene navigation, four-second scene playback, captions, inspection and preferences.
 - `FullscreenCinematicScene.tsx` and `ScrollCameraRig.tsx`: one persistent R3F canvas, actual perspective camera, a continuous C1 camera route, independent image failure boundaries and scene layers.
 - `WorldLayers.tsx`: original mesh spacecraft, trains, skimmers, bikes, crawlers, cargo; separate shader weather, spatial civic mechanisms and instanced festival drones.
 - `NativeDrifters.tsx`: modest original distant fauna with separate spatial flight and membrane flexion.
@@ -32,7 +32,7 @@ Open http://127.0.0.1:4174. Validate with `npm run typecheck`, `npm run lint`, `
 
 ## Controls
 
-Scroll forward/backward to move camera, craft, clouds and mechanisms; the same progress produces the same primary positions. Stop scrolling to hold them. Ambient drift can continue. Drag the planet with a mouse; touch retains vertical scrolling. Use regional climate inspections, reset camera, previous/next scene, chapter controls or Explore to jump anywhere. Alt+Up/Down changes scenes. Escape closes overlays. The navigator traps keyboard focus and restores it on close. The optional3:29 judge showcase opens with a ten-second montage of six selected highlights from scenes01–34, then gives every scene35–56 at least eight seconds. Manual scrolling stops playback. The demonstration crisis does not mutate player choices. Scenes01–34 require63% less manual scrolling than the verified Phase3 baseline; all56 scenes remain available in Explore.
+Scroll forward/backward to move camera, craft, clouds and mechanisms; the same progress produces the same primary positions. Stop scrolling to hold them. Ambient drift can continue. Drag the planet with a mouse; touch retains vertical scrolling. Use regional climate inspections, reset camera, previous/next scene, chapter controls or Explore to jump anywhere. Alt+Up/Down changes scenes. Escape closes overlays. The navigator traps keyboard focus and restores it on close. The default cinematic journey drives all56 scenes at four seconds each, totaling3:44 including transitions. Manual scroll stops playback. Demonstration crisis outcomes do not alter saved player decisions. The prior ten-second trailer timing remains a data-only extension point, not the default player.
 
 Pause freezes ambient drift. Reduce motion respects the operating system, removes entry vibration/lightning and freezes ambient drift while retaining explicit scroll control. Performance mode lowers render density/particles; mobile uses smaller textures. Still-image mode preserves all scene navigation and text inspections without WebGL. Audio is an optional original synthesized soundscape, starts only from a button gesture, and has mute controls; it uses no third-party recordings.
 
@@ -50,3 +50,7 @@ Six hero cutouts and a five-person support atlas retain original identities thro
 ## Final cinematic corrections
 
 The mineral-world shader, responsive final-orbit framing and shorter introduction are configured in `lib/planet-geology.ts`, `lib/cinematography.ts` and `data/pacing.ts`. Distinct scene08–14 plates and the ceremonial feast are mapped in `lib/scene-visuals.ts`; source dimensions and prompts are recorded in `docs/CINEMATIC_CORRECTION_ASSETS.md`. The honest face-reference comparison is in `docs/CHARACTER_REFERENCE_AUDIT.md`. Existing character bodies, crisis strategies, seven resources, comics and endings remain intact.
+
+## Alien Dynasty work
+
+The revised species and political canon is in `data/species.ts` and `docs/SPECIES_CULTURE_BIBLE.md`. The default player covers all56 scenes in224 seconds, including transitions. New source artwork is integrated through centralized Dynasty manifests; generation dimensions and unresolved legacy assets are recorded in the scene inventory. Existing art that predates alien biology is not a verified likeness replacement. No hosted publication is authorized.

@@ -1,7 +1,7 @@
 'use client';
 import {Canvas,useFrame} from '@react-three/fiber';
-import {Stars} from '@react-three/drei';
-import {Component,Suspense,useRef,type ReactNode} from 'react';
+import {Stars,useTexture} from '@react-three/drei';
+import {Component,Suspense,useEffect,useRef,type ReactNode} from 'react';
 import * as THREE from 'three';
 import PlanetSystem from '../PlanetSystem';
 import CinematicGrade from '../CinematicGrade';
@@ -28,6 +28,7 @@ function SceneWorld(props:CinematicSceneProps){
  const variant=correctedShots[scene.id]?.variant??(scene.id===51?emergencyRegion(props.progress).effect:scene.id===31?'cuisine':scene.id===22?'cuisine':scene.id===23?'atelier':scene.id===24?'objects':scene.id===25?'council':scene.id===26?'commons':scene.id===27?'ecosystem':scene.palette);
  const nextMedia=next?resolveSceneAsset(finaleAssetRequest(next.id,0,next.asset,props.outcomeAsset),low):media;
  const nextVariant=(next&&correctedShots[next.id]?.variant)??(next?.id===31?'cuisine':next?.id===22?'cuisine':next?.id===23?'atelier':next?.id===24?'objects':next?.id===25?'council':next?.id===26?'commons':next?.id===27?'ecosystem':next?.palette??variant);
+ useEffect(()=>{if(nextMedia.src)useTexture.preload(nextMedia.src);},[nextMedia.src]);
  const changes=!!next&&next.mode==='world'&&(nextMedia.src!==media.src||nextVariant!==variant);
  const civic=scene.id===10?'transit':scene.id===12?'energy':[14,21].includes(scene.id)?'network':scene.id===25?'council':scene.id===26?'clinic':'none';
  return <>

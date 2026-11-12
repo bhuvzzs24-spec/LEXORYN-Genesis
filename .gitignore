@@ -62,3 +62,13 @@ public/assets/**
 # Original targeted cinematic correction assets.
 !public/assets/corrections/
 !public/assets/corrections/*.webp
+
+# Original generated Alien Dynasty deliveries only.
+!public/assets/dynasty/
+!public/assets/dynasty/*.webp
+!public/assets/dynasty-civilization/
+!public/assets/dynasty-civilization/*.webp
+!public/assets/dynasty-crisis/
+!public/assets/dynasty-crisis/*.webp
+!public/assets/dynasty-props/
+!public/assets/dynasty-props/*.webp

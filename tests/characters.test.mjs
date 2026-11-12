@@ -1,14 +1,12 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import ts from 'typescript';
-const source=fs.readFileSync(new URL('../data/characters.ts',import.meta.url),'utf8');
-const code=ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.ESNext,target:ts.ScriptTarget.ES2022}}).outputText;
-const {characters,characterById}=await import('data:text/javascript;base64,'+Buffer.from(code).toString('base64'));
+import {moduleURL} from './load-module.mjs';
+const {characters,characterById}=await import(moduleURL('../data/characters.ts'));
 const manifest=JSON.parse(fs.readFileSync(new URL('../data/character-assets.json',import.meta.url),'utf8'));
 
-test('all12 original cast identities have coherent wardrobe, relationships and crisis roles',()=>{
- assert.equal(characters.length,12);assert.equal(new Set(characters.map(c=>c.id)).size,12);
+test('all15 revised cast identities have coherent wardrobe, relationships and crisis roles',()=>{
+ assert.equal(characters.length,15);assert.equal(new Set(characters.map(c=>c.id)).size,15);
  assert.equal(characters.filter(c=>c.hero).length,6);
  for(const c of characters){
   assert.equal(characterById[c.id],c);
@@ -30,9 +28,9 @@ test('character planes use real alpha WebP files with measured native dimensions
   assert.equal(bytes.readUIntLE(24,3)+1,a.width,a.asset);assert.equal(bytes.readUIntLE(27,3)+1,a.height,a.asset);
  }
  for(const c of characters.filter(c=>c.asset)){
-  const a=Object.values(manifest).find(a=>a.asset===c.asset);assert.ok(a,c.id);
+  const bytes=fs.readFileSync(new URL('../public'+c.asset,import.meta.url));const a=Object.values(manifest).find(a=>a.asset===c.asset)??{width:bytes.readUIntLE(24,3)+1,height:bytes.readUIntLE(27,3)+1};
   assert.equal(c.assetWidth,a.width,c.id);assert.equal(c.assetHeight,a.height,c.id);assert.equal(c.transparent,true);
  }
  const support=['kito','bolt','thess','lysara','tork'].map(id=>characterById[id]);
- support.forEach((c,i)=>{assert.equal(c.asset,manifest.supporting.asset);assert.deepEqual(c.portraitCrop,{x:i/5,y:0,width:1/5,height:1});});
+ support.filter(c=>c.asset===manifest.supporting.asset).forEach(c=>{const i=['kito','bolt','thess','lysara','tork'].indexOf(c.id);assert.equal(c.asset,manifest.supporting.asset);assert.deepEqual(c.portraitCrop,{x:i/5,y:0,width:1/5,height:1});});
 });

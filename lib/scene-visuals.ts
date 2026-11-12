@@ -1,3 +1,4 @@
+import {dynastySceneAssets} from '@/data/dynasty-runtime';
 /** Centralized photographic compositions. Existing successful originals remain available. */
 export const correctedShots:Readonly<Record<number,{asset:string;variant:string;architecture:boolean}>>={
  8:{asset:'/assets/overhaul/city-far.webp',variant:'city',architecture:true},
@@ -9,4 +10,5 @@ export const correctedShots:Readonly<Record<number,{asset:string;variant:string;
  14:{asset:'/assets/finale/atmospheric-laboratory.webp',variant:'network',architecture:false},
  22:{asset:'/assets/overhaul/cuisine-far.webp',variant:'cuisine',architecture:false},
  31:{asset:'/assets/corrections/ceremonial-feast.webp',variant:'cuisine',architecture:false},
+ ...Object.fromEntries(Object.entries(dynastySceneAssets).map(([id,asset])=>[id,{asset,variant:Number(id)===49?'storm':Number(id)>=29?'festival':Number(id)>=18&&Number(id)<=19?'ice':'city',architecture:false}])),
 };

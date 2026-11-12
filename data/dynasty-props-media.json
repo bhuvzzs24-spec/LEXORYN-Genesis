@@ -1,0 +1,242 @@
+{
+  "aether-grain": {
+    "src": "/assets/dynasty-props/aether-grain.webp",
+    "mobileSrc": "/assets/dynasty-props/aether-grain-mobile.webp",
+    "width": 1254,
+    "height": 1254,
+    "kind": "generated",
+    "alpha": true,
+    "inspectionId": "aether-grain",
+    "sourceSha256": "61109ad0b26a3a83eb16ea07835ba01fd1cd0b9e173577a097c1630076ce722e"
+  },
+  "cryo-bloom": {
+    "src": "/assets/dynasty-props/cryo-bloom.webp",
+    "mobileSrc": "/assets/dynasty-props/cryo-bloom-mobile.webp",
+    "width": 1254,
+    "height": 1254,
+    "kind": "generated",
+    "alpha": true,
+    "inspectionId": "cryo-bloom",
+    "sourceSha256": "a942309aea883e5ca20fb5c048744e56312264690b7a3da8f966d38fb53deef1"
+  },
+  "sky-kelp": {
+    "src": "/assets/dynasty-props/sky-kelp.webp",
+    "mobileSrc": "/assets/dynasty-props/sky-kelp-mobile.webp",
+    "width": 1254,
+    "height": 1254,
+    "kind": "generated",
+    "alpha": true,
+    "inspectionId": "sky-kelp",
+    "sourceSha256": "87ebc407702f9b01eba8183deffb386cc83d3a6361a2fba0d51077c4c9946b0b"
+  },
+  "solar-fruit": {
+    "src": "/assets/dynasty-props/solar-fruit.webp",
+    "mobileSrc": "/assets/dynasty-props/solar-fruit-mobile.webp",
+    "width": 1254,
+    "height": 1254,
+    "kind": "generated",
+    "alpha": true,
+    "inspectionId": "solar-fruit",
+    "sourceSha256": "d69fac15d6caed59995b4b7f8c59c4e5170b5cd4aca09a59b83df5eec7e06167"
+  },
+  "mistwater-broth": {
+    "src": "/assets/dynasty-props/mistwater-broth.webp",
+    "mobileSrc": "/assets/dynasty-props/mistwater-broth-mobile.webp",
+    "width": 1254,
+    "height": 1254,
+    "kind": "generated",
+    "alpha": true,
+    "inspectionId": "mistwater-broth",
+    "sourceSha256": "b12e9ecfa107269dd911dbac3e6afe8c8fb35b961cdead1ad114197e4126028f"
+  },
+  "lumifungus": {
+    "src": "/assets/dynasty-props/lumifungus.webp",
+    "mobileSrc": "/assets/dynasty-props/lumifungus-mobile.webp",
+    "width": 1254,
+    "height": 1254,
+    "kind": "generated",
+    "alpha": true,
+    "inspectionId": "lumifungus",
+    "sourceSha256": "4446893e234e6640a1fba605703a96add4329ff7f72249a39391a31ff9b75bf2"
+  },
+  "communication-jewelry": {
+    "src": "/assets/dynasty-props/communication-jewelry.webp",
+    "mobileSrc": "/assets/dynasty-props/communication-jewelry-mobile.webp",
+    "width": 1536,
+    "height": 1024,
+    "kind": "generated",
+    "alpha": true,
+    "inspectionId": "communication-jewelry",
+    "sourceSha256": "8c598fa0571631d6489e4e9e61a3f6fff662e7de60ed667435c54af0c7e8cc37"
+  },
+  "translation-pendant": {
+    "src": "/assets/dynasty-props/translation-pendant.webp",
+    "mobileSrc": "/assets/dynasty-props/translation-pendant-mobile.webp",
+    "width": 1536,
+    "height": 1024,
+    "kind": "generated",
+    "alpha": true,
+    "inspectionId": "translation-pendant",
+    "sourceSha256": "a9a5d499404712341deb89e8dc7cc4702f7559abc423e7a63e2637dede3f274f"
+  },
+  "ceremonial-crown": {
+    "src": "/assets/dynasty-props/ceremonial-crown.webp",
+    "mobileSrc": "/assets/dynasty-props/ceremonial-crown-mobile.webp",
+    "width": 1536,
+    "height": 1024,
+    "kind": "generated",
+    "alpha": true,
+    "inspectionId": "ceremonial-crown",
+    "sourceSha256": "e2f1f3f53502418f389d3847b6207a80f8f7075395b66dc16db1b90a3e36e6d3"
+  },
+  "neural-bracelet": {
+    "src": "/assets/dynasty-props/neural-bracelet.webp",
+    "mobileSrc": "/assets/dynasty-props/neural-bracelet-mobile.webp",
+    "width": 1536,
+    "height": 1024,
+    "kind": "generated",
+    "alpha": true,
+    "inspectionId": "neural-bracelet",
+    "sourceSha256": "256e1cd76442811f70e4d4d36ffdf481ef2f3a900cc15e62954fa73cfae92ba5"
+  },
+  "heat-walkers": {
+    "src": "/assets/dynasty-props/heat-walkers.webp",
+    "mobileSrc": "/assets/dynasty-props/heat-walkers-mobile.webp",
+    "width": 1536,
+    "height": 1024,
+    "kind": "generated",
+    "alpha": true,
+    "inspectionId": "heat-walkers",
+    "sourceSha256": "82270fbcf7d06c0c91378179947984346e814059655f7dd8e43c05ca8bc32c4a"
+  },
+  "ice-grip-boots": {
+    "src": "/assets/dynasty-props/ice-grip-boots.webp",
+    "mobileSrc": "/assets/dynasty-props/ice-grip-boots-mobile.webp",
+    "width": 1536,
+    "height": 1024,
+    "kind": "generated",
+    "alpha": true,
+    "inspectionId": "ice-grip-boots",
+    "sourceSha256": "8a1c023dc38a2dbde4b2fb73ea60c3ce9429ffc6528571d8cb8acf32d5c8edff"
+  },
+  "sky-grip-footwear": {
+    "src": "/assets/dynasty-props/sky-grip-footwear.webp",
+    "mobileSrc": "/assets/dynasty-props/sky-grip-footwear-mobile.webp",
+    "width": 1536,
+    "height": 1024,
+    "kind": "generated",
+    "alpha": true,
+    "inspectionId": "sky-grip-footwear",
+    "sourceSha256": "d58ab54794c6bf5f1b37dd212f6de30cdeafed1904b49b7dfb4fa7e0c83a2ded"
+  },
+  "climate-visor": {
+    "src": "/assets/dynasty-props/climate-visor.webp",
+    "mobileSrc": "/assets/dynasty-props/climate-visor-mobile.webp",
+    "width": 1254,
+    "height": 1254,
+    "kind": "generated",
+    "alpha": true,
+    "inspectionId": "climate-visor",
+    "sourceSha256": "7fb276ef9974e3a4b4eafd5997f7b953c0baf984757e296dd3b313eae2b7a113"
+  },
+  "environmental-scanner": {
+    "src": "/assets/dynasty-props/environmental-scanner.webp",
+    "mobileSrc": "/assets/dynasty-props/environmental-scanner-mobile.webp",
+    "width": 1774,
+    "height": 887,
+    "kind": "generated",
+    "alpha": true,
+    "inspectionId": "environmental-scanner",
+    "sourceSha256": "0a2ab8da9381a815f2712f37ead738bbf02e5614866ad06ce1a60b71c3d73263"
+  },
+  "medical-sensor": {
+    "src": "/assets/dynasty-props/medical-sensor.webp",
+    "mobileSrc": "/assets/dynasty-props/medical-sensor-mobile.webp",
+    "width": 1536,
+    "height": 1024,
+    "kind": "generated",
+    "alpha": true,
+    "inspectionId": "medical-sensor",
+    "sourceSha256": "7efd4f5b9e8868e0082036892a8827b9787fe5fa52953fdfb2712434cee3a739"
+  },
+  "reservoir-loop": {
+    "src": "/assets/dynasty-props/reservoir-loop.webp",
+    "mobileSrc": "/assets/dynasty-props/reservoir-loop-mobile.webp",
+    "width": 1254,
+    "height": 1254,
+    "kind": "generated",
+    "alpha": true,
+    "inspectionId": "reservoir-loop",
+    "sourceSha256": "21e76db9bf5b20832bc657089ae5a5220ab6274dea51ab51adafb1941a8dad69"
+  },
+  "field-laboratories": {
+    "src": "/assets/dynasty-props/field-laboratories.webp",
+    "mobileSrc": "/assets/dynasty-props/field-laboratories-mobile.webp",
+    "width": 1254,
+    "height": 1254,
+    "kind": "generated",
+    "alpha": true,
+    "inspectionId": "field-laboratories",
+    "sourceSha256": "56827688c1082d08786f3fe956b0a953277b95561feb3153f3d00554461ed17f"
+  },
+  "pyravar-attire": {
+    "src": "/assets/dynasty-props/pyravar-attire.webp",
+    "mobileSrc": "/assets/dynasty-props/pyravar-attire-mobile.webp",
+    "width": 941,
+    "height": 1672,
+    "kind": "generated",
+    "alpha": true,
+    "inspectionId": "pyravar-attire",
+    "sourceSha256": "8e2138a5e44fb1ad38b1145432cc7c0a60d0cd685d142e71e78225162bfa5897"
+  },
+  "cryonth-attire": {
+    "src": "/assets/dynasty-props/cryonth-attire.webp",
+    "mobileSrc": "/assets/dynasty-props/cryonth-attire-mobile.webp",
+    "width": 1024,
+    "height": 1536,
+    "kind": "generated",
+    "alpha": true,
+    "inspectionId": "cryonth-attire",
+    "sourceSha256": "83454ea9782b756e0f7ee720d670f47ead3a801f554e56cfa37a50fdcaaa4b56"
+  },
+  "aerion-attire": {
+    "src": "/assets/dynasty-props/aerion-attire.webp",
+    "mobileSrc": "/assets/dynasty-props/aerion-attire-mobile.webp",
+    "width": 1024,
+    "height": 1536,
+    "kind": "generated",
+    "alpha": true,
+    "inspectionId": "aerion-attire",
+    "sourceSha256": "98be05966780313d2d68f283bb3e514a0089d7dc0194919894806bcd01d9bfc8"
+  },
+  "field-professionals": {
+    "src": "/assets/dynasty-props/field-professionals.webp",
+    "mobileSrc": "/assets/dynasty-props/field-professionals-mobile.webp",
+    "width": 864,
+    "height": 1821,
+    "kind": "generated",
+    "alpha": true,
+    "inspectionId": "field-professionals",
+    "sourceSha256": "b6a32b3b78c86185fddc0a1c3b4c4096713dfafd5b491eb3781a0d32e2af0ae0"
+  },
+  "defense-armor": {
+    "src": "/assets/dynasty-props/defense-armor.webp",
+    "mobileSrc": "/assets/dynasty-props/defense-armor-mobile.webp",
+    "width": 1024,
+    "height": 1536,
+    "kind": "generated",
+    "alpha": true,
+    "inspectionId": "defense-armor",
+    "sourceSha256": "9552837c331ec8b2175ce2778243ec9d87878e3aea379121e50d8ce8ef451866"
+  },
+  "convergence-attire": {
+    "src": "/assets/dynasty-props/convergence-attire.webp",
+    "mobileSrc": "/assets/dynasty-props/convergence-attire-mobile.webp",
+    "width": 1024,
+    "height": 1536,
+    "kind": "generated",
+    "alpha": true,
+    "inspectionId": "convergence-attire",
+    "sourceSha256": "d8e115aba2de26fa98162f73a623c74b95e8fcbdbbe7deaca03d1b239db77ae4"
+  }
+}

@@ -1,12 +1,12 @@
 'use client';
 import {Suspense,useEffect,useMemo,useRef} from 'react';
 import {useFrame,useThree} from '@react-three/fiber';
-import {useTexture} from '@react-three/drei';
+import {useCinematicTexture} from './useCinematicTexture';
 import * as THREE from 'three';
 import {characters,type CharacterDefinition} from '@/data/characters';
 
 function CastPlane({character,x=0,height=7.3,z=-1,progress}:{character:CharacterDefinition;x?:number;height?:number;z?:number;progress:number}){
- const base=useTexture(character.asset),group=useRef<THREE.Group>(null),{gl}=useThree();
+ const base=useCinematicTexture(character.asset),group=useRef<THREE.Group>(null),{gl}=useThree();
  const texture=useMemo(()=>{const t=base.clone();t.colorSpace=THREE.SRGBColorSpace;t.anisotropy=Math.min(8,gl.capabilities.getMaxAnisotropy());const c=character.hero?null:character.portraitCrop;if(c){t.repeat.set(c.width,c.height);t.offset.set(c.x,1-c.y-c.height);}t.needsUpdate=true;return t;},[base,character,gl]);
  useEffect(()=>()=>texture.dispose(),[texture]);
  const aspect=character.hero?character.assetWidth/character.assetHeight:character.assetWidth*(character.portraitCrop?.width??1)/(character.assetHeight*(character.portraitCrop?.height??1));
@@ -16,7 +16,7 @@ function CastPlane({character,x=0,height=7.3,z=-1,progress}:{character:Character
 function CharacterStage({sceneId,progress,characterId,low}:{sceneId:number;progress:number;characterId:string|null;low:boolean}){
  const hero=sceneId>=36&&sceneId<=41?characters[sceneId-36]:null;
  const supporting=characters.filter(c=>!c.hero&&c.asset);
- const selected=supporting.find(c=>c.id===characterId)??supporting[Math.min(supporting.length-1,Math.floor(progress*supporting.length))];
+ const selected=characterId?supporting.find(c=>c.id===characterId):supporting.find(c=>c.id==='thess')??supporting[0];
  if(hero)return <CastPlane character={hero} x={low?-.3:-1.6} height={low?6.5:7.3} progress={progress}/>;
  if(sceneId===42&&characterId==='origin')return null;
  if(sceneId===42&&selected)return <CastPlane character={selected} x={low?-.5:-1.9} height={6.5} progress={progress}/>;
@@ -66,12 +66,12 @@ function CircuitWindows({progress,sceneId,reduced}:{progress:number;sceneId:numb
  return <instancedMesh ref={ref} args={[undefined,undefined,count]}><planeGeometry args={[1,1]}/><meshBasicMaterial color="#f1c47f" toneMapped={false}/></instancedMesh>;
 }
 export default function FinaleWorld({sceneId,progress,paused,quality,characterId,reducedMotion=false}:{sceneId:number;progress:number;paused:boolean;quality:'low'|'high';characterId:string|null;reducedMotion?:boolean}){
- const low=quality==='low',{gl}=useThree();useFrame(()=>{gl.domElement.dataset.finaleScene=String(sceneId);gl.domElement.dataset.character=sceneId>=36&&sceneId<=41?characters[sceneId-36].id:sceneId===42?characterId??'rotating-support':'none';gl.domElement.dataset.independentFinaleMotion='true';});
+ const low=quality==='low',{gl}=useThree();useFrame(()=>{gl.domElement.dataset.finaleScene=String(sceneId);gl.domElement.dataset.character=sceneId>=36&&sceneId<=41?characters[sceneId-36].id:sceneId===42?characterId??'thess':'none';gl.domElement.dataset.independentFinaleMotion='true';});
  return <>
  {[29,34,35].includes(sceneId)?<CircuitWindows progress={progress} sceneId={sceneId} reduced={reducedMotion}/>:null}
  {[36,37].includes(sceneId)?<Hangar progress={progress}/>:null}
- {([34,38,39,43,44,45,46,47,48,49,52,53].includes(sceneId)||sceneId===42&&characterId==='origin')?<Machinery progress={progress} paused={paused} low={low} sceneId={sceneId}/>:null}
- {[29,30,31,32,34,35].includes(sceneId)?<LightLanguage progress={progress} sceneId={sceneId} paused={paused} low={low}/>:null}
+ {([34,39,45,46].includes(sceneId)||sceneId===42&&characterId==='origin')?<Machinery progress={progress} paused={paused} low={low} sceneId={sceneId}/>:null}
+ {[29,30,31,32,34,35,44,47,48].includes(sceneId)?<LightLanguage progress={progress} sceneId={sceneId} paused={paused} low={low}/>:null}
  {sceneId===33?<SensorFilaments progress={progress} paused={paused}/>:null}
  <Suspense fallback={null}><CharacterStage sceneId={sceneId} progress={progress} characterId={characterId} low={low}/></Suspense>
  </>;

@@ -33,3 +33,6 @@
 @media(max-width:700px){.exhibit[data-in-scene=true]{top:auto;left:7%;right:7%;bottom:23%;width:auto;transform:none}.exhibit[data-in-scene=true] .caption p{max-width:none}}
 .reduced .exhibit[data-in-scene=true]{animation:none}
 @media(prefers-reduced-motion:reduce){.exhibit[data-in-scene=true]{animation:none}}
+
+.diet{font-size:9px;line-height:1.5;margin-top:12px}.diet div{margin-top:7px}.diet dt{color:#e5c58d;font-size:7px;letter-spacing:1px}.diet dd{margin:3px 0;color:#c3d1d5}
+.caption{max-height:52svh;overflow:auto;scrollbar-width:thin}

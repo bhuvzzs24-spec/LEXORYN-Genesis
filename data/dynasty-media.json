@@ -1,0 +1,267 @@
+{
+  "eve-of-collapse": {
+    "src": "/assets/dynasty/eve-of-collapse.webp",
+    "mobileSrc": "/assets/dynasty/eve-of-collapse-mobile.webp",
+    "width": 1672,
+    "height": 941,
+    "kind": "generated",
+    "alpha": false,
+    "sceneIds": [
+      49
+    ],
+    "sourceSha256": "068ab86e8c327a61071a5f1e470aea5e22f42db986c109bd2f30d336916e3573"
+  },
+  "character-kaor": {
+    "src": "/assets/dynasty/character-kaor.webp",
+    "width": 1024,
+    "height": 1536,
+    "kind": "generated",
+    "alpha": true,
+    "sceneIds": [],
+    "characterId": "kaor",
+    "sourceSha256": "3407d6bd59c19a895dd2b476f35e1030d15b2360a7eb1b1dce48d3da6552ddce"
+  },
+  "character-vaelora": {
+    "src": "/assets/dynasty/character-vaelora.webp",
+    "width": 1024,
+    "height": 1536,
+    "kind": "generated",
+    "alpha": true,
+    "sceneIds": [],
+    "characterId": "vaelora",
+    "sourceSha256": "78b2c844d94388027aeba8665bc71e4539ea258cdc763b7a3b8ed67bc33d45fd"
+  },
+  "character-sorya": {
+    "src": "/assets/dynasty/character-sorya.webp",
+    "width": 941,
+    "height": 1672,
+    "kind": "generated",
+    "alpha": true,
+    "sceneIds": [],
+    "characterId": "sorya",
+    "sourceSha256": "5c1604a9549d9b6579a5c4f0db9c9e99e230ea86f6afa04990dd1ec7c409ade0"
+  },
+  "character-elara": {
+    "src": "/assets/dynasty/character-elara.webp",
+    "width": 1024,
+    "height": 1536,
+    "kind": "generated",
+    "alpha": true,
+    "sceneIds": [],
+    "characterId": "elara",
+    "sourceSha256": "93e11a90431d3050ad009276329e63acf761b403df88d68787c15ccd36946cb8"
+  },
+  "portrait-kaor": {
+    "src": "/assets/dynasty/portrait-kaor.webp",
+    "width": 1199,
+    "height": 1312,
+    "kind": "generated",
+    "alpha": true,
+    "sceneIds": [],
+    "portraitFor": "kaor",
+    "sourceSha256": "f447e69676f2c45e1ecd71f4a9deaaaa44745c042574391fd83261dfad5ac326"
+  },
+  "portrait-vaelora": {
+    "src": "/assets/dynasty/portrait-vaelora.webp",
+    "width": 1086,
+    "height": 1448,
+    "kind": "generated",
+    "alpha": true,
+    "sceneIds": [],
+    "portraitFor": "vaelora",
+    "sourceSha256": "d003b347cd1bd237f6158e519b7712e76778beee7fc3ee7325e3584f75811a73"
+  },
+  "portrait-sorya": {
+    "src": "/assets/dynasty/portrait-sorya.webp",
+    "width": 1086,
+    "height": 1448,
+    "kind": "generated",
+    "alpha": true,
+    "sceneIds": [],
+    "portraitFor": "sorya",
+    "sourceSha256": "db31ffe6707a16bc09e6b37d6176e3e2b22d844ae8f689f0fa9b0ee25cb2d917"
+  },
+  "portrait-elara": {
+    "src": "/assets/dynasty/portrait-elara.webp",
+    "width": 1086,
+    "height": 1448,
+    "kind": "generated",
+    "alpha": true,
+    "sceneIds": [],
+    "portraitFor": "elara",
+    "sourceSha256": "ac019cab0dad029106c6f842f1baf4d42e88d09b7b52a915e7ba81e702b3f22e"
+  },
+  "character-lysara": {
+    "src": "/assets/dynasty/character-lysara.webp",
+    "width": 1024,
+    "height": 1536,
+    "kind": "generated",
+    "alpha": true,
+    "sceneIds": [],
+    "characterId": "lysara",
+    "sourceSha256": "425e13969a4087704ca33e351b1e4a55dd03d254d48104022126e04baef10910"
+  },
+  "character-thess": {
+    "src": "/assets/dynasty/character-thess.webp",
+    "width": 1024,
+    "height": 1536,
+    "kind": "generated",
+    "alpha": true,
+    "sceneIds": [],
+    "characterId": "thess",
+    "sourceSha256": "ca9e307afb5b1c8c10ea5513a35a3382ee402c98493a959fe6ac6128e5a87a16"
+  },
+  "character-mara": {
+    "src": "/assets/dynasty/character-mara.webp",
+    "width": 1024,
+    "height": 1536,
+    "kind": "generated",
+    "alpha": true,
+    "sceneIds": [],
+    "characterId": "mara",
+    "sourceSha256": "9451eec72e7f7aeb054af672775d654a37e52b75ad0fcddca5ec5c504b60b727"
+  },
+  "character-rhaen": {
+    "src": "/assets/dynasty/character-rhaen.webp",
+    "width": 1024,
+    "height": 1536,
+    "kind": "generated",
+    "alpha": true,
+    "sceneIds": [],
+    "characterId": "rhaen",
+    "sourceSha256": "f34933686fc7c57832b50bbb8ed8a44be07de263eaf058928a99904c33e80e1c"
+  },
+  "character-veyr": {
+    "src": "/assets/dynasty/character-veyr.webp",
+    "width": 1024,
+    "height": 1536,
+    "kind": "generated",
+    "alpha": true,
+    "sceneIds": [],
+    "characterId": "veyr",
+    "sourceSha256": "a77a157f092d5d3adac074daa1b8d2bfa0ae1274dddb161c1c41d3a382fa9b76"
+  },
+  "portrait-mara": {
+    "src": "/assets/dynasty/portrait-mara.webp",
+    "width": 1086,
+    "height": 1448,
+    "kind": "generated",
+    "alpha": true,
+    "sceneIds": [],
+    "portraitFor": "mara",
+    "sourceSha256": "1aa2a8a5cf4db74432d08f0fb259f8168b53613b2ac8dd1a5571cec37e76bf7b"
+  },
+  "portrait-thess": {
+    "src": "/assets/dynasty/portrait-thess.webp",
+    "width": 1086,
+    "height": 1448,
+    "kind": "generated",
+    "alpha": true,
+    "sceneIds": [],
+    "portraitFor": "thess",
+    "sourceSha256": "c85f7fb56a26c6d5f94c33ea76c70b07712c9c570424639c3a9f891b123d17d9"
+  },
+  "portrait-rhaen": {
+    "src": "/assets/dynasty/portrait-rhaen.webp",
+    "width": 1086,
+    "height": 1448,
+    "kind": "generated",
+    "alpha": true,
+    "sceneIds": [],
+    "portraitFor": "rhaen",
+    "sourceSha256": "6a38aa2bf0e78ca8e79aa427366d5035ee6b7cb267cd5288b379c8d0fd4a889d"
+  },
+  "portrait-veyr": {
+    "src": "/assets/dynasty/portrait-veyr.webp",
+    "width": 1086,
+    "height": 1448,
+    "kind": "generated",
+    "alpha": true,
+    "sceneIds": [],
+    "portraitFor": "veyr",
+    "sourceSha256": "a203bb883b42ec4fab1b849955f9003eebdb4c4b4069b9c98054860afe4c7445"
+  },
+  "portrait-lysara": {
+    "src": "/assets/dynasty/portrait-lysara.webp",
+    "width": 1086,
+    "height": 1448,
+    "kind": "generated",
+    "alpha": true,
+    "sceneIds": [],
+    "portraitFor": "lysara",
+    "sourceSha256": "bfd31937b786a89063ef111523eb7e51e5b96f19760cf7d565bbe13d3ae43fec"
+  },
+  "character-kito": {
+    "src": "/assets/dynasty/character-kito.webp",
+    "width": 941,
+    "height": 1672,
+    "kind": "generated",
+    "alpha": true,
+    "sceneIds": [],
+    "characterId": "kito",
+    "sourceSha256": "42cd0bf539d6949fa61d588ccb1062ad55ffb0f721e209c8befa065305390384"
+  },
+  "portrait-nyra": {
+    "src": "/assets/dynasty/portrait-nyra.webp",
+    "width": 1086,
+    "height": 1448,
+    "kind": "generated",
+    "alpha": true,
+    "sceneIds": [],
+    "portraitFor": "nyra",
+    "sourceSha256": "3861bfea125c4721854a2dc2fc9dea9b42a5b2cdd5a40fbba29192e60c1b749b"
+  },
+  "character-tork": {
+    "src": "/assets/dynasty/character-tork.webp",
+    "width": 941,
+    "height": 1672,
+    "kind": "generated",
+    "alpha": true,
+    "sceneIds": [],
+    "characterId": "tork",
+    "sourceSha256": "ea50331eaeaa20a955b004400edea2724939d7a51094e1c4cb2715a19578edbc"
+  },
+  "character-bolt": {
+    "src": "/assets/dynasty/character-bolt.webp",
+    "width": 941,
+    "height": 1672,
+    "kind": "generated",
+    "alpha": true,
+    "sceneIds": [],
+    "characterId": "bolt",
+    "sourceSha256": "32feca12e10d789464edb36daa03f3c14471f5cec80c3cb3310b584168875aec"
+  },
+  "portrait-kito": {
+    "src": "/assets/dynasty/portrait-kito.webp",
+    "width": 1190,
+    "height": 1322,
+    "kind": "generated",
+    "alpha": true,
+    "sourceMaster": "exec-deeb16f9-e07e-44e2-a307-1e75b91dff9d.png",
+    "sourceSha256": "09abe3c1e41623bd299136663ad4c02cdbd15acd184a61faedd87bd41a61811f",
+    "portraitFor": "kito",
+    "sceneIds": []
+  },
+  "portrait-bolt": {
+    "src": "/assets/dynasty/portrait-bolt.webp",
+    "width": 1166,
+    "height": 1349,
+    "kind": "generated",
+    "alpha": true,
+    "sourceMaster": "exec-2fe499a3-e670-4557-badc-8f9b76687dad.png",
+    "sourceSha256": "85d88e8635bd95f3406e053ebd640d18f7da2ab0de8569611532d8c9a68c15bd",
+    "portraitFor": "bolt",
+    "sceneIds": []
+  },
+  "portrait-tork": {
+    "src": "/assets/dynasty/portrait-tork.webp",
+    "width": 1145,
+    "height": 1374,
+    "kind": "generated",
+    "alpha": true,
+    "sourceMaster": "exec-ef8ec6fe-cda4-4f75-b793-a5b3540dc74e.png",
+    "sourceSha256": "722cab2bdcaa9a5c2be8ae362ea724dafde990763f7554dc259aacbf012d47c4",
+    "portraitFor": "tork",
+    "sceneIds": []
+  }
+}

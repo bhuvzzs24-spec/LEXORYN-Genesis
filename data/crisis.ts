@@ -1,3 +1,4 @@
+import {dynastyMedia} from './dynasty-runtime';
 /** Replace this card, not the rendering engine, when organizers reveal the mystery crisis. */
 export const resourceKeys=['safety','energy','water','food','resilience','ecosystem','trust'] as const;
 export type ResourceKey=typeof resourceKeys[number];
@@ -17,10 +18,10 @@ export const crisisConfig:CrisisConfig={
  ],
  outcomes:[
  {id:'fracture',title:'A WORLD STILL IN DANGER',line:'The reserves broke before the front. Mutual aid continues beyond this ending.',asset:'planetary-emergency',requirements:{},maxima:{safety:34},comicAftermath:'planetary-emergency'},
- {id:'covenant',title:'THE LIVING COVENANT',line:'Native corridors reopen. Cities share authority with the world that sustains them.',asset:'aftermath-covenant',requirements:{ecosystem:60,trust:65,safety:35},comicAftermath:'aftermath-covenant'},
- {id:'regional',title:'A CONSTELLATION OF REFUGES',line:'Independent regional loops contain failures. Rebuilding becomes a shared local craft.',asset:'aftermath-regional',requirements:{resilience:65,safety:35},comicAftermath:'aftermath-regional'},
- {id:'shelter',title:'THE SHIELDED CONCORD',line:'The fleet and central shield protect lives. Ecological repair remains an unpaid debt.',asset:'aftermath-central',requirements:{safety:70},comicAftermath:'aftermath-central'},
+ {id:'covenant',title:'THE LIVING COVENANT',line:'Vaelori, Myr and humans share authority with the planetary intelligence.',asset:'aftermath-covenant',requirements:{ecosystem:60,trust:65,safety:35},comicAftermath:'aftermath-covenant'},
+ {id:'regional',title:'THE REGIONAL ACCORD',line:'Independent regional loops contain failures. Rebuilding becomes a shared local craft.',asset:'aftermath-regional',requirements:{resilience:65,safety:35},comicAftermath:'aftermath-regional'},
+ {id:'shelter',title:'THE SHIELDED CONCORD',line:'Vaelori central control endures. The shield saves lives; ecological and minority debts remain.',asset:'aftermath-central',requirements:{safety:70},comicAftermath:'aftermath-central'},
  {id:'fragile',title:'THE LONG REPAIR',line:'The immediate front passes. Stressed reserves demand patient cooperation and another choice.',asset:'aftermath-regional',requirements:{},comicAftermath:'aftermath-regional'},
- ],fallbackOutcome:'fragile',comic:{strip:'/assets/finale/crisis-comic-strip.webp',columns:3,labels:['WARNING','DISASTER','DECISION','AFTERMATH']},
+ ],fallbackOutcome:'fragile',comic:{strip:dynastyMedia['crisis-comic-strip']?.src??'/assets/finale/crisis-comic-strip.webp',columns:3,labels:['WARNING','DISASTER','DECISION','AFTERMATH']},
 };
 export const resourceLabels:Record<ResourceKey,string>={safety:'Population safety',energy:'Energy',water:'Water',food:'Food',resilience:'Infrastructure',ecosystem:'Ecosystem',trust:'Public trust'};

@@ -1,3 +1,4 @@
+import {dynastyMedia} from '@/data/dynasty-runtime';
 import manifest from '@/data/story-media.json';
 import finale from '@/data/finale-media.json';
 import correctionMedia from '@/data/correction-media.json';
@@ -13,7 +14,7 @@ const atlases=visual.atlases as Record<string,SceneMedia>;
 const replacements:Record<string,string>={city:'city-far',market:'market-far',cuisine:'cuisine-far',objects:'objects-far',desert:'desert-far',ice:'ice-far',storm:'storm-far',convergence:'festival-far'};
 export function resolveSceneAsset(request:string,low=false):SceneMedia {
  const key=request.split('/').at(-1)?.replace('.webp','')??'';
- const media=correctionRegistry[key]??finalRegistry[key]??upgraded[key]??upgraded[replacements[key]]??registry[key]??registry.clouds;
+ const media=dynastyMedia[key]??correctionRegistry[key]??finalRegistry[key]??upgraded[key]??upgraded[replacements[key]]??registry[key]??registry.clouds;
  if(media)return {...media,src:low&&media.mobileSrc?media.mobileSrc:media.src};
  return {src:assets.atmosphericClouds.src,width:assets.atmosphericClouds.width,height:assets.atmosphericClouds.height,kind:'generated'};
 }
@@ -25,4 +26,7 @@ atlas('food-atlas',['aether-grain','cryo-bloom','sky-kelp','solar-fruit','mistwa
 atlas('gear-atlas',['neural-bracelet','climate-visor','translation-pendant','ceremonial-crown','environmental-scanner','communication-jewelry','medical-sensor','reservoir-loop','field-laboratories'],3,3);
 atlas('boots-atlas',['heat-walkers','ice-grip-boots','sky-grip-footwear'],3,1);
 atlas('attire-atlas',['pyravar-attire','cryonth-attire','aerion-attire','field-professionals','defense-armor','convergence-attire'],3,2);
+for(const media of Object.values(dynastyMedia)){if(media.inspectionId)inspections[media.inspectionId]={src:media.src,mobileSrc:media.mobileSrc,width:media.width,height:media.height,kind:'generated',transparent:media.alpha};}
 export const inspectionMedia:Readonly<Record<string,InspectionMedia>>=inspections;
+
+export const lowInspectionMedia:Readonly<Record<string,InspectionMedia>>=Object.fromEntries(Object.entries(inspections).map(([id,m])=>[id,{...m,src:m.mobileSrc??m.src}]));

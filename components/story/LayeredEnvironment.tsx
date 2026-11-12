@@ -2,7 +2,7 @@
 
 import {Suspense,memo,useEffect,useMemo,useRef} from 'react';
 import {useFrame,useThree} from '@react-three/fiber';
-import {useTexture} from '@react-three/drei';
+import {useCinematicTexture} from './useCinematicTexture';
 import * as THREE from 'three';
 import type {ParallaxEnvironmentProps} from './WorldLayers';
 
@@ -34,7 +34,7 @@ const shades={
 
 /** Alpha artwork is a distinct spatial layer; texture UVs retain the native aspect ratio. */
 function ImageLayer({src,depth=-12,width=38,position=[0,.6],opacity=1,drift=.4,progress,order=0}:{progress:number;order?:number}&EnvironmentDepthLayer){
- const texture=useTexture(src),group=useRef<THREE.Group>(null),{gl}=useThree();
+ const texture=useCinematicTexture(src),group=useRef<THREE.Group>(null),{gl}=useThree();
  useEffect(()=>{let changed=false;if(texture.colorSpace!==THREE.SRGBColorSpace){texture.colorSpace=THREE.SRGBColorSpace;changed=true;}const anisotropy=Math.min(8,gl.capabilities.getMaxAnisotropy());if(texture.anisotropy!==anisotropy){texture.anisotropy=anisotropy;changed=true;}if(changed)texture.needsUpdate=true;},[texture,gl]);
  const image=texture.image as {width?:number;height?:number};
  const aspect=image?.width&&image?.height?image.width/image.height:16/9;

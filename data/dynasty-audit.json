@@ -1,0 +1,3412 @@
+{
+  "audit_date": "2026-11-12",
+  "baseline_commit": "25478ed98c6404bfefa4a4f709f57991159be710",
+  "scope": "Baseline source audit before Alien Dynasty asset integration. Retained sources are not falsely marked upgraded.",
+  "scene_count": 56,
+  "main_assets_measured": 57,
+  "scenes": [
+    {
+      "scene": 1,
+      "title": "THE UNCHARTED SYSTEM",
+      "current_requested_asset": null,
+      "current_resolved_asset": null,
+      "current_native_dimensions": null,
+      "source_exists": true,
+      "quality_status": "Original shader geometry; no raster planet texture or Earth map",
+      "updated_canon_match": "planet preserved; orbital species motifs still require upgrade",
+      "new_image_required": false,
+      "additional_images": [],
+      "conditional_images": [],
+      "final_selected_asset": null,
+      "final_actual_native_dimensions": null,
+      "selection_status": "Baseline retained pending redesign integration; not final approval",
+      "animation_method": "Actual3D procedural shader planet, separate clouds/atmosphere, mineral crystals, station/satellites/broken moon; real drag/rotation",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "THE UNCHARTED SYSTEM",
+      "final_inspection_assets": []
+    },
+    {
+      "scene": 2,
+      "title": "THE BROKEN MOON",
+      "current_requested_asset": null,
+      "current_resolved_asset": null,
+      "current_native_dimensions": null,
+      "source_exists": true,
+      "quality_status": "Original shader geometry; no raster planet texture or Earth map",
+      "updated_canon_match": "planet preserved; orbital species motifs still require upgrade",
+      "new_image_required": false,
+      "additional_images": [],
+      "conditional_images": [],
+      "final_selected_asset": null,
+      "final_actual_native_dimensions": null,
+      "selection_status": "Baseline retained pending redesign integration; not final approval",
+      "animation_method": "Actual3D procedural shader planet, separate clouds/atmosphere, mineral crystals, station/satellites/broken moon; real drag/rotation",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "THE BROKEN MOON",
+      "final_inspection_assets": []
+    },
+    {
+      "scene": 3,
+      "title": "GOLDEN MERIDIANS",
+      "current_requested_asset": null,
+      "current_resolved_asset": null,
+      "current_native_dimensions": null,
+      "source_exists": true,
+      "quality_status": "Original shader geometry; no raster planet texture or Earth map",
+      "updated_canon_match": "planet preserved; orbital species motifs still require upgrade",
+      "new_image_required": false,
+      "additional_images": [],
+      "conditional_images": [],
+      "final_selected_asset": null,
+      "final_actual_native_dimensions": null,
+      "selection_status": "Baseline retained pending redesign integration; not final approval",
+      "animation_method": "Actual3D procedural shader planet, separate clouds/atmosphere, mineral crystals, station/satellites/broken moon; real drag/rotation",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "GOLDEN MERIDIANS",
+      "final_inspection_assets": []
+    },
+    {
+      "scene": 4,
+      "title": "FIRST TRANSMISSION",
+      "current_requested_asset": null,
+      "current_resolved_asset": null,
+      "current_native_dimensions": null,
+      "source_exists": true,
+      "quality_status": "Original shader geometry; no raster planet texture or Earth map",
+      "updated_canon_match": "planet preserved; orbital species motifs still require upgrade",
+      "new_image_required": false,
+      "additional_images": [],
+      "conditional_images": [],
+      "final_selected_asset": null,
+      "final_actual_native_dimensions": null,
+      "selection_status": "Baseline retained pending redesign integration; not final approval",
+      "animation_method": "Actual3D procedural shader planet, separate clouds/atmosphere, mineral crystals, station/satellites/broken moon; real drag/rotation",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "FIRST TRANSMISSION",
+      "final_inspection_assets": []
+    },
+    {
+      "scene": 5,
+      "title": "THE OBSERVATION FLEET",
+      "current_requested_asset": null,
+      "current_resolved_asset": null,
+      "current_native_dimensions": null,
+      "source_exists": true,
+      "quality_status": "Original shader geometry; no raster planet texture or Earth map",
+      "updated_canon_match": "planet preserved; orbital species motifs still require upgrade",
+      "new_image_required": false,
+      "additional_images": [],
+      "conditional_images": [],
+      "final_selected_asset": null,
+      "final_actual_native_dimensions": null,
+      "selection_status": "Baseline retained pending redesign integration; not final approval",
+      "animation_method": "Actual3D procedural shader planet, separate clouds/atmosphere, mineral crystals, station/satellites/broken moon; real drag/rotation; independent3D fleet",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "THE OBSERVATION FLEET",
+      "final_inspection_assets": []
+    },
+    {
+      "scene": 6,
+      "title": "ATMOSPHERIC ENTRY",
+      "current_requested_asset": "/assets/story/clouds.webp",
+      "current_resolved_asset": "/assets/story/clouds.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "updated_canon_match": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "new_image_required": false,
+      "additional_images": [],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/story/clouds.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Baseline retained pending redesign integration; not final approval",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; cloud effects",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "ATMOSPHERIC ENTRY",
+      "final_inspection_assets": []
+    },
+    {
+      "scene": 7,
+      "title": "THROUGH THE STORMS",
+      "current_requested_asset": "/assets/story/clouds.webp",
+      "current_resolved_asset": "/assets/story/clouds.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "updated_canon_match": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "new_image_required": false,
+      "additional_images": [],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/story/clouds.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Baseline retained pending redesign integration; not final approval",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; independent3D scout; storm effects",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "THROUGH THE STORMS",
+      "final_inspection_assets": []
+    },
+    {
+      "scene": 8,
+      "title": "FIRST SIGHT OF VELAIR PRIME",
+      "current_requested_asset": "/assets/overhaul/city-far.webp",
+      "current_resolved_asset": "/assets/overhaul/city-far.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "updated_canon_match": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "new_image_required": true,
+      "additional_images": [
+        "/assets/overhaul/city-midground.webp",
+        "/assets/overhaul/city-foreground.webp"
+      ],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/overhaul/city-far.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Baseline retained pending redesign integration; not final approval",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; independent3D fleet; cloud effects",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "FIRST SIGHT OF VELAIR PRIME",
+      "final_inspection_assets": []
+    },
+    {
+      "scene": 9,
+      "title": "THE SKYWAY",
+      "current_requested_asset": "/assets/corrections/skyway-eye-level.webp",
+      "current_resolved_asset": "/assets/corrections/skyway-eye-level.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "updated_canon_match": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "new_image_required": true,
+      "additional_images": [],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/corrections/skyway-eye-level.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Baseline retained pending redesign integration; not final approval",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; independent3D scout; cloud effects",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "THE SKYWAY",
+      "final_inspection_assets": []
+    },
+    {
+      "scene": 10,
+      "title": "THE TRANSIT RINGS",
+      "current_requested_asset": "/assets/corrections/transit-ring-interchange.webp",
+      "current_resolved_asset": "/assets/corrections/transit-ring-interchange.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "updated_canon_match": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "new_image_required": true,
+      "additional_images": [],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/corrections/transit-ring-interchange.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Baseline retained pending redesign integration; not final approval",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; independent3D train",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "THE TRANSIT RINGS",
+      "final_inspection_assets": []
+    },
+    {
+      "scene": 11,
+      "title": "LIFE ABOVE THE CLOUDS",
+      "current_requested_asset": "/assets/story/commons.webp",
+      "current_resolved_asset": "/assets/story/commons.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Cinematic generated still; visible people predominantly human; target4K unavailable in this delivery.",
+      "updated_canon_match": "New alien-specific source; see generation record",
+      "new_image_required": false,
+      "additional_images": [],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/dynasty-civilization/alien-residential.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Original alien artwork integrated; source inspected; browser acceptance pending",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; independent3D bike; cloud effects",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "LIFE ABOVE THE CLOUDS",
+      "final_inspection_assets": []
+    },
+    {
+      "scene": 12,
+      "title": "THE ENERGY SPIRES",
+      "current_requested_asset": "/assets/overhaul/storm-far.webp",
+      "current_resolved_asset": "/assets/overhaul/storm-far.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "updated_canon_match": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "new_image_required": true,
+      "additional_images": [],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/overhaul/storm-far.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Baseline retained pending redesign integration; not final approval",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; storm effects",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "THE ENERGY SPIRES",
+      "final_inspection_assets": []
+    },
+    {
+      "scene": 13,
+      "title": "THE GREAT MARKET",
+      "current_requested_asset": "/assets/overhaul/market-far.webp",
+      "current_resolved_asset": "/assets/overhaul/market-far.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "updated_canon_match": "New alien-specific source; see generation record",
+      "new_image_required": false,
+      "additional_images": [
+        "/assets/overhaul/food-atlas.webp",
+        "/assets/overhaul/market-midground.webp",
+        "/assets/overhaul/market-foreground.webp"
+      ],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/dynasty-civilization/alien-market.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Original alien artwork integrated; source inspected; browser acceptance pending",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; independent3D cargo; steam effects",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "THE GREAT MARKET",
+      "final_inspection_assets": [
+        {
+          "id": "aether-grain",
+          "src": "/assets/dynasty-props/aether-grain.webp",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "alpha": true
+        },
+        {
+          "id": "sky-kelp",
+          "src": "/assets/dynasty-props/sky-kelp.webp",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "alpha": true
+        }
+      ]
+    },
+    {
+      "scene": 14,
+      "title": "THE CITY THAT THINKS",
+      "current_requested_asset": "/assets/finale/atmospheric-laboratory.webp",
+      "current_resolved_asset": "/assets/finale/atmospheric-laboratory.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "updated_canon_match": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "new_image_required": true,
+      "additional_images": [],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/finale/atmospheric-laboratory.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Baseline retained pending redesign integration; not final approval",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; independent3D cargo; cloud effects",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "THE CITY THAT THINKS",
+      "final_inspection_assets": []
+    },
+    {
+      "scene": 15,
+      "title": "PLANETARY CLIMATE MAP",
+      "current_requested_asset": null,
+      "current_resolved_asset": null,
+      "current_native_dimensions": null,
+      "source_exists": true,
+      "quality_status": "Original shader geometry; no raster planet texture or Earth map",
+      "updated_canon_match": "planet preserved; orbital species motifs still require upgrade",
+      "new_image_required": false,
+      "additional_images": [],
+      "conditional_images": [],
+      "final_selected_asset": null,
+      "final_actual_native_dimensions": null,
+      "selection_status": "Baseline retained pending redesign integration; not final approval",
+      "animation_method": "Actual3D procedural shader planet, separate clouds/atmosphere, mineral crystals, station/satellites/broken moon; real drag/rotation",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "PLANETARY CLIMATE MAP",
+      "final_inspection_assets": []
+    },
+    {
+      "scene": 16,
+      "title": "PYRAVAR",
+      "current_requested_asset": "/assets/story/desert.webp",
+      "current_resolved_asset": "/assets/story/desert.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Cinematic generated still; visible people predominantly human; target4K unavailable in this delivery.",
+      "updated_canon_match": "New alien-specific source; see generation record",
+      "new_image_required": false,
+      "additional_images": [],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/dynasty-civilization/pyravar-dominion.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Original alien artwork integrated; source inspected; browser acceptance pending",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; independent3D skimmer; dust effects",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "PYRAVAR",
+      "final_inspection_assets": []
+    },
+    {
+      "scene": 17,
+      "title": "PYRAVAR SURVIVAL",
+      "current_requested_asset": "/assets/story/desert.webp",
+      "current_resolved_asset": "/assets/story/desert.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Cinematic generated still; visible people predominantly human; target4K unavailable in this delivery.",
+      "updated_canon_match": "New alien-specific source; see generation record",
+      "new_image_required": false,
+      "additional_images": [
+        "/assets/overhaul/attire-atlas.webp",
+        "/assets/overhaul/boots-atlas.webp"
+      ],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/dynasty-civilization/solar-reservoir.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Original alien artwork integrated; source inspected; browser acceptance pending",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; independent3D skimmer; dust effects",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "PYRAVAR SURVIVAL",
+      "final_inspection_assets": [
+        {
+          "id": "solar-fruit",
+          "src": "/assets/dynasty-props/solar-fruit.webp",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "alpha": true
+        },
+        {
+          "id": "reservoir-loop",
+          "src": "/assets/dynasty-props/reservoir-loop.webp",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "alpha": true
+        },
+        {
+          "id": "pyravar-attire",
+          "src": "/assets/dynasty-props/pyravar-attire.webp",
+          "dimensions": [
+            941,
+            1672
+          ],
+          "alpha": true
+        }
+      ]
+    },
+    {
+      "scene": 18,
+      "title": "CRYONTH",
+      "current_requested_asset": "/assets/story/ice.webp",
+      "current_resolved_asset": "/assets/story/ice.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "updated_canon_match": "New alien-specific source; see generation record",
+      "new_image_required": false,
+      "additional_images": [],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/dynasty-civilization/myr-geothermal.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Original alien artwork integrated; source inspected; browser acceptance pending",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; independent3D crawler; aurora effects",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "CRYONTH",
+      "final_inspection_assets": []
+    },
+    {
+      "scene": 19,
+      "title": "LIFE BENEATH THE ICE",
+      "current_requested_asset": "/assets/story/ice-interior.webp",
+      "current_resolved_asset": "/assets/story/ice-interior.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Cinematic generated still; visible people predominantly human; target4K unavailable in this delivery.",
+      "updated_canon_match": "New alien-specific source; see generation record",
+      "new_image_required": false,
+      "additional_images": [
+        "/assets/overhaul/attire-atlas.webp",
+        "/assets/overhaul/boots-atlas.webp"
+      ],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/dynasty-civilization/myr-thermal-research.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Original alien artwork integrated; source inspected; browser acceptance pending",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; steam effects",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "LIFE BENEATH THE ICE",
+      "final_inspection_assets": [
+        {
+          "id": "cryo-bloom",
+          "src": "/assets/dynasty-props/cryo-bloom.webp",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "alpha": true
+        },
+        {
+          "id": "cryonth-attire",
+          "src": "/assets/dynasty-props/cryonth-attire.webp",
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "alpha": true
+        }
+      ]
+    },
+    {
+      "scene": 20,
+      "title": "AERION MERIDIA",
+      "current_requested_asset": "/assets/story/storm.webp",
+      "current_resolved_asset": "/assets/story/storm.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "updated_canon_match": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "new_image_required": true,
+      "additional_images": [],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/story/storm.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Baseline retained pending redesign integration; not final approval",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; independent3D fleet; storm effects",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "AERION MERIDIA",
+      "final_inspection_assets": [
+        {
+          "id": "aerion-attire",
+          "src": "/assets/dynasty-props/aerion-attire.webp",
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "alpha": true
+        }
+      ]
+    },
+    {
+      "scene": 21,
+      "title": "THREE REGIONS, ONE FUTURE",
+      "current_requested_asset": "/assets/story/city.webp",
+      "current_resolved_asset": "/assets/story/city.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "updated_canon_match": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "new_image_required": true,
+      "additional_images": [],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/story/city.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Baseline retained pending redesign integration; not final approval",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; independent3D cargo; cloud effects",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "THREE REGIONS, ONE FUTURE",
+      "final_inspection_assets": []
+    },
+    {
+      "scene": 22,
+      "title": "LEXORIAN CUISINE",
+      "current_requested_asset": "/assets/overhaul/cuisine-far.webp",
+      "current_resolved_asset": "/assets/overhaul/cuisine-far.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "updated_canon_match": "New alien-specific source; see generation record",
+      "new_image_required": false,
+      "additional_images": [
+        "/assets/overhaul/food-atlas.webp"
+      ],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/dynasty-civilization/alien-food-preparation.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Original alien artwork integrated; source inspected; browser acceptance pending",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; steam effects; independently placed alpha object planes with inspection lift",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "LEXORIAN CUISINE",
+      "final_inspection_assets": [
+        {
+          "id": "aether-grain",
+          "src": "/assets/dynasty-props/aether-grain.webp",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "alpha": true
+        },
+        {
+          "id": "cryo-bloom",
+          "src": "/assets/dynasty-props/cryo-bloom.webp",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "alpha": true
+        },
+        {
+          "id": "sky-kelp",
+          "src": "/assets/dynasty-props/sky-kelp.webp",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "alpha": true
+        },
+        {
+          "id": "solar-fruit",
+          "src": "/assets/dynasty-props/solar-fruit.webp",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "alpha": true
+        },
+        {
+          "id": "mistwater-broth",
+          "src": "/assets/dynasty-props/mistwater-broth.webp",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "alpha": true
+        },
+        {
+          "id": "lumifungus",
+          "src": "/assets/dynasty-props/lumifungus.webp",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "alpha": true
+        }
+      ]
+    },
+    {
+      "scene": 23,
+      "title": "THE ATELIER OF 3186",
+      "current_requested_asset": "/assets/story/atelier.webp",
+      "current_resolved_asset": "/assets/story/atelier.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Cinematic generated still; visible people predominantly human; target4K unavailable in this delivery.",
+      "updated_canon_match": "New alien-specific source; see generation record",
+      "new_image_required": false,
+      "additional_images": [
+        "/assets/overhaul/attire-atlas.webp",
+        "/assets/overhaul/boots-atlas.webp"
+      ],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/dynasty-civilization/alien-atelier.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Original alien artwork integrated; source inspected; browser acceptance pending",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; steam effects",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "THE ATELIER OF 3186",
+      "final_inspection_assets": [
+        {
+          "id": "pyravar-attire",
+          "src": "/assets/dynasty-props/pyravar-attire.webp",
+          "dimensions": [
+            941,
+            1672
+          ],
+          "alpha": true
+        },
+        {
+          "id": "cryonth-attire",
+          "src": "/assets/dynasty-props/cryonth-attire.webp",
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "alpha": true
+        },
+        {
+          "id": "aerion-attire",
+          "src": "/assets/dynasty-props/aerion-attire.webp",
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "alpha": true
+        },
+        {
+          "id": "field-professionals",
+          "src": "/assets/dynasty-props/field-professionals.webp",
+          "dimensions": [
+            864,
+            1821
+          ],
+          "alpha": true
+        },
+        {
+          "id": "defense-armor",
+          "src": "/assets/dynasty-props/defense-armor.webp",
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "alpha": true
+        },
+        {
+          "id": "convergence-attire",
+          "src": "/assets/dynasty-props/convergence-attire.webp",
+          "dimensions": [
+            1024,
+            1536
+          ],
+          "alpha": true
+        }
+      ]
+    },
+    {
+      "scene": 24,
+      "title": "OBJECTS OF EVERYDAY LIFE",
+      "current_requested_asset": "/assets/story/objects.webp",
+      "current_resolved_asset": "/assets/story/objects.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "updated_canon_match": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "new_image_required": true,
+      "additional_images": [
+        "/assets/overhaul/gear-atlas.webp",
+        "/assets/overhaul/boots-atlas.webp"
+      ],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/story/objects.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Baseline retained pending redesign integration; not final approval",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; independently placed alpha object planes with inspection lift",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "OBJECTS OF EVERYDAY LIFE",
+      "final_inspection_assets": [
+        {
+          "id": "communication-jewelry",
+          "src": "/assets/dynasty-props/communication-jewelry.webp",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "alpha": true
+        },
+        {
+          "id": "translation-pendant",
+          "src": "/assets/dynasty-props/translation-pendant.webp",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "alpha": true
+        },
+        {
+          "id": "ceremonial-crown",
+          "src": "/assets/dynasty-props/ceremonial-crown.webp",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "alpha": true
+        },
+        {
+          "id": "neural-bracelet",
+          "src": "/assets/dynasty-props/neural-bracelet.webp",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "alpha": true
+        },
+        {
+          "id": "heat-walkers",
+          "src": "/assets/dynasty-props/heat-walkers.webp",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "alpha": true
+        },
+        {
+          "id": "ice-grip-boots",
+          "src": "/assets/dynasty-props/ice-grip-boots.webp",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "alpha": true
+        },
+        {
+          "id": "sky-grip-footwear",
+          "src": "/assets/dynasty-props/sky-grip-footwear.webp",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "alpha": true
+        },
+        {
+          "id": "climate-visor",
+          "src": "/assets/dynasty-props/climate-visor.webp",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "alpha": true
+        },
+        {
+          "id": "environmental-scanner",
+          "src": "/assets/dynasty-props/environmental-scanner.webp",
+          "dimensions": [
+            1774,
+            887
+          ],
+          "alpha": true
+        },
+        {
+          "id": "medical-sensor",
+          "src": "/assets/dynasty-props/medical-sensor.webp",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "alpha": true
+        }
+      ]
+    },
+    {
+      "scene": 25,
+      "title": "THE THREE-REGION COUNCIL",
+      "current_requested_asset": "/assets/story/council.webp",
+      "current_resolved_asset": "/assets/story/council.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Cinematic generated still; visible people predominantly human; target4K unavailable in this delivery.",
+      "updated_canon_match": "New alien-specific source; see generation record",
+      "new_image_required": false,
+      "additional_images": [],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/dynasty-civilization/vaelori-council.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Original alien artwork integrated; source inspected; browser acceptance pending",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "THE THREE-REGION COUNCIL",
+      "final_inspection_assets": []
+    },
+    {
+      "scene": 26,
+      "title": "THE FUTURE GENERATION",
+      "current_requested_asset": "/assets/story/commons.webp",
+      "current_resolved_asset": "/assets/story/commons.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Cinematic generated still; visible people predominantly human; target4K unavailable in this delivery.",
+      "updated_canon_match": "New alien-specific source; see generation record",
+      "new_image_required": false,
+      "additional_images": [],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/dynasty-civilization/alien-learning-care.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Original alien artwork integrated; source inspected; browser acceptance pending",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; independent3D cargo",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "THE FUTURE GENERATION",
+      "final_inspection_assets": [
+        {
+          "id": "field-laboratories",
+          "src": "/assets/dynasty-props/field-laboratories.webp",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "alpha": true
+        }
+      ]
+    },
+    {
+      "scene": 27,
+      "title": "THE LIVING ECOSYSTEM",
+      "current_requested_asset": "/assets/story/ecosystem.webp",
+      "current_resolved_asset": "/assets/story/ecosystem.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Cinematic generated still; visible people predominantly human; target4K unavailable in this delivery.",
+      "updated_canon_match": "New alien-specific source; see generation record",
+      "new_image_required": false,
+      "additional_images": [],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/dynasty-civilization/native-ecology.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Original alien artwork integrated; source inspected; browser acceptance pending",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; cloud effects",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "THE LIVING ECOSYSTEM",
+      "final_inspection_assets": []
+    },
+    {
+      "scene": 28,
+      "title": "PREPARING FOR CONVERGENCE",
+      "current_requested_asset": "/assets/story/convergence.webp",
+      "current_resolved_asset": "/assets/story/convergence.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Cinematic generated still; visible people predominantly human; target4K unavailable in this delivery.",
+      "updated_canon_match": "New alien-specific source; see generation record",
+      "new_image_required": false,
+      "additional_images": [
+        "/assets/overhaul/city-midground.webp",
+        "/assets/overhaul/city-foreground.webp"
+      ],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/dynasty-civilization/convergence-preparations.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Original alien artwork integrated; source inspected; browser acceptance pending",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; independent3D cargo; lantern effects",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "PREPARING FOR CONVERGENCE",
+      "final_inspection_assets": []
+    },
+    {
+      "scene": 29,
+      "title": "THE FESTIVAL AWAKENS",
+      "current_requested_asset": "/assets/finale/convergence-night.webp",
+      "current_resolved_asset": "/assets/finale/convergence-night.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "updated_canon_match": "New alien-specific source; see generation record",
+      "new_image_required": false,
+      "additional_images": [],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/dynasty-civilization/alien-convergence.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Original alien artwork integrated; source inspected; browser acceptance pending",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; independent3D cargo; lantern effects; independent instanced light-language elements",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "THE FESTIVAL AWAKENS",
+      "final_inspection_assets": []
+    },
+    {
+      "scene": 30,
+      "title": "THE CEREMONIAL PROCESSION",
+      "current_requested_asset": "/assets/finale/ceremonial-procession.webp",
+      "current_resolved_asset": "/assets/finale/ceremonial-procession.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Cinematic generated still; visible people predominantly human; target4K unavailable in this delivery.",
+      "updated_canon_match": "New alien-specific source; see generation record",
+      "new_image_required": false,
+      "additional_images": [],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/dynasty-civilization/alien-procession.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Original alien artwork integrated; source inspected; browser acceptance pending",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; lantern effects; independent instanced light-language elements",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "THE CEREMONIAL PROCESSION",
+      "final_inspection_assets": []
+    },
+    {
+      "scene": 31,
+      "title": "THE FEAST OF THREE REGIONS",
+      "current_requested_asset": "/assets/corrections/ceremonial-feast.webp",
+      "current_resolved_asset": "/assets/corrections/ceremonial-feast.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Cinematic generated still; visible people predominantly human; target4K unavailable in this delivery.",
+      "updated_canon_match": "New alien-specific source; see generation record",
+      "new_image_required": false,
+      "additional_images": [
+        "/assets/overhaul/food-atlas.webp"
+      ],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/dynasty-civilization/alien-ceremonial-feast.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Original alien artwork integrated; source inspected; browser acceptance pending",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; steam effects; independently placed alpha object planes with inspection lift; independent instanced light-language elements",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "THE FEAST OF THREE REGIONS",
+      "final_inspection_assets": [
+        {
+          "id": "aether-grain",
+          "src": "/assets/dynasty-props/aether-grain.webp",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "alpha": true
+        },
+        {
+          "id": "cryo-bloom",
+          "src": "/assets/dynasty-props/cryo-bloom.webp",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "alpha": true
+        },
+        {
+          "id": "sky-kelp",
+          "src": "/assets/dynasty-props/sky-kelp.webp",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "alpha": true
+        },
+        {
+          "id": "solar-fruit",
+          "src": "/assets/dynasty-props/solar-fruit.webp",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "alpha": true
+        },
+        {
+          "id": "mistwater-broth",
+          "src": "/assets/dynasty-props/mistwater-broth.webp",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "alpha": true
+        },
+        {
+          "id": "lumifungus",
+          "src": "/assets/dynasty-props/lumifungus.webp",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "alpha": true
+        }
+      ]
+    },
+    {
+      "scene": 32,
+      "title": "THE LANGUAGE OF LIGHT",
+      "current_requested_asset": "/assets/finale/convergence-night.webp",
+      "current_resolved_asset": "/assets/finale/convergence-night.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "updated_canon_match": "New alien-specific source; see generation record",
+      "new_image_required": false,
+      "additional_images": [],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/dynasty-civilization/alien-convergence.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Original alien artwork integrated; source inspected; browser acceptance pending",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; lantern effects; independent instanced light-language elements",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "THE LANGUAGE OF LIGHT",
+      "final_inspection_assets": []
+    },
+    {
+      "scene": 33,
+      "title": "THE MYR CEREMONY",
+      "current_requested_asset": "/assets/finale/myr-ceremony.webp",
+      "current_resolved_asset": "/assets/finale/myr-ceremony.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Detailed native1672×941 still; full-size inspected.",
+      "updated_canon_match": "New alien-specific source; see generation record",
+      "new_image_required": false,
+      "additional_images": [],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/dynasty-civilization/myr-ecological-ceremony.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Original alien artwork integrated; source inspected; browser acceptance pending",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; cloud effects",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "THE MYR CEREMONY",
+      "final_inspection_assets": []
+    },
+    {
+      "scene": 34,
+      "title": "THE GREAT SYNCHRONIZATION",
+      "current_requested_asset": "/assets/finale/convergence-night.webp",
+      "current_resolved_asset": "/assets/finale/convergence-night.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "updated_canon_match": "New alien-specific source; see generation record",
+      "new_image_required": false,
+      "additional_images": [],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/dynasty-civilization/alien-convergence.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Original alien artwork integrated; source inspected; browser acceptance pending",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; independent3D fleet; lantern effects; real3D Codex machinery (scene49 removal required); independent instanced light-language elements",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "THE GREAT SYNCHRONIZATION",
+      "final_inspection_assets": []
+    },
+    {
+      "scene": 35,
+      "title": "THE UNEXPECTED SIGNAL",
+      "current_requested_asset": "/assets/finale/convergence-night.webp",
+      "current_resolved_asset": "/assets/finale/convergence-night.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "updated_canon_match": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "new_image_required": true,
+      "additional_images": [],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/finale/convergence-night.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Baseline retained pending redesign integration; not final approval",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; independent instanced light-language elements",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "THE UNEXPECTED SIGNAL",
+      "final_inspection_assets": []
+    },
+    {
+      "scene": 36,
+      "title": "AARYAN VEER",
+      "current_requested_asset": "/assets/finale/hangar-interior.webp",
+      "current_resolved_asset": "/assets/finale/hangar-interior.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "updated_canon_match": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "new_image_required": true,
+      "additional_images": [
+        "/assets/finale/character-aaryan.webp",
+        "/assets/finale/portrait-aaryan.webp"
+      ],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/finale/hangar-interior.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Baseline retained pending redesign integration; not final approval",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; independent3D fleet; cloud effects; alpha character plane(s), not rigged body motion",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "AARYAN VEER",
+      "final_character": {
+        "id": "aaryan",
+        "species": "human",
+        "asset": "/assets/finale/character-aaryan.webp",
+        "dimensions": [
+          941,
+          1672
+        ],
+        "portrait": "/assets/finale/portrait-aaryan.webp",
+        "status": "current"
+      },
+      "final_inspection_assets": []
+    },
+    {
+      "scene": 37,
+      "title": "GENERAL KAOR",
+      "current_requested_asset": "/assets/finale/hangar-interior.webp",
+      "current_resolved_asset": "/assets/finale/hangar-interior.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "updated_canon_match": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "new_image_required": true,
+      "additional_images": [
+        "/assets/finale/character-kaor.webp",
+        "/assets/finale/portrait-kaor.webp"
+      ],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/finale/hangar-interior.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Baseline retained pending redesign integration; not final approval",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; independent3D scout; cloud effects; alpha character plane(s), not rigged body motion",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "GENERAL KAOR",
+      "final_character": {
+        "id": "kaor",
+        "species": "vaelori",
+        "asset": "/assets/dynasty/character-kaor.webp",
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "portrait": "/assets/dynasty/portrait-kaor.webp",
+        "status": "current"
+      },
+      "final_inspection_assets": []
+    },
+    {
+      "scene": 38,
+      "title": "SORYA ELIN",
+      "current_requested_asset": "/assets/finale/atmospheric-laboratory.webp",
+      "current_resolved_asset": "/assets/finale/atmospheric-laboratory.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "updated_canon_match": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "new_image_required": true,
+      "additional_images": [
+        "/assets/finale/character-sorya.webp",
+        "/assets/finale/portrait-sorya.webp"
+      ],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/finale/atmospheric-laboratory.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Baseline retained pending redesign integration; not final approval",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; steam effects; alpha character plane(s), not rigged body motion; real3D Codex machinery (scene49 removal required)",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "SORYA ELIN",
+      "final_character": {
+        "id": "sorya",
+        "species": "vaelori",
+        "asset": "/assets/dynasty/character-sorya.webp",
+        "dimensions": [
+          941,
+          1672
+        ],
+        "portrait": "/assets/dynasty/portrait-sorya.webp",
+        "status": "current"
+      },
+      "final_inspection_assets": []
+    },
+    {
+      "scene": 39,
+      "title": "NYRA VOSS",
+      "current_requested_asset": "/assets/finale/codex-core.webp",
+      "current_resolved_asset": "/assets/finale/codex-core.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "updated_canon_match": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "new_image_required": false,
+      "additional_images": [
+        "/assets/finale/character-nyra.webp"
+      ],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/finale/codex-core.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Baseline retained pending redesign integration; not final approval",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; steam effects; alpha character plane(s), not rigged body motion; real3D Codex machinery (scene49 removal required)",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "NYRA VOSS",
+      "final_character": {
+        "id": "nyra",
+        "species": "human",
+        "asset": "/assets/finale/character-nyra.webp",
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "portrait": "/assets/dynasty/portrait-nyra.webp",
+        "status": "current"
+      },
+      "final_inspection_assets": []
+    },
+    {
+      "scene": 40,
+      "title": "ELARA QUIN",
+      "current_requested_asset": "/assets/finale/forbidden-archive.webp",
+      "current_resolved_asset": "/assets/finale/forbidden-archive.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "updated_canon_match": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "new_image_required": true,
+      "additional_images": [
+        "/assets/finale/character-elara.webp"
+      ],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/finale/forbidden-archive.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Baseline retained pending redesign integration; not final approval",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; alpha character plane(s), not rigged body motion",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "ELARA QUIN",
+      "final_character": {
+        "id": "elara",
+        "species": "vaelori",
+        "asset": "/assets/dynasty/character-elara.webp",
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "portrait": "/assets/dynasty/portrait-elara.webp",
+        "status": "current"
+      },
+      "final_inspection_assets": []
+    },
+    {
+      "scene": 41,
+      "title": "EMPRESS VAELORA",
+      "current_requested_asset": "/assets/story/council.webp",
+      "current_resolved_asset": "/assets/story/council.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Cinematic generated still; visible people predominantly human; target4K unavailable in this delivery.",
+      "updated_canon_match": "New alien-specific source; see generation record",
+      "new_image_required": false,
+      "additional_images": [
+        "/assets/finale/character-vaelora.webp"
+      ],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/dynasty-civilization/vaelori-council.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Original alien artwork integrated; source inspected; browser acceptance pending",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; alpha character plane(s), not rigged body motion",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "EMPRESS VAELORA",
+      "final_character": {
+        "id": "vaelora",
+        "species": "vaelori",
+        "asset": "/assets/dynasty/character-vaelora.webp",
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "portrait": "/assets/dynasty/portrait-vaelora.webp",
+        "status": "current"
+      },
+      "final_inspection_assets": []
+    },
+    {
+      "scene": 42,
+      "title": "THE PEOPLE BEHIND THE HEROES",
+      "current_requested_asset": "/assets/story/commons.webp",
+      "current_resolved_asset": "/assets/story/commons.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Cinematic generated still; visible people predominantly human; target4K unavailable in this delivery.",
+      "updated_canon_match": "New alien-specific source; see generation record",
+      "new_image_required": false,
+      "additional_images": [
+        "/assets/finale/supporting-cast.webp"
+      ],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/dynasty-civilization/alien-learning-care.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Original alien artwork integrated; source inspected; browser acceptance pending",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; independent3D cargo; alpha character plane(s), not rigged body motion",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "THE PEOPLE BEHIND THE HEROES",
+      "final_inspection_assets": [],
+      "final_supporting_cast": [
+        {
+          "id": "kito",
+          "species": "human",
+          "asset": "/assets/dynasty/character-kito.webp",
+          "portrait": "/assets/dynasty/portrait-kito.webp"
+        },
+        {
+          "id": "bolt",
+          "species": "robot",
+          "asset": "/assets/dynasty/character-bolt.webp",
+          "portrait": "/assets/dynasty/portrait-bolt.webp"
+        },
+        {
+          "id": "thess",
+          "species": "myr",
+          "asset": "/assets/dynasty/character-thess.webp",
+          "portrait": "/assets/dynasty/portrait-thess.webp"
+        },
+        {
+          "id": "lysara",
+          "species": "vaelori",
+          "asset": "/assets/dynasty/character-lysara.webp",
+          "portrait": "/assets/dynasty/portrait-lysara.webp"
+        },
+        {
+          "id": "tork",
+          "species": "human",
+          "asset": "/assets/dynasty/character-tork.webp",
+          "portrait": "/assets/dynasty/portrait-tork.webp"
+        },
+        {
+          "id": "origin",
+          "species": "planetary-intelligence",
+          "asset": "",
+          "portrait": null
+        },
+        {
+          "id": "veyr",
+          "species": "vaelori",
+          "asset": "/assets/dynasty/character-veyr.webp",
+          "portrait": "/assets/dynasty/portrait-veyr.webp"
+        },
+        {
+          "id": "rhaen",
+          "species": "vaelori",
+          "asset": "/assets/dynasty/character-rhaen.webp",
+          "portrait": "/assets/dynasty/portrait-rhaen.webp"
+        },
+        {
+          "id": "mara",
+          "species": "myr",
+          "asset": "/assets/dynasty/character-mara.webp",
+          "portrait": "/assets/dynasty/portrait-mara.webp"
+        }
+      ]
+    },
+    {
+      "scene": 43,
+      "title": "EMERGENCY COUNCIL",
+      "current_requested_asset": "/assets/story/council.webp",
+      "current_resolved_asset": "/assets/story/council.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Cinematic generated still; visible people predominantly human; target4K unavailable in this delivery.",
+      "updated_canon_match": "New alien-specific source; see generation record",
+      "new_image_required": false,
+      "additional_images": [
+        "/assets/finale/character-aaryan.webp",
+        "/assets/finale/character-sorya.webp",
+        "/assets/finale/character-elara.webp"
+      ],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/dynasty-civilization/vaelori-council.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Original alien artwork integrated; source inspected; browser acceptance pending",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; alpha character plane(s), not rigged body motion; real3D Codex machinery (scene49 removal required)",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "EMERGENCY COUNCIL",
+      "final_inspection_assets": []
+    },
+    {
+      "scene": 44,
+      "title": "THE FORBIDDEN ARCHIVE",
+      "current_requested_asset": "/assets/finale/forbidden-archive.webp",
+      "current_resolved_asset": "/assets/finale/forbidden-archive.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "updated_canon_match": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "new_image_required": false,
+      "additional_images": [],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/finale/forbidden-archive.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Baseline retained pending redesign integration; not final approval",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; real3D Codex machinery (scene49 removal required)",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "THE FORBIDDEN ARCHIVE",
+      "final_inspection_assets": []
+    },
+    {
+      "scene": 45,
+      "title": "DESCENT BELOW VELAIR PRIME",
+      "current_requested_asset": "/assets/finale/codex-core.webp",
+      "current_resolved_asset": "/assets/finale/codex-core.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "updated_canon_match": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "new_image_required": false,
+      "additional_images": [],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/finale/codex-core.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Baseline retained pending redesign integration; not final approval",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; independent3D scout; steam effects; real3D Codex machinery (scene49 removal required)",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "DESCENT BELOW VELAIR PRIME",
+      "final_inspection_assets": []
+    },
+    {
+      "scene": 46,
+      "title": "THE CODEX VEIN",
+      "current_requested_asset": "/assets/finale/codex-core.webp",
+      "current_resolved_asset": "/assets/finale/codex-core.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "updated_canon_match": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "new_image_required": false,
+      "additional_images": [],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/finale/codex-core.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Baseline retained pending redesign integration; not final approval",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; steam effects; real3D Codex machinery (scene49 removal required)",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "THE CODEX VEIN",
+      "final_inspection_assets": []
+    },
+    {
+      "scene": 47,
+      "title": "THE LOST HISTORY",
+      "current_requested_asset": "/assets/finale/forbidden-archive.webp",
+      "current_resolved_asset": "/assets/finale/forbidden-archive.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "updated_canon_match": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "new_image_required": false,
+      "additional_images": [],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/finale/forbidden-archive.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Baseline retained pending redesign integration; not final approval",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; real3D Codex machinery (scene49 removal required)",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "THE LOST HISTORY",
+      "final_inspection_assets": []
+    },
+    {
+      "scene": 48,
+      "title": "THE REAL PROBLEM",
+      "current_requested_asset": "/assets/finale/myr-ceremony.webp",
+      "current_resolved_asset": "/assets/finale/myr-ceremony.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Detailed native1672×941 still; full-size inspected.",
+      "updated_canon_match": "New alien-specific source; see generation record",
+      "new_image_required": false,
+      "additional_images": [],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/dynasty-civilization/myr-geothermal.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Original alien artwork integrated; source inspected; browser acceptance pending",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; cloud effects; real3D Codex machinery (scene49 removal required)",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "THE REAL PROBLEM",
+      "final_inspection_assets": []
+    },
+    {
+      "scene": 49,
+      "title": "THE CHOICE BEFORE THE STORM",
+      "current_requested_asset": "/assets/finale/planetary-emergency.webp",
+      "current_resolved_asset": "/assets/finale/planetary-emergency.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "updated_canon_match": "New alien-specific source; see generation record",
+      "new_image_required": false,
+      "additional_images": [],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/dynasty/eve-of-collapse.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Original alien artwork integrated; source inspected; browser acceptance pending",
+      "animation_method": "Layered storm balcony + independent3D fleet, rain and storm effects; reused Codex machinery removed",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "replacement_requirement": "THE EVE OF COLLAPSE: alien imperial storm balcony; remove reused Codex ring geometry.",
+      "final_scene_title": "THE EVE OF COLLAPSE",
+      "final_inspection_assets": []
+    },
+    {
+      "scene": 50,
+      "title": "THE CRISIS BEGINS",
+      "current_requested_asset": "/assets/finale/planetary-emergency.webp",
+      "current_resolved_asset": "/assets/finale/planetary-emergency.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "updated_canon_match": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "new_image_required": true,
+      "additional_images": [],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/finale/planetary-emergency.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Baseline retained pending redesign integration; not final approval",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; independent3D fleet; storm effects",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "THE CRISIS BEGINS",
+      "final_inspection_assets": []
+    },
+    {
+      "scene": 51,
+      "title": "PLANETARY EMERGENCY",
+      "current_requested_asset": "/assets/story/desert.webp",
+      "current_resolved_asset": "/assets/story/desert.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Cinematic generated still; visible people predominantly human; target4K unavailable in this delivery.",
+      "updated_canon_match": "noncompliant with alien-majority population",
+      "new_image_required": true,
+      "additional_images": [],
+      "conditional_images": [
+        "/assets/overhaul/desert-far.webp",
+        "/assets/overhaul/ice-far.webp",
+        "/assets/overhaul/storm-far.webp"
+      ],
+      "final_selected_asset": "/assets/story/desert.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Baseline retained pending redesign integration; not final approval",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; independent3D skimmer; dust effects",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "PLANETARY EMERGENCY",
+      "final_inspection_assets": []
+    },
+    {
+      "scene": 52,
+      "title": "THE COUNCIL DECIDES",
+      "current_requested_asset": "/assets/story/council.webp",
+      "current_resolved_asset": "/assets/story/council.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Cinematic generated still; visible people predominantly human; target4K unavailable in this delivery.",
+      "updated_canon_match": "New alien-specific source; see generation record",
+      "new_image_required": false,
+      "additional_images": [],
+      "conditional_images": [],
+      "final_selected_asset": "/assets/dynasty-civilization/vaelori-council.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "Original alien artwork integrated; source inspected; browser acceptance pending",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; real3D Codex machinery (scene49 removal required)",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "THE COUNCIL DECIDES",
+      "final_inspection_assets": []
+    },
+    {
+      "scene": 53,
+      "title": "THE CONSEQUENCES",
+      "current_requested_asset": "/assets/finale/planetary-emergency.webp",
+      "current_resolved_asset": "/assets/finale/planetary-emergency.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "updated_canon_match": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "new_image_required": false,
+      "additional_images": [],
+      "conditional_images": [
+        "/assets/finale/aftermath-central.webp",
+        "/assets/finale/aftermath-regional.webp",
+        "/assets/finale/aftermath-covenant.webp",
+        "/assets/finale/planetary-emergency.webp"
+      ],
+      "final_selected_asset": "/assets/finale/planetary-emergency.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "New conditional comic and ending sources integrated; browser acceptance pending",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; independent3D cargo; cloud effects; real3D Codex machinery (scene49 removal required)",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "THE CONSEQUENCES",
+      "final_inspection_assets": [],
+      "final_conditional_assets": [
+        {
+          "src": "/assets/dynasty-crisis/crisis-comic-strip.webp",
+          "dimensions": [
+            2172,
+            724
+          ],
+          "outcome": "three-panel-strip"
+        },
+        {
+          "src": "/assets/dynasty-crisis/shielded-concord.webp",
+          "dimensions": [
+            1672,
+            941
+          ],
+          "outcome": "shelter"
+        },
+        {
+          "src": "/assets/dynasty-crisis/regional-accord.webp",
+          "dimensions": [
+            1672,
+            941
+          ],
+          "outcome": "regional"
+        },
+        {
+          "src": "/assets/dynasty-crisis/living-covenant.webp",
+          "dimensions": [
+            1672,
+            941
+          ],
+          "outcome": "covenant"
+        }
+      ]
+    },
+    {
+      "scene": 54,
+      "title": "THE FOUR-PANEL CRISIS COMIC",
+      "current_requested_asset": "/assets/finale/forbidden-archive.webp",
+      "current_resolved_asset": "/assets/finale/forbidden-archive.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "updated_canon_match": "New alien-specific source; see generation record",
+      "new_image_required": false,
+      "additional_images": [
+        "/assets/finale/crisis-comic-strip.webp"
+      ],
+      "conditional_images": [
+        "/assets/finale/aftermath-central.webp",
+        "/assets/finale/aftermath-regional.webp",
+        "/assets/finale/aftermath-covenant.webp",
+        "/assets/finale/planetary-emergency.webp"
+      ],
+      "final_selected_asset": "/assets/dynasty-crisis/crisis-comic-strip.webp",
+      "final_actual_native_dimensions": [
+        2172,
+        724
+      ],
+      "selection_status": "New conditional comic and ending sources integrated; browser acceptance pending",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "THE FOUR-PANEL CRISIS COMIC",
+      "final_inspection_assets": [],
+      "final_conditional_assets": [
+        {
+          "src": "/assets/dynasty-crisis/crisis-comic-strip.webp",
+          "dimensions": [
+            2172,
+            724
+          ],
+          "outcome": "three-panel-strip"
+        },
+        {
+          "src": "/assets/dynasty-crisis/shielded-concord.webp",
+          "dimensions": [
+            1672,
+            941
+          ],
+          "outcome": "shelter"
+        },
+        {
+          "src": "/assets/dynasty-crisis/regional-accord.webp",
+          "dimensions": [
+            1672,
+            941
+          ],
+          "outcome": "regional"
+        },
+        {
+          "src": "/assets/dynasty-crisis/living-covenant.webp",
+          "dimensions": [
+            1672,
+            941
+          ],
+          "outcome": "covenant"
+        }
+      ]
+    },
+    {
+      "scene": 55,
+      "title": "THE FUTURE OF LEXORYN",
+      "current_requested_asset": "/assets/finale/aftermath-covenant.webp",
+      "current_resolved_asset": "/assets/finale/aftermath-covenant.webp",
+      "current_native_dimensions": [
+        1672,
+        941
+      ],
+      "source_exists": true,
+      "quality_status": "Cinematic generated still; visible people predominantly human; target4K unavailable in this delivery.",
+      "updated_canon_match": "noncompliant with alien-majority population",
+      "new_image_required": false,
+      "additional_images": [],
+      "conditional_images": [
+        "/assets/finale/aftermath-central.webp",
+        "/assets/finale/aftermath-regional.webp",
+        "/assets/finale/aftermath-covenant.webp",
+        "/assets/finale/planetary-emergency.webp"
+      ],
+      "final_selected_asset": "/assets/finale/aftermath-covenant.webp",
+      "final_actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "selection_status": "New conditional comic and ending sources integrated; browser acceptance pending",
+      "animation_method": "Layered2.5D photographic plate + scroll-controlled real3D camera; independent3D cargo; cloud effects",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "THE FUTURE OF LEXORYN",
+      "final_inspection_assets": [],
+      "final_conditional_assets": [
+        {
+          "src": "/assets/dynasty-crisis/crisis-comic-strip.webp",
+          "dimensions": [
+            2172,
+            724
+          ],
+          "outcome": "three-panel-strip"
+        },
+        {
+          "src": "/assets/dynasty-crisis/shielded-concord.webp",
+          "dimensions": [
+            1672,
+            941
+          ],
+          "outcome": "shelter"
+        },
+        {
+          "src": "/assets/dynasty-crisis/regional-accord.webp",
+          "dimensions": [
+            1672,
+            941
+          ],
+          "outcome": "regional"
+        },
+        {
+          "src": "/assets/dynasty-crisis/living-covenant.webp",
+          "dimensions": [
+            1672,
+            941
+          ],
+          "outcome": "covenant"
+        }
+      ]
+    },
+    {
+      "scene": 56,
+      "title": "THE LAST PROMPT",
+      "current_requested_asset": null,
+      "current_resolved_asset": null,
+      "current_native_dimensions": null,
+      "source_exists": true,
+      "quality_status": "Original shader geometry; no raster planet texture or Earth map",
+      "updated_canon_match": "planet preserved; orbital species motifs still require upgrade",
+      "new_image_required": false,
+      "additional_images": [],
+      "conditional_images": [],
+      "final_selected_asset": null,
+      "final_actual_native_dimensions": null,
+      "selection_status": "Baseline retained pending redesign integration; not final approval",
+      "animation_method": "Actual3D procedural shader planet, separate clouds/atmosphere, mineral crystals, station/satellites/broken moon; real drag/rotation",
+      "visual_validation": "Source inspection recorded; Alien Dynasty browser acceptance pending",
+      "final_scene_title": "THE LAST PROMPT",
+      "final_inspection_assets": []
+    }
+  ],
+  "assets": [
+    {
+      "src": "/assets/corrections/ceremonial-feast.webp",
+      "exists": true,
+      "key": "ceremonial-feast",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 664572,
+      "sha256": "442e0cf76a721249e67cb05b85f812360229117ef278ea9ba6691f3e4a363d21",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Cinematic generated still; visible people predominantly human; target4K unavailable in this delivery.",
+      "species_compliance": "noncompliant with alien-majority population",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "mobile": {
+        "src": "/assets/corrections/ceremonial-feast-mobile.webp",
+        "exists": true,
+        "width": 1672,
+        "height": 941,
+        "bytes": 396676
+      }
+    },
+    {
+      "src": "/assets/corrections/skyway-eye-level.webp",
+      "exists": true,
+      "key": "skyway-eye-level",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 654032,
+      "sha256": "dbad98ba4c7d2c8f4a29e9b9c6b064112dcee9d39581a52dfb2efacb3a5417d3",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "species_compliance": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "mobile": {
+        "src": "/assets/corrections/skyway-eye-level-mobile.webp",
+        "exists": true,
+        "width": 1672,
+        "height": 941,
+        "bytes": 403436
+      }
+    },
+    {
+      "src": "/assets/corrections/transit-ring-interchange.webp",
+      "exists": true,
+      "key": "transit-ring-interchange",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 744806,
+      "sha256": "376b2cc45f7c826b3a7bf4c08b1b3871ab5f93ac80353ab9fae7472154be5c7a",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "species_compliance": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "mobile": {
+        "src": "/assets/corrections/transit-ring-interchange-mobile.webp",
+        "exists": true,
+        "width": 1672,
+        "height": 941,
+        "bytes": 460012
+      }
+    },
+    {
+      "src": "/assets/finale/aftermath-central.webp",
+      "exists": true,
+      "key": "aftermath-central",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 578186,
+      "sha256": "35135737d164bd4a0fe9445d71100ce88dd8f43a6b944bafa942775c10cecf0a",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "species_compliance": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "mobile": {
+        "src": "/assets/finale/aftermath-central-mobile.webp",
+        "exists": true,
+        "width": 1672,
+        "height": 941,
+        "bytes": 337382
+      }
+    },
+    {
+      "src": "/assets/finale/aftermath-covenant.webp",
+      "exists": true,
+      "key": "aftermath-covenant",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 672606,
+      "sha256": "284bdca76404e2b95d24aa36f50e8dfbac69fafa4db13b58da356bbb11667d9b",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Cinematic generated still; visible people predominantly human; target4K unavailable in this delivery.",
+      "species_compliance": "noncompliant with alien-majority population",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "mobile": {
+        "src": "/assets/finale/aftermath-covenant-mobile.webp",
+        "exists": true,
+        "width": 1672,
+        "height": 941,
+        "bytes": 408512
+      }
+    },
+    {
+      "src": "/assets/finale/aftermath-regional.webp",
+      "exists": true,
+      "key": "aftermath-regional",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 694514,
+      "sha256": "926f4e34fceae40a2e655d5dccac44c8421d94a695af0021a2b9b6c7b2afb63d",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "species_compliance": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "mobile": {
+        "src": "/assets/finale/aftermath-regional-mobile.webp",
+        "exists": true,
+        "width": 1672,
+        "height": 941,
+        "bytes": 426188
+      }
+    },
+    {
+      "src": "/assets/finale/atmospheric-laboratory.webp",
+      "exists": true,
+      "key": "atmospheric-laboratory",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 630166,
+      "sha256": "03591449c2049459ffa602ed77c0a67ac0dfda37fa03b449e29627912fc3575f",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "species_compliance": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "mobile": {
+        "src": "/assets/finale/atmospheric-laboratory-mobile.webp",
+        "exists": true,
+        "width": 1672,
+        "height": 941,
+        "bytes": 369990
+      }
+    },
+    {
+      "src": "/assets/finale/ceremonial-procession.webp",
+      "exists": true,
+      "key": "ceremonial-procession",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 683966,
+      "sha256": "223fb735a8c86f162406d6f2a4ed4a4d26f9f02b25611e611b8f9d03b14066e5",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Cinematic generated still; visible people predominantly human; target4K unavailable in this delivery.",
+      "species_compliance": "noncompliant with alien-majority population",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "mobile": {
+        "src": "/assets/finale/ceremonial-procession-mobile.webp",
+        "exists": true,
+        "width": 1672,
+        "height": 941,
+        "bytes": 414002
+      }
+    },
+    {
+      "src": "/assets/finale/character-aaryan.webp",
+      "exists": true,
+      "key": "character-aaryan",
+      "width": 941,
+      "height": 1672,
+      "mode": "RGBA",
+      "bytes": 372732,
+      "sha256": "1558531458879885a12b594a482c1c8bb6297dbeb263452892ab9d3c68593717",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Detailed generated human anatomy; finite native face/body resolution, not rigged.",
+      "species_compliance": "human reference only; noncompliant for Vaelori/Myr roles",
+      "replacement_required": false,
+      "actual_native_dimensions": [
+        941,
+        1672
+      ]
+    },
+    {
+      "src": "/assets/finale/character-elara.webp",
+      "exists": true,
+      "key": "character-elara",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "bytes": 298912,
+      "sha256": "b280f0666b37d38ab70fdc5d2abdcc30c35374940963f296182bcd808cc2090a",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Detailed generated human anatomy; finite native face/body resolution, not rigged.",
+      "species_compliance": "human reference only; noncompliant for Vaelori/Myr roles",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "src": "/assets/finale/character-kaor.webp",
+      "exists": true,
+      "key": "character-kaor",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "bytes": 351346,
+      "sha256": "9ec39f891236046cdab5adc4ab85f8cd5206aeb77e5b2c967f5e8153393fa346",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Detailed generated human anatomy; finite native face/body resolution, not rigged.",
+      "species_compliance": "human reference only; noncompliant for Vaelori/Myr roles",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "src": "/assets/finale/character-nyra.webp",
+      "exists": true,
+      "key": "character-nyra",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "bytes": 283536,
+      "sha256": "0ce687966c582b036286ba40f7f49b7280e11e45ba35a3942c18bf690c4e7c98",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Detailed generated human anatomy; finite native face/body resolution, not rigged.",
+      "species_compliance": "human reference only; noncompliant for Vaelori/Myr roles",
+      "replacement_required": false,
+      "actual_native_dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "src": "/assets/finale/character-sorya.webp",
+      "exists": true,
+      "key": "character-sorya",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "bytes": 308358,
+      "sha256": "60a4d8e0699613643a11dd1f04fd1f2ba943daccbc167cad38bffd16540f8015",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Detailed generated human anatomy; finite native face/body resolution, not rigged.",
+      "species_compliance": "human reference only; noncompliant for Vaelori/Myr roles",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "src": "/assets/finale/character-vaelora.webp",
+      "exists": true,
+      "key": "character-vaelora",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "bytes": 312772,
+      "sha256": "c51cb6b0f06970ed0be93a4f40ad1b6ac664295dd2b90226fd69c8186b31fa61",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Detailed generated human anatomy; finite native face/body resolution, not rigged.",
+      "species_compliance": "human reference only; noncompliant for Vaelori/Myr roles",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "src": "/assets/finale/codex-core.webp",
+      "exists": true,
+      "key": "codex-core",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 468884,
+      "sha256": "145ffd3f0743fa57c7fa19f3df7e72a942ef952cefb067828f2c8879a524f78b",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "species_compliance": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "replacement_required": false,
+      "actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "mobile": {
+        "src": "/assets/finale/codex-core-mobile.webp",
+        "exists": true,
+        "width": 1672,
+        "height": 941,
+        "bytes": 249306
+      }
+    },
+    {
+      "src": "/assets/finale/convergence-night.webp",
+      "exists": true,
+      "key": "convergence-night",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 384236,
+      "sha256": "3539bb41e6ca44ef342f02d82b51855c074775f0d7b937041d80ff24dc462885",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "species_compliance": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "mobile": {
+        "src": "/assets/finale/convergence-night-mobile.webp",
+        "exists": true,
+        "width": 1672,
+        "height": 941,
+        "bytes": 216402
+      }
+    },
+    {
+      "src": "/assets/finale/crisis-comic-strip.webp",
+      "exists": true,
+      "key": "crisis-comic-strip",
+      "width": 2172,
+      "height": 724,
+      "mode": "RGB",
+      "bytes": 595158,
+      "sha256": "0832841d4fcb50e7c12c19ee6aba898e77faa9d0adfb983a7d2c68936f0ad22a",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted; full-size individual opened",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Cinematic generated still; visible people predominantly human; target4K unavailable in this delivery.",
+      "species_compliance": "noncompliant with alien-majority population",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        2172,
+        724
+      ],
+      "mobile": {
+        "src": "/assets/finale/crisis-comic-strip-mobile.webp",
+        "exists": true,
+        "width": 2172,
+        "height": 724,
+        "bytes": 339596
+      }
+    },
+    {
+      "src": "/assets/finale/forbidden-archive.webp",
+      "exists": true,
+      "key": "forbidden-archive",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 633914,
+      "sha256": "8f7c8c9e4bf1ea60e9011c7b9969832ba91717b2140da9a0be64387c75646c6d",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "species_compliance": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "replacement_required": false,
+      "actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "mobile": {
+        "src": "/assets/finale/forbidden-archive-mobile.webp",
+        "exists": true,
+        "width": 1672,
+        "height": 941,
+        "bytes": 356832
+      }
+    },
+    {
+      "src": "/assets/finale/hangar-interior.webp",
+      "exists": true,
+      "key": "hangar-interior",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 640286,
+      "sha256": "7775630a70971dc8425070c7c3bac4766991cd2e49d78b97000302a1a10019de",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "species_compliance": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "mobile": {
+        "src": "/assets/finale/hangar-interior-mobile.webp",
+        "exists": true,
+        "width": 1672,
+        "height": 941,
+        "bytes": 366862
+      }
+    },
+    {
+      "src": "/assets/finale/myr-ceremony.webp",
+      "exists": true,
+      "key": "myr-ceremony",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 790476,
+      "sha256": "36199d6acfb518e2c5f7b299802e7c5abf2edd6fc20ae58e6b3990d5f3e94649",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted; full-size individual opened",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Detailed native1672×941 still; full-size inspected.",
+      "species_compliance": "old quadrupedal Myr plus human-majority audience; incompatible with revised Myr anatomy",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "mobile": {
+        "src": "/assets/finale/myr-ceremony-mobile.webp",
+        "exists": true,
+        "width": 1672,
+        "height": 941,
+        "bytes": 488316
+      }
+    },
+    {
+      "src": "/assets/finale/planetary-emergency.webp",
+      "exists": true,
+      "key": "planetary-emergency",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 508584,
+      "sha256": "6f0510f308806fe0543e9d372ad335620f6d27425686dea68454d2a5a092eb1b",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "species_compliance": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "mobile": {
+        "src": "/assets/finale/planetary-emergency-mobile.webp",
+        "exists": true,
+        "width": 1672,
+        "height": 941,
+        "bytes": 273396
+      }
+    },
+    {
+      "src": "/assets/finale/portrait-aaryan.webp",
+      "exists": true,
+      "key": "portrait-aaryan",
+      "width": 1086,
+      "height": 1448,
+      "mode": "RGBA",
+      "bytes": 651624,
+      "sha256": "6e9ed59c90b830bd77e43a39d0c0d9322835e353bf354662f48f63dba0d170cb",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Detailed generated human anatomy; finite native face/body resolution, not rigged.",
+      "species_compliance": "human reference only; noncompliant for Vaelori/Myr roles",
+      "replacement_required": false,
+      "actual_native_dimensions": [
+        1086,
+        1448
+      ]
+    },
+    {
+      "src": "/assets/finale/portrait-kaor.webp",
+      "exists": true,
+      "key": "portrait-kaor",
+      "width": 1086,
+      "height": 1448,
+      "mode": "RGBA",
+      "bytes": 622164,
+      "sha256": "c151958585ad54c639fafdf12aee033ee79301361cd01cee166924ba99c4132e",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Detailed generated human anatomy; finite native face/body resolution, not rigged.",
+      "species_compliance": "human reference only; noncompliant for Vaelori/Myr roles",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1086,
+        1448
+      ]
+    },
+    {
+      "src": "/assets/finale/portrait-sorya.webp",
+      "exists": true,
+      "key": "portrait-sorya",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "bytes": 698594,
+      "sha256": "40b3ab0e4c1f7ce4a601a9cb70bc970e317d349490a14131f322fa0d1972195b",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Detailed generated human anatomy; finite native face/body resolution, not rigged.",
+      "species_compliance": "human reference only; noncompliant for Vaelori/Myr roles",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "src": "/assets/finale/supporting-cast.webp",
+      "exists": true,
+      "key": "supporting-cast",
+      "width": 1983,
+      "height": 793,
+      "mode": "RGBA",
+      "bytes": 484340,
+      "sha256": "bb087ca71ebc5223bc8841c65b86a3654aa436593d2f58d16515de4da5c92ceb",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Cinematic generated still; visible people predominantly human; target4K unavailable in this delivery.",
+      "species_compliance": "noncompliant with alien-majority population",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1983,
+        793
+      ]
+    },
+    {
+      "src": "/assets/overhaul/attire-atlas.webp",
+      "exists": true,
+      "key": "attire-atlas",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "bytes": 915992,
+      "sha256": "1b1ea274b1b5f6fcabf24a8d65edce0987ff94e7f548093a563e557fb18222e7",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Detailed alpha atlas; individual cropped item resolution is substantially below2048.",
+      "species_compliance": "human-compatible construction; anatomy-specific Vaelori/Myr adaptations absent",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "src": "/assets/overhaul/boots-atlas.webp",
+      "exists": true,
+      "key": "boots-atlas",
+      "width": 2172,
+      "height": 724,
+      "mode": "RGBA",
+      "bytes": 1440642,
+      "sha256": "a61e0780a72c218f51bca8a60d6a5b3731861240c3605a3bfb8d8ce2fa450d00",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Detailed alpha atlas; individual cropped item resolution is substantially below2048.",
+      "species_compliance": "human-compatible construction; anatomy-specific Vaelori/Myr adaptations absent",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        2172,
+        724
+      ]
+    },
+    {
+      "src": "/assets/overhaul/city-far.webp",
+      "exists": true,
+      "key": "city-far",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 713512,
+      "sha256": "99c1c84e30f7a6660d15283d33bd6c6e91ceaca4d02a5939779939710143adca",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "species_compliance": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "mobile": {
+        "src": "/assets/overhaul/city-far-mobile.webp",
+        "exists": true,
+        "width": 1672,
+        "height": 941,
+        "bytes": 437478
+      }
+    },
+    {
+      "src": "/assets/overhaul/city-foreground.webp",
+      "exists": true,
+      "key": "city-foreground",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "bytes": 816860,
+      "sha256": "e9b7745e5dda9c63e9164fb94a6bb948fcf0c21e60d60092e4196dd7d7de77e8",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Isolated alpha architecture for layered compositing; no deformation or new pixels.",
+      "species_compliance": "material continuity usable; species-specific scale and access not demonstrated",
+      "replacement_required": false,
+      "actual_native_dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "src": "/assets/overhaul/city-midground.webp",
+      "exists": true,
+      "key": "city-midground",
+      "width": 1774,
+      "height": 887,
+      "mode": "RGBA",
+      "bytes": 1236180,
+      "sha256": "6469a785ebc0f884ba37a5851830dc75519b4748c63a36f642effedd6483248b",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Isolated alpha architecture for layered compositing; no deformation or new pixels.",
+      "species_compliance": "material continuity usable; species-specific scale and access not demonstrated",
+      "replacement_required": false,
+      "actual_native_dimensions": [
+        1774,
+        887
+      ]
+    },
+    {
+      "src": "/assets/overhaul/cuisine-far.webp",
+      "exists": true,
+      "key": "cuisine-far",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 733310,
+      "sha256": "51df451a06ae2868d81141a6abe763c1fc532e073e73ab3164b00edfcd1185a4",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "species_compliance": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "mobile": {
+        "src": "/assets/overhaul/cuisine-far-mobile.webp",
+        "exists": true,
+        "width": 1672,
+        "height": 941,
+        "bytes": 404078
+      }
+    },
+    {
+      "src": "/assets/overhaul/desert-far.webp",
+      "exists": true,
+      "key": "desert-far",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 717430,
+      "sha256": "9e75eef3f69002fe607fdc51530543457773547de31ea6401ca4187fb969658c",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "species_compliance": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "mobile": {
+        "src": "/assets/overhaul/desert-far-mobile.webp",
+        "exists": true,
+        "width": 1672,
+        "height": 941,
+        "bytes": 415878
+      }
+    },
+    {
+      "src": "/assets/overhaul/festival-far.webp",
+      "exists": true,
+      "key": "festival-far",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 709106,
+      "sha256": "b449dd2c137fe93ee42e530a27ee55f23440683b87b3ffb8ea6579175455ea6a",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Cinematic generated still; visible people predominantly human; target4K unavailable in this delivery.",
+      "species_compliance": "noncompliant with alien-majority population",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "mobile": {
+        "src": "/assets/overhaul/festival-far-mobile.webp",
+        "exists": true,
+        "width": 1672,
+        "height": 941,
+        "bytes": 427082
+      }
+    },
+    {
+      "src": "/assets/overhaul/food-atlas.webp",
+      "exists": true,
+      "key": "food-atlas",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "bytes": 1748576,
+      "sha256": "555d9a0e950593afd6e03a38846822561423bf0db55cf09b9a957bd514c8bdbf",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted; full-size individual opened",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Detailed alpha atlas; individual cropped item resolution is substantially below2048.",
+      "species_compliance": "human-compatible construction; anatomy-specific Vaelori/Myr adaptations absent",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "src": "/assets/overhaul/gear-atlas.webp",
+      "exists": true,
+      "key": "gear-atlas",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "bytes": 1434184,
+      "sha256": "268b2d353b12c475adf72a0a78d5df67460bd13307dd0607419ed5a329417510",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Detailed alpha atlas; individual cropped item resolution is substantially below2048.",
+      "species_compliance": "human-compatible construction; anatomy-specific Vaelori/Myr adaptations absent",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "src": "/assets/overhaul/ice-far.webp",
+      "exists": true,
+      "key": "ice-far",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 810590,
+      "sha256": "d313d3d77ff8eb17fdec3dda07a7ca465f077fa56811dba78f5fd52180195f9f",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "species_compliance": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "mobile": {
+        "src": "/assets/overhaul/ice-far-mobile.webp",
+        "exists": true,
+        "width": 1672,
+        "height": 941,
+        "bytes": 476912
+      }
+    },
+    {
+      "src": "/assets/overhaul/market-far.webp",
+      "exists": true,
+      "key": "market-far",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 851530,
+      "sha256": "03aa634b40f6af566edb2ac605892618573874a6cd5aaf360aaeff4a5a9b7851",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "species_compliance": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "mobile": {
+        "src": "/assets/overhaul/market-far-mobile.webp",
+        "exists": true,
+        "width": 1672,
+        "height": 941,
+        "bytes": 513430
+      }
+    },
+    {
+      "src": "/assets/overhaul/market-foreground.webp",
+      "exists": true,
+      "key": "market-foreground",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "bytes": 893542,
+      "sha256": "83a6bb3fada1ed35ce4ecdb75d166041180d0966e4e8fd00eaa2f0194e70c9a2",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Isolated alpha architecture for layered compositing; no deformation or new pixels.",
+      "species_compliance": "material continuity usable; species-specific scale and access not demonstrated",
+      "replacement_required": false,
+      "actual_native_dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "src": "/assets/overhaul/market-midground.webp",
+      "exists": true,
+      "key": "market-midground",
+      "width": 1875,
+      "height": 839,
+      "mode": "RGBA",
+      "bytes": 1283328,
+      "sha256": "e0b72c037d9c4ccae49ea0c2060c5cef51b06a059ed19810b22bd5d33d6ae4ec",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Isolated alpha architecture for layered compositing; no deformation or new pixels.",
+      "species_compliance": "material continuity usable; species-specific scale and access not demonstrated",
+      "replacement_required": false,
+      "actual_native_dimensions": [
+        1875,
+        839
+      ]
+    },
+    {
+      "src": "/assets/overhaul/objects-far.webp",
+      "exists": true,
+      "key": "objects-far",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 568882,
+      "sha256": "027e163670ca51a12155bb21e4681208dc814341c9a64042d27c04c6fda526f3",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "species_compliance": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "mobile": {
+        "src": "/assets/overhaul/objects-far-mobile.webp",
+        "exists": true,
+        "width": 1672,
+        "height": 941,
+        "bytes": 274000
+      }
+    },
+    {
+      "src": "/assets/overhaul/storm-far.webp",
+      "exists": true,
+      "key": "storm-far",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 852756,
+      "sha256": "7e68653cb82fe6c078147a0a53bac415084bd8cd7ff687221151d109dcf2139c",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "species_compliance": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "mobile": {
+        "src": "/assets/overhaul/storm-far-mobile.webp",
+        "exists": true,
+        "width": 1672,
+        "height": 941,
+        "bytes": 517496
+      }
+    },
+    {
+      "src": "/assets/story/atelier.webp",
+      "exists": true,
+      "key": "atelier",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 481658,
+      "sha256": "34da864114eb2872073d4abefe42750ab4f1bf97c4f60539f06ae5f03349f996",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Cinematic generated still; visible people predominantly human; target4K unavailable in this delivery.",
+      "species_compliance": "noncompliant with alien-majority population",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "mobile": {
+        "src": "/assets/story/atelier-mobile.webp",
+        "exists": true,
+        "width": 960,
+        "height": 540,
+        "bytes": 160884
+      }
+    },
+    {
+      "src": "/assets/story/city.webp",
+      "exists": true,
+      "key": "city",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 560618,
+      "sha256": "d250f1668f6e5db981287e0ce29c675d6b233669ae474a296ecfed434f1b753d",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "species_compliance": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "mobile": {
+        "src": "/assets/story/city-mobile.webp",
+        "exists": true,
+        "width": 960,
+        "height": 540,
+        "bytes": 176110
+      }
+    },
+    {
+      "src": "/assets/story/clouds.webp",
+      "exists": true,
+      "key": "clouds",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 132806,
+      "sha256": "5d774f86d8efba23ca315a3eb8c7b6be459cc0012d8436d063065127fd69b54a",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "species_compliance": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "replacement_required": false,
+      "actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "mobile": {
+        "src": "/assets/story/clouds-mobile.webp",
+        "exists": true,
+        "width": 960,
+        "height": 540,
+        "bytes": 45398
+      }
+    },
+    {
+      "src": "/assets/story/commons.webp",
+      "exists": true,
+      "key": "commons",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 589832,
+      "sha256": "b48fbbcfece96f37ac250f9671614f2de42152659020ed761e8d3b8eeef0d39e",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Cinematic generated still; visible people predominantly human; target4K unavailable in this delivery.",
+      "species_compliance": "noncompliant with alien-majority population",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "mobile": {
+        "src": "/assets/story/commons-mobile.webp",
+        "exists": true,
+        "width": 960,
+        "height": 540,
+        "bytes": 191892
+      }
+    },
+    {
+      "src": "/assets/story/convergence.webp",
+      "exists": true,
+      "key": "convergence",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 420202,
+      "sha256": "ff66b4f368df6f3ed875c5906f269f0acd4fe22b382377c80d99cc07a3dc3dc0",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Cinematic generated still; visible people predominantly human; target4K unavailable in this delivery.",
+      "species_compliance": "noncompliant with alien-majority population",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "mobile": {
+        "src": "/assets/story/convergence-mobile.webp",
+        "exists": true,
+        "width": 960,
+        "height": 540,
+        "bytes": 137384
+      }
+    },
+    {
+      "src": "/assets/story/council.webp",
+      "exists": true,
+      "key": "council",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 493392,
+      "sha256": "0d92768f2920b5bc17bb822bb4fdb1e69fd2fbd17b36b494db44879ab9e3e625",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Cinematic generated still; visible people predominantly human; target4K unavailable in this delivery.",
+      "species_compliance": "noncompliant with alien-majority population",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "mobile": {
+        "src": "/assets/story/council-mobile.webp",
+        "exists": true,
+        "width": 960,
+        "height": 540,
+        "bytes": 148548
+      }
+    },
+    {
+      "src": "/assets/story/cuisine.webp",
+      "exists": true,
+      "key": "cuisine",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 512000,
+      "sha256": "ffc417432feb31ab1f423bc345ade5a11dc4c4fbf086c728cb06027cc724a21c",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Cinematic generated still; visible people predominantly human; target4K unavailable in this delivery.",
+      "species_compliance": "noncompliant with alien-majority population",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "mobile": {
+        "src": "/assets/story/cuisine-mobile.webp",
+        "exists": true,
+        "width": 960,
+        "height": 540,
+        "bytes": 169186
+      }
+    },
+    {
+      "src": "/assets/story/desert.webp",
+      "exists": true,
+      "key": "desert",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 547718,
+      "sha256": "e23cb8b4ceae924e5f61dbcf7ed5e28d82cd3672cebf9de820f5c76ac212f75b",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Cinematic generated still; visible people predominantly human; target4K unavailable in this delivery.",
+      "species_compliance": "noncompliant with alien-majority population",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "mobile": {
+        "src": "/assets/story/desert-mobile.webp",
+        "exists": true,
+        "width": 960,
+        "height": 540,
+        "bytes": 161210
+      }
+    },
+    {
+      "src": "/assets/story/ecosystem.webp",
+      "exists": true,
+      "key": "ecosystem",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 556764,
+      "sha256": "953a6fbf64a1b71f50e26e5e8a2e4c1fd4bfb32b2c07dfb549e25bf33c4c9ee8",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Cinematic generated still; visible people predominantly human; target4K unavailable in this delivery.",
+      "species_compliance": "noncompliant with alien-majority population",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "mobile": {
+        "src": "/assets/story/ecosystem-mobile.webp",
+        "exists": true,
+        "width": 960,
+        "height": 540,
+        "bytes": 170254
+      }
+    },
+    {
+      "src": "/assets/story/ice-interior.webp",
+      "exists": true,
+      "key": "ice-interior",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 615110,
+      "sha256": "cd125800c8b158b0dcbd5216b5150e509e089f40856e391763773ebb23daf830",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Cinematic generated still; visible people predominantly human; target4K unavailable in this delivery.",
+      "species_compliance": "noncompliant with alien-majority population",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "mobile": {
+        "src": "/assets/story/ice-interior-mobile.webp",
+        "exists": true,
+        "width": 960,
+        "height": 540,
+        "bytes": 192798
+      }
+    },
+    {
+      "src": "/assets/story/ice.webp",
+      "exists": true,
+      "key": "ice",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 512884,
+      "sha256": "15bd11dfc564f51e57d09c0aca329dbcce0ad7215fd506f9c3e6ee6d4a0ee924",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "species_compliance": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "mobile": {
+        "src": "/assets/story/ice-mobile.webp",
+        "exists": true,
+        "width": 960,
+        "height": 540,
+        "bytes": 152396
+      }
+    },
+    {
+      "src": "/assets/story/market.webp",
+      "exists": true,
+      "key": "market",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 750868,
+      "sha256": "c8c745c911c9f1eb140b5bf87d094ce162cbc483f939b873a77814feffe770da",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Cinematic generated still; visible people predominantly human; target4K unavailable in this delivery.",
+      "species_compliance": "noncompliant with alien-majority population",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "mobile": {
+        "src": "/assets/story/market-mobile.webp",
+        "exists": true,
+        "width": 960,
+        "height": 540,
+        "bytes": 225848
+      }
+    },
+    {
+      "src": "/assets/story/objects.webp",
+      "exists": true,
+      "key": "objects",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 531700,
+      "sha256": "17d96d7a2c8002466218c2566326d3b691cb94b3c8045cb33709756d8014ab93",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "species_compliance": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "mobile": {
+        "src": "/assets/story/objects-mobile.webp",
+        "exists": true,
+        "width": 960,
+        "height": 540,
+        "bytes": 163772
+      }
+    },
+    {
+      "src": "/assets/story/storm.webp",
+      "exists": true,
+      "key": "storm",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 578586,
+      "sha256": "f9f1c8c23c7e1044a08c0dad74370011b8ce5af01e8477fe96d334742bf05ad6",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "species_compliance": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1672,
+        941
+      ],
+      "mobile": {
+        "src": "/assets/story/storm-mobile.webp",
+        "exists": true,
+        "width": 960,
+        "height": 540,
+        "bytes": 162944
+      }
+    },
+    {
+      "src": "/assets/planet/orbit-poster.webp",
+      "key": "orbit-poster",
+      "exists": true,
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB",
+      "bytes": 25614,
+      "sha256": "4a0270ef442d410f4563279d0e63586a34163efc34196c18c4a76eecc5b6e999",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted; full-size individual opened",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Stale1280×720 render of pre-mineral blue/white planet; full-size inspected.",
+      "species_compliance": "does not represent current mineral planet",
+      "replacement_required": true,
+      "actual_native_dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "src": "/assets/regions/atmospheric-clouds.webp",
+      "key": "atmospheric-clouds",
+      "exists": true,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 279524,
+      "sha256": "0712f6f211bf2a137e970546c2ace878fffe3ed819d911d32cec1887ea2efb67",
+      "inspection": "contact-sheet visual inspection; individual full-size inspection where noted; full-size individual opened",
+      "browser_validation": "not performed for Alien Dynasty redesign",
+      "quality": "Detailed generated environment; no native4K source in current delivery; image-alone architecture cannot establish species population.",
+      "species_compliance": "unproven; requires anatomy-specific world details or new alien inhabitants",
+      "replacement_required": false,
+      "actual_native_dimensions": [
+        1672,
+        941
+      ]
+    }
+  ],
+  "limitations": [
+    "No browser acceptance pass for this redesign performed by this audit.",
+    "Current main environment deliveries are1672×941, not native4K.",
+    "Mobile derivatives decoded/measured; visual composition inspected through main sources.",
+    "Original generated PNG masters are not reverified here; source_exists refers to delivered local WebP.",
+    "Image inventories include baseline optional/retained source assets, even if not active after aliases.",
+    "Default comic has three strip cells plus one outcome image; outcome resources remain unchanged."
+  ],
+  "integrated_generated_sources": 70,
+  "browser_acceptance": "Not completed: prior localhost automatic approval gate remains unresolved"
+}

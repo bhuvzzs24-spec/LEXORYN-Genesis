@@ -1,11 +1,11 @@
 'use client';
 import {useEffect,useMemo,useRef} from 'react';
 import {useFrame,useThree,type ThreeEvent} from '@react-three/fiber';
-import {useTexture} from '@react-three/drei';
+import {useCinematicTexture} from './useCinematicTexture';
 import * as THREE from 'three';
 import type {StoryScene} from '@/data/story';
 import {sampleCinematicCamera} from '@/lib/cinematography';
-import {inspectionMedia} from './SceneAssetRegistry';
+import {inspectionMedia,lowInspectionMedia} from './SceneAssetRegistry';
 import type {InspectionMedia} from './InspectionExhibit';
 
 const vertex=`varying vec2 vUv;void main(){vUv=uv;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}`;
@@ -22,7 +22,7 @@ void main(){
 }`;
 
 function Item({id,media,position,width,focused,anyFocused,onHover}:{id:string;media:InspectionMedia;position:THREE.Vector3;width:number;focused:boolean;anyFocused:boolean;onHover:(id:string|null)=>void}){
- const texture=useTexture(media.src),mesh=useRef<THREE.Mesh>(null),current=useRef(0),{camera,gl,size}=useThree();
+ const texture=useCinematicTexture(media.src),mesh=useRef<THREE.Mesh>(null),current=useRef(0),{camera,gl,size}=useThree();
  const crop=media.crop??{x:0,y:0,width:1,height:1},aspect=media.width*crop.width/(media.height*crop.height);
  const uniforms=useMemo(()=>({uAtlas:{value:texture},uCrop:{value:new THREE.Vector4(crop.x,crop.y,crop.width,crop.height)},uOpacity:{value:1},uFocus:{value:0}}),[texture,crop.x,crop.y,crop.width,crop.height]);
  const point=useMemo(()=>new THREE.Vector3(),[]);
@@ -48,7 +48,7 @@ export function SceneObjectLayer({scene,focusedId,onHover}:{scene:StoryScene;foc
  const {size,gl}=useThree(),low=size.width<700;
  const items=useMemo(()=>{
   const pose=sampleCinematicCamera(scene.id-1,.4,low,size.width/size.height),camera=new THREE.PerspectiveCamera(42,size.width/size.height,.03,180);camera.position.set(...pose.position);camera.lookAt(new THREE.Vector3(...pose.target));camera.updateMatrixWorld();
-  return scene.hotspots.flatMap((h,i)=>{const media=inspectionMedia[h.id];if(!media)return[];const point=new THREE.Vector3(h.position[0]*2-1,1-h.position[1]*2,.5).unproject(camera),direction=point.sub(camera.position).normalize(),z=[22,31].includes(scene.id)?-.8-i*.035:-1.1-(i%3)*.12;const k=(z-camera.position.z)/direction.z;const position=camera.position.clone().addScaledVector(direction,k);return[{id:h.id,media,position,width:(low?1.18:[22,31].includes(scene.id)?2.85:1.85)*(scene.id===31?.65:1)*(h.category==='footwear'?.82:1)}];});
+  return scene.hotspots.flatMap((h,i)=>{const media=(low?lowInspectionMedia:inspectionMedia)[h.id];if(!media)return[];const point=new THREE.Vector3(h.position[0]*2-1,1-h.position[1]*2,.5).unproject(camera),direction=point.sub(camera.position).normalize(),z=[22,31].includes(scene.id)?-.8-i*.035:-1.1-(i%3)*.12;const k=(z-camera.position.z)/direction.z;const position=camera.position.clone().addScaledVector(direction,k);return[{id:h.id,media,position,width:(low?1.18:[22,31].includes(scene.id)?2.85:1.85)*(scene.id===31?.65:1)*(h.category==='footwear'?.82:1)}];});
  },[scene,low,size.width,size.height]);
  useFrame(()=>{gl.domElement.dataset.independentItems=String(items.length);gl.domElement.dataset.inspectedObject=focusedId??'';if(!focusedId)gl.domElement.dataset.objectLift='0';});
  return <group>{items.map(item=><Item key={item.id} {...item} focused={focusedId===item.id} anyFocused={!!focusedId} onHover={onHover}/>)}</group>;

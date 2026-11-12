@@ -28,5 +28,6 @@ export function useCinematicScroll({root,stage,mobile,reduced,onProgress}:{root:
    timeline.to(navigationVeil.current,{opacity:1,duration:montage?.06:.22,ease:'sine.inOut'}).call(snap).to(navigationVeil.current,{opacity:0,duration:montage?.12:.52,ease:'sine.out'},montage?'+=0':'+=.04');
   }else{const driver={y:scrollY};timeline.to(driver,{y:target,duration:.9,ease:'sine.inOut',onUpdate:()=>window.scrollTo({top:driver.y,behavior:'instant'})});}
  },[reduced]);
- return {trigger,goTo,navigationVeil};
+ const seekPlayback=useCallback((p:number)=>{const t=trigger.current;if(!t)return;navigation.current?.kill();window.scrollTo({top:t.start+p*(t.end-t.start),behavior:'instant'});ScrollTrigger.update();const scrub=t.getTween();if(scrub&&typeof scrub.progress==='function')scrub.progress(1);animation.current?.progress(p);},[]);
+ return {trigger,goTo,seekPlayback,navigationVeil};
 }

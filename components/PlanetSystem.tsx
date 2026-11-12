@@ -231,7 +231,7 @@ function OrbitalStation({ paused, reducedMotion }: { paused: boolean; reducedMot
         <mesh><boxGeometry args={[.14,.11,.09]}/><meshStandardMaterial color={i%3===0?'#b69a6f':'#46505b'} metalness={.85} roughness={.5}/></mesh>
         <mesh position={[0,.063,0]}><boxGeometry args={[.075,.008,.034]}/><meshBasicMaterial color={i%4===0?'#7ee0ec':'#dfaf65'}/></mesh>
       </group>})}
-      {[0,Math.PI/2,Math.PI,Math.PI*1.5].map(a=><mesh key={a} rotation={[0,-a,0]} position={[Math.cos(a)*.4,0,Math.sin(a)*.4]}><boxGeometry args={[.73,.025,.027]}/><meshStandardMaterial color="#818c95" metalness={.8} roughness={.4}/></mesh>)}
+      {Array.from({length:6},(_,i)=>i*Math.PI/3).map(a=><mesh key={a} rotation={[0,-a,0]} position={[Math.cos(a)*.4,0,Math.sin(a)*.4]}><boxGeometry args={[.73,.025,.027]}/><meshStandardMaterial color="#9a7952" metalness={.8} roughness={.4}/></mesh>)}
     </group>
     <mesh><cylinderGeometry args={[.16,.19,1.03,16]}/><meshStandardMaterial color="#596773" metalness={.85} roughness={.35}/></mesh>
     {[-.32,-.17,.18,.34].map(y=><mesh key={y} position={[0,y,0]}><cylinderGeometry args={[.22,.22,.065,24]}/><meshStandardMaterial color="#af9470" metalness={.85} roughness={.4}/></mesh>)}
@@ -250,6 +250,11 @@ function OrbitalStation({ paused, reducedMotion }: { paused: boolean; reducedMot
 function Satellite({ index, paused, reducedMotion }: { index: number; paused: boolean; reducedMotion: boolean }) {
  const group=useRef<THREE.Group>(null), time=useRef(index*1.9);
  useFrame((_,dt)=>{if(!group.current)return;if(!paused&&!reducedMotion)time.current+=dt*.045;const a=time.current;group.current.position.set(Math.cos(a)*2.62,Math.sin(a*1.3)*.56-.3,Math.sin(a)*2.62);group.current.rotation.set(.3,a,.5);});
+ if(index===0)return <group ref={group} scale={.11}>
+  <mesh scale={[.4,.7,.4]}><sphereGeometry args={[1,32,24]}/><meshPhysicalMaterial color="#6d9e92" roughness={.32} metalness={.25} transmission={.3} thickness={.3}/></mesh>
+  {[0,Math.PI/3,Math.PI*2/3].map(a=><mesh key={a} rotation={[.3,a,0]} scale={[.75,1.15,.55]}><torusGeometry args={[.8,.035,8,64]}/><meshStandardMaterial color="#7f9c81" metalness={.58} roughness={.4}/></mesh>)}
+  <mesh><sphereGeometry args={[.18,20,16]}/><meshBasicMaterial color="#85bda4"/></mesh>
+ </group>;
  return <group ref={group} scale={.11}>
   <mesh><boxGeometry args={[.4,.45,.4]}/><meshStandardMaterial color="#8e8778" metalness={.8} roughness={.45}/></mesh>
   <mesh><boxGeometry args={[2.4,.025,.38]}/><meshStandardMaterial color="#1b3653" metalness={.65} roughness={.35}/></mesh>
