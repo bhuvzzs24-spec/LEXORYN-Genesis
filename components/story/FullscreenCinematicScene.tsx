@@ -6,6 +6,7 @@ import * as THREE from 'three';
 import PlanetSystem from '../PlanetSystem';
 import CinematicGrade from '../CinematicGrade';
 import FinaleWorld from './FinaleWorld';
+import {correctedShots} from '@/lib/scene-visuals';
 import {finaleAssetRequest,emergencyRegion} from '@/lib/finale';
 import {storyScenes} from '@/data/story';
 import {cinematicLayerBlend} from '@/lib/cinematography';
@@ -24,9 +25,9 @@ function SceneWorld(props:CinematicSceneProps){
  const orbital=scene.mode==='orbit',entering=scene.id===6||scene.id===7;
  const showWorld=!orbital||entering;
  const common={progress:props.progress,paused:props.paused,reducedMotion:props.reducedMotion,quality:props.quality};
- const variant=scene.id===51?emergencyRegion(props.progress).effect:scene.id===31?'cuisine':scene.id===22?'cuisine':scene.id===23?'atelier':scene.id===24?'objects':scene.id===25?'council':scene.id===26?'commons':scene.id===27?'ecosystem':scene.palette;
+ const variant=correctedShots[scene.id]?.variant??(scene.id===51?emergencyRegion(props.progress).effect:scene.id===31?'cuisine':scene.id===22?'cuisine':scene.id===23?'atelier':scene.id===24?'objects':scene.id===25?'council':scene.id===26?'commons':scene.id===27?'ecosystem':scene.palette);
  const nextMedia=next?resolveSceneAsset(finaleAssetRequest(next.id,0,next.asset,props.outcomeAsset),low):media;
- const nextVariant=next?.id===31?'cuisine':next?.id===22?'cuisine':next?.id===23?'atelier':next?.id===24?'objects':next?.id===25?'council':next?.id===26?'commons':next?.id===27?'ecosystem':next?.palette??variant;
+ const nextVariant=(next&&correctedShots[next.id]?.variant)??(next?.id===31?'cuisine':next?.id===22?'cuisine':next?.id===23?'atelier':next?.id===24?'objects':next?.id===25?'council':next?.id===26?'commons':next?.id===27?'ecosystem':next?.palette??variant);
  const changes=!!next&&next.mode==='world'&&(nextMedia.src!==media.src||nextVariant!==variant);
  const civic=scene.id===10?'transit':scene.id===12?'energy':[14,21].includes(scene.id)?'network':scene.id===25?'council':scene.id===26?'clinic':'none';
  return <>
@@ -37,9 +38,9 @@ function SceneWorld(props:CinematicSceneProps){
   {scene.id===4?<Transmission progress={props.progress}/>:null}
   {scene.id===5?<AnimatedVehicleLayer {...common} variant="fleet"/>:null}
   {showWorld?<>
-   <Suspense fallback={null}><AssetBoundary key={media.src}><LayeredEnvironment {...common} {...sceneDepthAssets(scene.asset)} asset={media.src} aspect={media.width/media.height} variant={entering?'storm':variant} foreground={!entering&&scene.id<29} architecture={!entering&&scene.id<29} opacity={(changes?1-mix:1)*(scene.id===35&&!props.reducedMotion?.87+.1*Math.sin(props.progress*Math.PI*3):1)}/></AssetBoundary></Suspense>
-   {changes&&props.progress>.78?<Suspense fallback={null}><AssetBoundary key={nextMedia.src}><LayeredEnvironment {...common} {...sceneDepthAssets(next.asset)} asset={nextMedia.src} aspect={nextMedia.width/nextMedia.height} variant={nextVariant} depth={-28.05} foreground={next.id<29} architecture={next.id<29} progress={0} opacity={mix}/></AssetBoundary></Suspense>:null}
-   {[22,24,31].includes(scene.id)?<Suspense fallback={null}><AssetBoundary key={`items-${scene.id}`}><SceneObjectLayer scene={scene.id===31?{...scene,id:22}:scene} focusedId={props.focusedObjectId} onHover={props.onHoverObject}/></AssetBoundary></Suspense>:null}
+   <Suspense fallback={null}><AssetBoundary key={media.src}><LayeredEnvironment {...common} {...sceneDepthAssets(scene.asset)} asset={media.src} aspect={media.width/media.height} variant={entering?'storm':variant} foreground={!entering&&scene.id<29} architecture={!entering&&scene.id<29&&(correctedShots[scene.id]?.architecture??true)} opacity={(changes?1-mix:1)*(scene.id===35&&!props.reducedMotion?.87+.1*Math.sin(props.progress*Math.PI*3):1)}/></AssetBoundary></Suspense>
+   {changes&&props.progress>.78?<Suspense fallback={null}><AssetBoundary key={nextMedia.src}><LayeredEnvironment {...common} {...sceneDepthAssets(next.asset)} asset={nextMedia.src} aspect={nextMedia.width/nextMedia.height} variant={nextVariant} depth={-28.05} foreground={next.id<29} architecture={next.id<29&&(correctedShots[next.id]?.architecture??true)} progress={0} opacity={mix}/></AssetBoundary></Suspense>:null}
+   {[22,24,31].includes(scene.id)?<Suspense fallback={null}><AssetBoundary key={`items-${scene.id}`}><SceneObjectLayer scene={scene} focusedId={props.focusedObjectId} onHover={props.onHoverObject}/></AssetBoundary></Suspense>:null}
    <AtmosphericEffects {...common} variant={scene.id===51?emergencyRegion(props.progress).effect:entering?'storm':scene.effect==='steam'?'market':scene.palette} seed={3186+scene.id}/>
    {!entering?<AnimatedVehicleLayer {...common} variant={scene.vehicle}/>:null}
    {!entering?<CivicMechanisms {...common} variant={civic}/>:null}
@@ -50,4 +51,4 @@ function SceneWorld(props:CinematicSceneProps){
   {scene.id>=29&&scene.id<56?<FinaleWorld sceneId={scene.id} progress={props.progress} paused={props.paused} quality={props.quality} characterId={props.characterId} reducedMotion={props.reducedMotion}/>:null}
  </>;
 }
-export default function FullscreenCinematicScene(props:CinematicSceneProps){return <Canvas camera={{position:[0,.3,9.2],fov:42,near:.03,far:180}} dpr={props.quality==='low'?[1,1.1]:[1,1.5]} gl={{alpha:true,antialias:true,powerPreference:props.quality==='low'?'low-power':'high-performance'}} onCreated={({gl})=>{gl.setClearColor('#050a12',0);gl.toneMapping=THREE.ACESFilmicToneMapping;gl.toneMappingExposure=1.03;gl.domElement.addEventListener('webglcontextlost',props.onFailure,{once:true});}} fallback={<span>Interactive cinematic canvas. Scene navigation, climate profiles and descriptions are available outside this canvas.</span>}><Suspense fallback={null}><SceneWorld {...props}/></Suspense></Canvas>;}
+export default function FullscreenCinematicScene(props:CinematicSceneProps){return <Canvas camera={{position:[0,.3,9.2],fov:42,near:.03,far:180}} dpr={props.quality==='low'?[1,1.1]:[1,1.75]} gl={{alpha:true,antialias:true,powerPreference:props.quality==='low'?'low-power':'high-performance'}} onCreated={({gl})=>{gl.setClearColor('#050a12',0);gl.toneMapping=THREE.ACESFilmicToneMapping;gl.toneMappingExposure=1.03;gl.domElement.addEventListener('webglcontextlost',props.onFailure,{once:true});}} fallback={<span>Interactive cinematic canvas. Scene navigation, climate profiles and descriptions are available outside this canvas.</span>}><Suspense fallback={null}><SceneWorld {...props}/></Suspense></Canvas>;}

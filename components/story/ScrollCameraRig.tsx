@@ -7,7 +7,7 @@ export function ScrollCameraRig({sceneIndex,progress,selectedRegion,reducedMotio
  const {camera,gl,size}=useThree(),target=useMemo(()=>new THREE.Vector3(),[]),focus=useRef(0);
  useEffect(()=>{focus.current=0;},[planetKey]);
  useFrame((_,delta)=>{
-  const pose=sampleCinematicCamera(sceneIndex,progress,size.width<700),orbital=sceneIndex<5||sceneIndex===14||sceneIndex===55;
+  const pose=sampleCinematicCamera(sceneIndex,progress,size.width<700,size.width/size.height),orbital=sceneIndex<5||sceneIndex===14||sceneIndex===55;
   focus.current=reducedMotion?(selectedRegion&&orbital?1:0):THREE.MathUtils.damp(focus.current,selectedRegion&&orbital?1:0,7,Math.min(delta,.05));
   const position=[...pose.position],look=[...pose.target],f=focus.current;
   if(f>.0001){const fp=[1.25,.3,size.width<700?9:6.4],ft=[1.25,.1,0];for(let i=0;i<3;i++){position[i]=THREE.MathUtils.lerp(position[i],fp[i],f);look[i]=THREE.MathUtils.lerp(look[i],ft[i],f);}}

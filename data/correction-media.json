@@ -1,0 +1,26 @@
+{
+  "skyway-eye-level": {
+    "src": "/assets/corrections/skyway-eye-level.webp",
+    "width": 1672,
+    "height": 941,
+    "mobileSrc": "/assets/corrections/skyway-eye-level-mobile.webp",
+    "kind": "generated",
+    "alpha": false
+  },
+  "transit-ring-interchange": {
+    "src": "/assets/corrections/transit-ring-interchange.webp",
+    "width": 1672,
+    "height": 941,
+    "mobileSrc": "/assets/corrections/transit-ring-interchange-mobile.webp",
+    "kind": "generated",
+    "alpha": false
+  },
+  "ceremonial-feast": {
+    "src": "/assets/corrections/ceremonial-feast.webp",
+    "width": 1672,
+    "height": 941,
+    "mobileSrc": "/assets/corrections/ceremonial-feast-mobile.webp",
+    "kind": "generated",
+    "alpha": false
+  }
+}

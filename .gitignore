@@ -58,3 +58,7 @@ public/assets/**
 # Original generated final-chapter art only.
 !public/assets/finale/
 !public/assets/finale/*.webp
+
+# Original targeted cinematic correction assets.
+!public/assets/corrections/
+!public/assets/corrections/*.webp

@@ -1,3 +1,5 @@
+import {manualSceneWeight} from './pacing';
+import {correctedShots} from '../lib/scene-visuals';
 import {finaleScenes} from './finale-story';
 /** Phase 1–2 story canon. Asset paths are replaceable production slots, not claims of resolution. */
 export type StoryVector = readonly [number, number, number];
@@ -209,5 +211,5 @@ export const storyScenes: readonly StoryScene[] = [
     hotspot('native-fungus', 'LUMINOUS FUNGI', [.17, .76], 'Native fungi recycle organic material in shaded ground layers. Cultivated food species are kept distinct from unmanaged wild growth.', 'ecology', 'eco-fungus'),
   ] }),
   scene({ id: 28, title: 'PREPARING FOR CONVERGENCE', asset: '/assets/story/convergence.webp', palette: 'festival', effect: 'lantern', vehicle: 'cargo', caption: 'Tonight, three regions will light one sky.', duration: 1.15, camera: surfaceFlight(.2, 1.15, 10.1, -.2), hotspots: [hotspot('convergence-drones', 'CONVERGENCE LIGHTS', [.7, .4], 'Coordinated lantern drones rise from civic terraces, tracing the shared regional energy network as communities prepare for the Night of Convergence.', 'festival')], info: 'Festival preparation concludes this phase. The Night of Convergence ceremony begins the next chapter; no crisis branch is implemented here.' }),
-  ...finaleScenes.map(s=>s.id===31?{...s,hotspots:cuisineHotspots}:s),
-];
+  ...finaleScenes.map(s=>s.id===31?{...s,hotspots:cuisineHotspots.map((h,i)=>({...h,position:[.12+i*.15,.64+(i%2)*.035] as const}))}:s),
+].map(scene=>({...scene,asset:correctedShots[scene.id]?.asset??scene.asset,duration:manualSceneWeight(scene.id,scene.duration)}));

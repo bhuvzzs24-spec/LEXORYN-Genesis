@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef } from 'react';
 import { ThreeEvent, useFrame, useThree } from '@react-three/fiber';
 import * as THREE from 'three';
 import { regions } from '@/data/world';
+import {crystalClusters} from '@/lib/planet-geology';
 
 export interface PlanetSystemProps {
  orbitalProgress?: number;
@@ -39,20 +40,21 @@ const noiseGLSL = /* glsl */ `
     }
     return result;
   }
-  // Tilted mineral plate fields: most of this world is land, with enclosed rift basins.
-  // No geographic source maps are used; the deterministic field is continuous on the sphere.
-  float continent(vec3 q) {
-    vec3 warp=vec3(fbm(q*2.1+4.0),fbm(q*2.1+10.0),fbm(q*2.1-7.0));
-    vec3 axis=q*vec3(1.15,.78,1.42)+warp*.61;
-    float plate=fbm(axis*2.7+vec3(3.4,-1.8,8.6));
-    float longRift=sin(dot(q,vec3(3.2,-1.7,2.6))+fbm(q*6.1)*3.8);
-    return plate*.80+.125+longRift*.055;
+  // Warped three-dimensional mineral cells form unequal cratons, not Earth-like continents.
+  vec3 mineralCells(vec3 q) {
+    vec3 warp=vec3(fbm(q*1.7+4.0),fbm(q*1.7-6.0),fbm(q*1.7+12.0));
+    vec3 p=q*vec3(3.7,2.6,4.3)+(warp-.5)*.88;
+    vec3 cell=floor(p),local=fract(p);float first=9.0,second=9.0,identity=0.0;
+    for(int x=-1;x<=1;x++)for(int y=-1;y<=1;y++)for(int z=-1;z<=1;z++){
+      vec3 offset=vec3(float(x),float(y),float(z)),seed=cell+offset;
+      vec3 center=vec3(hash31(seed),hash31(seed+17.7),hash31(seed+43.1));
+      float distance=length(offset+center-local);
+      if(distance<first){second=first;first=distance;identity=hash31(seed+81.0);}else second=min(second,distance);
+    }
+    return vec3(second-first,identity,first);
   }
-  float engineeredScar(vec3 q) {
-    float mainFault=abs(dot(q,normalize(vec3(.35,.82,-.47)))+.12*sin(dot(q,vec3(3.3,-1.8,4.7))));
-    float branch=abs(dot(q,normalize(vec3(-.66,.28,.70)))-.19+.09*sin(q.y*10.0+q.z*4.0));
-    float segment=smoothstep(-.65,-.18,q.z+q.x*.42);
-    return min(mainFault,branch+.014*(1.0-segment));
+  float crustHeight(vec3 q,vec3 plate){
+    return plate.y*.68+fbm(q*4.9+vec3(7.0,-3.0,2.0))*.25;
   }
 
 `;
@@ -64,11 +66,12 @@ const surfaceVertex = /* glsl */ `
   varying vec3 vNormalWorld;
   void main() {
     vec3 q=normalize(position);
-    float land=smoothstep(.39,.445,continent(q));
-    float ridges=pow(1.0-abs(fbm(q*30.0)*2.0-1.0),4.0);
-    float strata=sin(fbm(q*13.0)*65.0)*.5+.5;
-    float scar=1.0-smoothstep(.004,.018,engineeredScar(q));
-    vec3 displaced=position+normal*(land*(ridges*.017+strata*.003)-scar*.007);
+    vec3 plate=mineralCells(q);float height=crustHeight(q,plate);
+    float rock=smoothstep(.26,.32,height);
+    float terraces=fbm(q*17.0);
+    float ridges=pow(1.0-abs(fbm(q*29.0)*2.0-1.0),3.0);
+    float depression=(1.0-smoothstep(.006,.045,plate.x))*.004;
+    vec3 displaced=position+normal*(rock*(terraces*.006+ridges*.009)-depression);
     vObject=q;
     vWorld=(modelMatrix*vec4(displaced,1.0)).xyz;
     vNormalWorld=normalize(mat3(modelMatrix)*normal);
@@ -91,62 +94,57 @@ const surfaceFragment = /* glsl */ `
   }
   void main() {
     vec3 q=normalize(vObject);
-    float h=continent(q);
-    float land=smoothstep(.39,.445,h);
-    float macro=fbm(q*19.0);
-    float micro=n3(q*970.0);
-    float crags=pow(1.0-abs(2.0*fbm(q*92.0)-1.0),4.0);
-    float strata=sin(fbm(q*14.0)*88.0+macro*4.0)*.5+.5;
-    float iron=smoothstep(.53,.71,fbm(q*8.4+vec3(2.3,6.2,-1.0)));
-    // Graphite, metallic silicates and weathered bronze stay readable through the thin weather.
-    vec3 basalt=mix(vec3(.019,.024,.025),vec3(.097,.100,.084),macro*.72+crags*.30);
-    basalt=mix(basalt,vec3(.128,.078,.032)*(.55+strata*.6),iron*.70);
-    basalt*=.72+micro*.29+strata*.21;
-    vec3 sea=mix(vec3(.0015,.007,.007),vec3(.006,.037,.032),smoothstep(.31,.435,h));
+    vec3 plate=mineralCells(q);float h=crustHeight(q,plate);
+    float land=smoothstep(.26,.32,h);
+    float macro=fbm(q*21.0),micro=n3(q*1250.0);
+    float crags=pow(1.0-abs(2.0*fbm(q*83.0)-1.0),4.0);
+    float strata=.5+.5*sin(fbm(q*17.0)*93.0+plate.y*21.0);
+    float bronze=smoothstep(.56,.79,plate.y)*smoothstep(.33,.65,macro);
+    float crystal=smoothstep(.65,.80,macro)*smoothstep(.08,.22,plate.x);
+    vec3 basalt=mix(vec3(.007,.014,.017),vec3(.020,.048,.043),macro*.65+crags*.3);
+    basalt=mix(basalt,vec3(.063,.032,.013)*(.6+strata*.5),bronze*.7);
+    basalt=mix(basalt,vec3(.028,.116,.109),crystal*.52);
+    basalt*=.75+micro*.2+strata*.19;
+    vec3 sea=mix(vec3(.001,.008,.011),vec3(.006,.048,.046),smoothstep(.12,.31,h));
     vec3 albedo=mix(sea,basalt,land);
-    // Cryonth's ice is a skewed, fractured mineral shelf rather than a white terrestrial ice cap.
-    float polar=smoothstep(.80,.965,dot(q,normalize(vec3(-.18,1.0,.12)))+(macro-.5)*.17);
-    polar*=smoothstep(.36,.48,h);
-    albedo=mix(albedo,vec3(.075,.155,.151)*(.68+crags*.43),polar*.76);
-    float scarDistance=engineeredScar(q);
-    float excavated=1.0-smoothstep(.007,.023,scarDistance);
-    albedo=mix(albedo,vec3(.004,.008,.008),excavated*.82);
-    float mineralSeam=1.0-smoothstep(.001,.004,abs(fbm(q*13.0+vec3(4.0,7.0,2.0))-.48));
-    albedo+=vec3(.043,.026,.009)*mineralSeam*land;
-    float roughness=mix(.34,.72,land);
-    roughness=mix(roughness,.52,iron*.6+polar*.2);
-    vec3 N=normalize(vNormalWorld);
+    float polar=smoothstep(.77,.98,dot(q,normalize(vec3(-.28,1.0,.19)))+(macro-.5)*.18)*land;
+    albedo=mix(albedo,vec3(.043,.128,.145)*(.65+crags*.45),polar*.72);
+    float brokenRift=1.0-smoothstep(.008,.030,plate.x);
+    albedo=mix(albedo,vec3(.002,.008,.010),brokenRift*.67);
+    float roughness=mix(.34,.79,land);roughness=mix(roughness,.43,crystal*.55+bronze*.12);
+    vec3 smoothN=normalize(vNormalWorld),geometricN=normalize(cross(dFdx(vWorld),dFdy(vWorld)));
+    if(dot(geometricN,smoothN)<0.0)geometricN=-geometricN;
+    vec3 N=normalize(mix(smoothN,geometricN,.16));
     vec3 tangent=normalize(cross(abs(N.y)>.95?vec3(1,0,0):vec3(0,1,0),N));
     vec3 bitangent=cross(N,tangent);
-    float bumpA=n3(q*310.0)-n3(q*310.0+vec3(.23,0,0));
-    float bumpB=n3(q*310.0)-n3(q*310.0+vec3(0,.23,0));
-    N=normalize(N+(tangent*bumpA+bitangent*bumpB)*land*.34);
+    float bumpA=n3(q*390.0)-n3(q*390.0+vec3(.19,0,0));
+    float bumpB=n3(q*390.0)-n3(q*390.0+vec3(0,.19,0));
+    N=normalize(N+(tangent*bumpA+bitangent*bumpB)*land*.09);
     vec3 L=normalize(uStar), V=normalize(cameraPosition-vWorld), H=normalize(L+V);
     float NoL=max(dot(N,L),0.0), NoV=max(dot(N,V),.001), NoH=max(dot(N,H),0.0), VoH=max(dot(V,H),0.0);
-    vec3 F0=mix(vec3(.035),vec3(.155,.128,.080),land*.66+iron*.18);
+    vec3 F0=mix(vec3(.035),vec3(.155,.128,.080),bronze*.46+crystal*.1);
     vec3 F=F0+(1.0-F0)*pow(1.0-VoH,5.0);
     float k=pow(roughness+1.0,2.0)/8.0;
     float G=(NoV/(NoV*(1.0-k)+k))*(NoL/(NoL*(1.0-k)+k));
     vec3 spec=distribution(NoH,roughness)*G*F/max(4.0*NoV*NoL,.001);
     vec3 diffuse=albedo*(1.0-F)/PI;
-    vec3 direct=(diffuse+spec)*NoL*vec3(5.8,4.8,3.55);
+    vec3 direct=(diffuse+spec)*NoL*vec3(4.1,3.6,2.85);
     float facing=dot(N,L);
     float night=1.0-smoothstep(-.19,.11,facing);
     float horizon=pow(1.0-NoV,3.0);
     vec3 ambient=albedo*vec3(.045,.075,.080);
-    // Nested branching faults and two broken engineered meridians reveal a planetary machine.
-    float tectonic=abs(fbm(q*6.8+vec3(.5,3.0,7.0))-.47);
-    float fault=(1.0-smoothstep(.0014,.0060,tectonic))*land;
-    float smallFault=(1.0-smoothstep(.0006,.0021,abs(fbm(q*32.0)-.52)))*land*.27;
-    float scarLine=1.0-smoothstep(.0014,.0048,scarDistance);
-    float interrupter=smoothstep(.23,.36,fbm(q*19.0));
-    float ancient=fault*.46+smallFault+scarLine*.76*interrupter;
-    vec3 emission=vec3(1.0,.46,.105)*ancient*(.47+night*.85);
+    // Short, interrupted branching fractures follow mineral boundaries. No meridian or planar band.
+    float fractureMask=smoothstep(.43,.65,fbm(q*8.3+vec3(8.0,-1.0,4.0)));
+    float primary=(1.0-smoothstep(.0010,.007,plate.x))*fractureMask;
+    float branch=(1.0-smoothstep(.0007,.0026,abs(fbm(q*47.0+plate.y)-.53)));
+    branch*=smoothstep(.49,.65,fbm(q*15.0-7.0))*.24;
+    float ancient=(primary*.38+branch)*land;
+    vec3 emission=vec3(.91,.40,.10)*ancient*(.18+night*.72);
     // Inhabited shelves form unequal clusters, interlinked by darker industrial corridors.
     vec3 cell=floor(q*890.0);
     float settlements=step(.965,hash31(cell))*step(.50,n3(q*76.0));
     float industrial=step(.987,hash31(floor(q*610.0)+13.0));
-    float coast=smoothstep(.395,.44,h)*(1.0-smoothstep(.56,.64,h));
+    float coast=smoothstep(.26,.34,h)*(1.0-smoothstep(.44,.55,h));
     float habitable=1.0-smoothstep(.74,.92,abs(q.y));
     emission+=vec3(1.0,.58,.19)*settlements*coast*habitable*night*2.4;
     emission+=vec3(.11,.58,.52)*industrial*land*night*.85;
@@ -293,6 +291,11 @@ const faultFaceFragment = /* glsl */ `
   #include <colorspace_fragment>
  }
 `;
+function MineralCrystals(){
+ const ref=useRef<THREE.InstancedMesh>(null),clusters=useMemo(()=>crystalClusters(),[]);
+ useEffect(()=>{if(!ref.current)return;const dummy=new THREE.Object3D(),up=new THREE.Vector3(0,1,0);clusters.forEach((c,i)=>{const direction=new THREE.Vector3(...c.direction);dummy.position.copy(direction).multiplyScalar(2.018+c.height*.5);dummy.quaternion.setFromUnitVectors(up,direction);dummy.scale.set(c.width,c.height,c.width);dummy.updateMatrix();ref.current?.setMatrixAt(i,dummy.matrix);ref.current?.setColorAt(i,new THREE.Color(c.bronze?'#725435':'#244f50'));});ref.current.instanceMatrix.needsUpdate=true;if(ref.current.instanceColor)ref.current.instanceColor.needsUpdate=true;},[clusters]);
+ return <instancedMesh ref={ref} args={[undefined,undefined,clusters.length]}><cylinderGeometry args={[.005,.014,1,5,1]}/><meshPhysicalMaterial color="#779491" metalness={.72} roughness={.29} clearcoat={.35} clearcoatRoughness={.25}/></instancedMesh>;
+}
 function SurfaceRelays(){
  // Short, terrain-aligned structures reinforce scale; the glowing network is embedded shader relief.
  const relays=useMemo(()=>Array.from({length:15},(_,i)=>{
@@ -350,7 +353,7 @@ export default function PlanetSystem({progress,paused,reducedMotion,selectedRegi
   if(distance<raycaster.near||distance>raycaster.far)return;
   intersections.push({distance,point:pickPoint.clone(),object:surface.current});
  };
- const segments=size.width<700?100:192;
+ const segments=size.width<700?128:256;
  useEffect(()=>{manual.current=false;},[selectedRegion]);
  useEffect(()=>{const initial=gl.domElement.style.touchAction;gl.domElement.style.touchAction='pan-y';return()=>{gl.domElement.style.touchAction=initial;};},[gl]);
  useFrame((_,dt)=>{
@@ -361,7 +364,7 @@ export default function PlanetSystem({progress,paused,reducedMotion,selectedRegi
   if(selectedRegion&&!manual.current){const region=regions.find(r=>r.id===selectedRegion);if(region){normal.set(...region.position).normalize();target.setFromUnitVectors(normal,new THREE.Vector3(0,.10,1).normalize());if(reducedMotion)rotation.current.quaternion.copy(target);else rotation.current.quaternion.slerp(target,1-Math.exp(-dt*3));}}
   else if(manual.current){if(!drag.current&&!paused&&!reducedMotion)dragAngles.current.yaw+=dt*.021;target.setFromEuler(new THREE.Euler(dragAngles.current.pitch,dragAngles.current.yaw,0,'YXZ'));if(reducedMotion)rotation.current.quaternion.copy(target);else rotation.current.quaternion.slerp(target,1-Math.exp(-dt*12));}
   else {if(!paused&&!reducedMotion)idle.current+=dt*.021;rotation.current.rotation.set(.1,idle.current,0);}
-  gl.domElement.dataset.planetDesign='mineral-rift-v3';
+  gl.domElement.dataset.planetDesign='obsidian-cellular-v4';
   gl.domElement.dataset.rotation=[rotation.current.rotation.x,rotation.current.rotation.y,rotation.current.rotation.z].map(value=>value.toFixed(3)).join(',');
  });
  function pointerDown(e:ThreeEvent<PointerEvent>){if(progress>.25||e.nativeEvent.pointerType==='touch')return;e.stopPropagation();manual.current=true;const angles=new THREE.Euler().setFromQuaternion(rotation.current?.quaternion??new THREE.Quaternion(),'YXZ');dragAngles.current={pitch:angles.x,yaw:angles.y};drag.current={x:e.clientX,y:e.clientY,pitch:angles.x,yaw:angles.y};(e.target as unknown as {setPointerCapture:(id:number)=>void}).setPointerCapture(e.pointerId);gl.domElement.style.cursor='grabbing';}
@@ -374,9 +377,10 @@ export default function PlanetSystem({progress,paused,reducedMotion,selectedRegi
     <shaderMaterial vertexShader={surfaceVertex} fragmentShader={surfaceFragment} uniforms={uniforms}/>
    </mesh>
    <mesh ref={clouds} renderOrder={2}>
-    <sphereGeometry args={[2.034,128,80]}/>
+    <sphereGeometry args={[2.105,128,80]}/>
     <shaderMaterial vertexShader={shellVertex} fragmentShader={cloudFragment} uniforms={cloudUniforms} transparent depthWrite={false}/>
    </mesh>
+   <MineralCrystals/>
    <SurfaceRelays/>
    {progress<.22&&regions.map(region=>{
     const point=new THREE.Vector3(...region.position).normalize().multiplyScalar(2.06);
@@ -392,7 +396,7 @@ export default function PlanetSystem({progress,paused,reducedMotion,selectedRegi
     </group>;
    })}
   </group>
-  <mesh renderOrder={3}><sphereGeometry args={[2.079,128,80]}/><shaderMaterial vertexShader={shellVertex} fragmentShader={atmosphereFragment} uniforms={atmosphereUniforms} transparent depthWrite={false} side={THREE.BackSide} blending={THREE.AdditiveBlending}/></mesh>
+  <mesh renderOrder={3}><sphereGeometry args={[2.16,128,80]}/><shaderMaterial vertexShader={shellVertex} fragmentShader={atmosphereFragment} uniforms={atmosphereUniforms} transparent depthWrite={false} side={THREE.BackSide} blending={THREE.AdditiveBlending}/></mesh>
   <group visible={progress<.43}><OrbitalStation paused={paused} reducedMotion={reducedMotion}/>
   {[0,1,2].map(index=><Satellite key={index} index={index} paused={paused} reducedMotion={reducedMotion}/>)}
   <BrokenMoon progress={orbitalProgress}/></group>

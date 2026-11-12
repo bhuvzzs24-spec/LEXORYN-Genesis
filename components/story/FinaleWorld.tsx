@@ -7,7 +7,7 @@ import {characters,type CharacterDefinition} from '@/data/characters';
 
 function CastPlane({character,x=0,height=7.3,z=-1,progress}:{character:CharacterDefinition;x?:number;height?:number;z?:number;progress:number}){
  const base=useTexture(character.asset),group=useRef<THREE.Group>(null),{gl}=useThree();
- const texture=useMemo(()=>{const t=base.clone();t.colorSpace=THREE.SRGBColorSpace;const c=character.hero?null:character.portraitCrop;if(c){t.repeat.set(c.width,c.height);t.offset.set(c.x,1-c.y-c.height);}t.needsUpdate=true;return t;},[base,character]);
+ const texture=useMemo(()=>{const t=base.clone();t.colorSpace=THREE.SRGBColorSpace;t.anisotropy=Math.min(8,gl.capabilities.getMaxAnisotropy());const c=character.hero?null:character.portraitCrop;if(c){t.repeat.set(c.width,c.height);t.offset.set(c.x,1-c.y-c.height);}t.needsUpdate=true;return t;},[base,character,gl]);
  useEffect(()=>()=>texture.dispose(),[texture]);
  const aspect=character.hero?character.assetWidth/character.assetHeight:character.assetWidth*(character.portraitCrop?.width??1)/(character.assetHeight*(character.portraitCrop?.height??1));
  useFrame(()=>{gl.domElement.dataset.characterAsset=character.asset;if(group.current){group.current.position.set(x+(progress-.5)*.35,-.15,z+progress*.25);group.current.rotation.y=(progress-.5)*.035;}});

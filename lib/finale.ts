@@ -5,6 +5,4 @@ export function finaleAssetRequest(id:number,progress:number,original:string,out
  if(id===53||id===55)return `/assets/finale/${outcomeAsset??'planetary-emergency'}.webp`;
  return original;
 }
-export const showcaseScenes=[0,5,7,15,17,19,21,22,23,28,32,35,41,45,49,51,53,54,55] as const;
-export const showcaseShotMs=12000;
-export const showcaseDurationSeconds=showcaseScenes.length*showcaseShotMs/1000;
+export {showcaseShots,showcaseFrame,showcaseDurationSeconds,montageDurationSeconds} from '@/data/pacing';

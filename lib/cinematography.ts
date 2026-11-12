@@ -1,3 +1,4 @@
+import {finalPlanetFraming} from './planet-geology';
 import {storyScenes,type StoryVector} from '@/data/story';
 
 export interface CinematicCameraPose {
@@ -21,11 +22,11 @@ const authoredNodes:readonly CinematicCameraPose[]=[
  pose([1.22,.38,3.15],[1.1,.2,-16]),
  pose([.35,1,10.4],[.15,.45,-20]),
  // Capital: leftward establishing drift, following skyway, station, terraces, spires.
- pose([-.4,.75,9.6],[-.15,.25,-20]),
- pose([.75,.3,8.8],[.25,.18,-18]),
- pose([1.3,.65,9.4],[.4,.25,-18]),
- pose([.25,1.15,10.2],[0,.65,-20]),
- pose([-.65,1,11.1],[-.25,.6,-20]),
+ pose([-1.8,.75,9.6],[-.65,.25,-20]),
+ pose([1.5,-.25,8.8],[.4,.15,-18]),
+ pose([-1.4,1.1,10.1],[-.5,.45,-18]),
+ pose([1.2,.3,9.5],[.3,.2,-20]),
+ pose([-.8,1.5,11.1],[-.3,.8,-20]),
  pose([.4,.18,10],[.1,.1,-17]),
  // Orbital climate overview enters/exits under the environment transition veil.
  pose([.1,.35,10],[.65,.1,0]),
@@ -89,7 +90,8 @@ const shotArcs:Readonly<Record<number,StoryVector>>={
  12:[.08,.02,0],15:[.12,.025,0],17:[-.08,.04,0],19:[.08,.04,0],27:[-.10,.07,0],
 };
 
-function frameNode(node:CinematicCameraPose,index:number,mobile:boolean):CinematicCameraPose {
+function frameNode(node:CinematicCameraPose,index:number,mobile:boolean,aspect:number):CinematicCameraPose {
+ if(index>=55){const framing=finalPlanetFraming(aspect,index===55?1.035:1);return {position:framing.position,target:framing.target};}
  if(!mobile)return node;
  const orbital=index<=5||index===14||index===15||index>=55;
  // Fit shared boundary nodes, not only the active shot. That is essential at05→06/14→15.
@@ -99,8 +101,8 @@ function frameNode(node:CinematicCameraPose,index:number,mobile:boolean):Cinemat
  };
 }
 
-function makeRoute(mobile:boolean){
- const nodes=authoredNodes.map((node,index)=>frameNode(node,index,mobile));
+function makeRoute(mobile:boolean,aspect:number){
+ const nodes=authoredNodes.map((node,index)=>frameNode(node,index,mobile,aspect));
  const slope=(key:'position'|'target',index:number,axis:number)=>{
   if(index===0||index===nodes.length-1)return 0;
   const before=(nodes[index][key][axis]-nodes[index-1][key][axis])/(nodeTimes[index]-nodeTimes[index-1]);
@@ -116,7 +118,8 @@ function makeRoute(mobile:boolean){
  }));
  return {nodes,tangents};
 }
-const desktopRoute=makeRoute(false),mobileRoute=makeRoute(true);
+const routes=new Map<string,ReturnType<typeof makeRoute>>();
+function route(mobile:boolean,aspect:number){const key=`${mobile}:${aspect.toFixed(3)}`;let value=routes.get(key);if(!value){value=makeRoute(mobile,aspect);if(routes.size>8)routes.clear();routes.set(key,value);}return value;}
 
 function interpolate(a:StoryVector,b:StoryVector,ta:StoryVector,tb:StoryVector,p:number,duration:number):StoryVector {
  const p2=p*p,p3=p2*p;
@@ -129,9 +132,9 @@ function interpolate(a:StoryVector,b:StoryVector,ta:StoryVector,tb:StoryVector,p
 }
 
 /** Pure scroll sampling: deterministic, reversible and C1 across weighted story boundaries. */
-export function sampleCinematicCamera(sceneIndex:number,localProgress:number,mobile=false):CinematicCameraPose {
+export function sampleCinematicCamera(sceneIndex:number,localProgress:number,mobile=false,aspect=mobile?.55:1.6):CinematicCameraPose {
  const index=Math.floor(clamp(sceneIndex,0,authoredNodes.length-2)),p=clamp(localProgress);
- const {nodes,tangents}=mobile?mobileRoute:desktopRoute;
+ const {nodes,tangents}=route(mobile,aspect);
  if(p===0)return nodes[index];
  if(p===1)return nodes[index+1];
  const duration=durationWeights[index];

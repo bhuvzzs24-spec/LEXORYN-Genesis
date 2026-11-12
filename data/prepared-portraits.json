@@ -10,7 +10,7 @@
     "bytes": 651624,
     "sourceMaster": "exec-d327b71c-797c-4c65-ab27-b85cf3c7fe30.png",
     "identityReference": "exec-582ad7f5-b5cd-4ba4-b256-3864f2166b56.png",
-    "status": "prepared; not used by runtime"
+    "status": "active in optional character field notes; full-body reveal preserved"
   },
   "kaor": {
     "id": "kaor",
@@ -23,7 +23,7 @@
     "bytes": 622164,
     "sourceMaster": "exec-1788b7e9-666d-4d57-85cf-12c5d1213dc5.png",
     "identityReference": "exec-9cc8fc6f-79d4-4cb1-8012-b670084a6542.png",
-    "status": "prepared; not used by runtime"
+    "status": "active in optional character field notes; full-body reveal preserved"
   },
   "sorya": {
     "id": "sorya",
@@ -36,6 +36,6 @@
     "bytes": 698594,
     "sourceMaster": "exec-c2abe786-7f86-4186-b73c-f7dbc6932ed2.png",
     "identityReference": "exec-d2659879-a608-4f1d-a3a6-4df71824963b.png",
-    "status": "prepared; not used by runtime"
+    "status": "active in optional character field notes; full-body reveal preserved"
   }
 }

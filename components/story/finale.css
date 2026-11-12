@@ -3,3 +3,15 @@
 
 .cast-fallback{position:absolute;z-index:1;left:4%;bottom:10%;width:55%;height:80%;object-fit:contain;pointer-events:none}
 @media(max-width:700px){.cast-fallback{left:2%;width:76%;bottom:15%;height:72%}}
+
+/* Final orbit reserves separate screen space for the complete planet, ending and actions. */
+.story-viewport[data-scene="56"] .cinematic-caption{bottom:19%;left:8%;right:8%}
+.story-viewport[data-scene="56"] .cinematic-caption h1{font:400 10px Manrope,sans-serif;letter-spacing:4px;margin:0 0 15px;color:#c3d1d3}
+.story-viewport[data-scene="56"] .caption-kicker{display:none}
+.story-viewport[data-scene="56"] .caption-line{font:400 20px/1.7 Cinzel,serif;max-width:670px;margin:auto}
+.story-viewport[data-scene="56"] .final-actions{bottom:11.5%;gap:12px 35px}
+.final-actions button{min-height:44px}
+.cast-detail-portrait{display:block;width:100%;height:185px;object-fit:cover;object-position:center 32%;margin:15px 0}
+@media(max-width:700px){.story-viewport[data-scene="56"] .cinematic-caption{bottom:32%;left:7%;right:7%}.story-viewport[data-scene="56"] .caption-line{font-size:15px;line-height:1.8}.story-viewport[data-scene="56"] .cinematic-caption h1{font-size:8px;letter-spacing:3px}.story-viewport[data-scene="56"] .final-actions{bottom:17%;left:7%;right:7%;gap:9px 18px}.final-actions button{font-size:7px}.cast-detail-portrait{height:180px}}
+
+.comic-image-fallback{padding:18px;font-size:12px;line-height:1.7;color:#dfd5c4}.comic-image-fallback small{display:block;margin-top:12px;font-size:9px;color:#9eb5be}

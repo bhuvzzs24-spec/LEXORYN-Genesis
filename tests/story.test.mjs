@@ -11,7 +11,7 @@ test('the complete 56-beat story is ordered, distinct and divided into eight cha
  assert.equal(new Set(storyScenes.map(s=>s.slug)).size,56);
  assert.equal(storyChapters.length,8);
  for(const c of storyChapters)assert.equal(storyScenes.filter(s=>s.chapter===c.id).length,7);
- assert.ok(totalStoryDuration>=45&&totalStoryDuration<=60);
+ assert.ok(totalStoryDuration>=30&&totalStoryDuration<=38);
  assert.equal(storyScenes[0].mode,'orbit');assert.equal(storyScenes[14].mode,'orbit');
  assert.match(storyScenes[27].title,/PREPARING FOR CONVERGENCE/);
 });

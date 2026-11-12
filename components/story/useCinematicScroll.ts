@@ -19,13 +19,13 @@ export function useCinematicScroll({root,stage,mobile,reduced,onProgress}:{root:
   window.addEventListener('wheel',interrupt,{passive:true});window.addEventListener('touchstart',interrupt,{passive:true});
   return()=>{active=false;cancelAnimationFrame(raf);interrupt();window.removeEventListener('wheel',interrupt);window.removeEventListener('touchstart',interrupt);trigger.current=null;animation.current=null;context.revert();};
  },[mobile,reduced,onProgress,root,stage]);
- const goTo=useCallback((index:number,local=.18)=>{
+ const goTo=useCallback((index:number,local=.18,montage=false)=>{
   const t=trigger.current;if(!t)return;navigation.current?.kill();const p=progressForScene(index,local),target=t.start+p*(t.end-t.start);
   const snap=()=>{window.scrollTo({top:target,behavior:'instant'});ScrollTrigger.update();const scrub=t.getTween();if(scrub&&typeof scrub.progress==='function')scrub.progress(1);animation.current?.progress(p);};
   if(reduced){snap();return;}
   const timeline=gsap.timeline();navigation.current=timeline;
-  if(Math.abs(rendered.current-p)>.09&&navigationVeil.current){
-   timeline.to(navigationVeil.current,{opacity:1,duration:.22,ease:'sine.inOut'}).call(snap).to(navigationVeil.current,{opacity:0,duration:.52,ease:'sine.out'},'+=.04');
+  if((montage||Math.abs(rendered.current-p)>.09)&&navigationVeil.current){
+   timeline.to(navigationVeil.current,{opacity:1,duration:montage?.06:.22,ease:'sine.inOut'}).call(snap).to(navigationVeil.current,{opacity:0,duration:montage?.12:.52,ease:'sine.out'},montage?'+=0':'+=.04');
   }else{const driver={y:scrollY};timeline.to(driver,{y:target,duration:.9,ease:'sine.inOut',onUpdate:()=>window.scrollTo({top:driver.y,behavior:'instant'})});}
  },[reduced]);
  return {trigger,goTo,navigationVeil};
